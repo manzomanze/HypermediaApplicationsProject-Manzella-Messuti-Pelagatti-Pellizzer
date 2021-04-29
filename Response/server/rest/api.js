@@ -9,10 +9,14 @@ async function init() {
   // Call the init function that returns the Database
   const db = await initializeDatabase()
   // Let's extract all the objects we need to perform queries inside the endpoints
-  const { Career } = db._tables
+  const { Career, Service } = db._tables
   // API to get all the articles
   app.get('/career', async (req, res) => {
     const articles = await Career.findAll()
+    return res.json(articles)
+  })
+  app.get('/services', async (req, res) => {
+    const articles = await Service.findAll()
     return res.json(articles)
   })
   // This one is just an example

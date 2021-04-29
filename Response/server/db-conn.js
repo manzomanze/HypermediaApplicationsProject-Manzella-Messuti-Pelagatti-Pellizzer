@@ -1,7 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize')
 
 // Development
-const db = new Sequelize('postgres://postgres:@127.0.0.1:5432/response')
+//const db = new Sequelize('postgres://postgres:postgres@127.0.0.1:5432/response')
+const db = new Sequelize('postgres://postgres:postgres@127.0.0.1:5432/response')
 // Production
 // const pg = require('pg')
 // pg.defaults.ssl = true
@@ -47,6 +48,7 @@ function defineDatabaseStructure() {
   const Career = db.define(
     'career',
     {
+      id_career: { type: DataTypes.INTEGER, primaryKey: true },
       title: DataTypes.STRING,
       introduction: DataTypes.TEXT,
       requirements: DataTypes.TEXT,
