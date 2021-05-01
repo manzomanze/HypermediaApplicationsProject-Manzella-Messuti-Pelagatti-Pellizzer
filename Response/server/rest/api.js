@@ -47,6 +47,17 @@ async function init() {
     })
     return res.json(article)
   })
+  app.get('/areas', async (req, res) => {
+    const articles = await Area.findAll()
+    return res.json(articles)
+  })
+  app.get('/areas/:id', async (req, res) => {
+    const { id } = req.params
+    const article = await Area.findOne({
+      where: { id },
+    })
+    return res.json(article)
+  })
 
   // This one is just an example
 }
