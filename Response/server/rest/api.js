@@ -9,7 +9,15 @@ async function init() {
   // Call the init function that returns the Database
   const db = await initializeDatabase()
   // Let's extract all the objects we need to perform queries inside the endpoints
-  const { Career, Service, ServicesContent } = db._tables
+  const {
+    Area,
+    Service,
+    ServicesContent,
+    Employee,
+    CaseStudies,
+    CaseStudiesContent,
+    Career,
+  } = db._tables
   // API to get all the articles
   app.get('/career', async (req, res) => {
     const articles = await Career.findAll()
@@ -24,6 +32,18 @@ async function init() {
     const article = await Service.findOne({
       where: { id },
       include: { model: ServicesContent }, // -> this is the way we "include" also comments inside Articles
+    })
+    return res.json(article)
+  })
+  app.get('/casestudies', async (req, res) => {
+    const articles = await CaseStudies.findAll()
+    return res.json(articles)
+  })
+  app.get('/casestudies/:id', async (req, res) => {
+    const { id } = req.params
+    const article = await CaseStudies.findOne({
+      where: { id },
+      include: { model: CaseStudiesContent }, // -> this is the way we "include" also comments inside Articles
     })
     return res.json(article)
   })
