@@ -2,7 +2,7 @@
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links li");
+  const navLinks = document.querySelectorAll(".nav-links > li");
 
   burger.addEventListener("click", () => {
     //[Show - Hide] Navbar links
@@ -32,7 +32,7 @@ navSlide();
 const arrow = document.getElementById("arrow");
 const capBurger = document.querySelector(".capBurger");
 const chapters = document.getElementById("chapters");
-const capLinks = document.querySelectorAll("#chapters li");
+const capLinks = document.querySelectorAll("#chapters > li");
 
 capBurger.addEventListener("click", () => {
   //[Show - Hide] Navbar links
