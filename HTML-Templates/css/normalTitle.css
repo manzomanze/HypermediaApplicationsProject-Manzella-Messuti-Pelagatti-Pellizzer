@@ -1,0 +1,16 @@
+/* Normal Title */
+.normalTitle {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.normalTitle h2{
+  text-align: left;
+  padding: 0px 10px;
+  color: #333;
+  font-size: 2rem;
+  margin: 20px;
+}

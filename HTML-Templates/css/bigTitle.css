@@ -1,0 +1,17 @@
+/* Big Title */
+.bigTitle {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.bigTitle h2{
+  text-align: left;
+  color: #ec7404;
+  font-size: 3rem;
+  padding: 0px 10px;
+  margin: 15px;
+  border-bottom: #ec7404 4px solid;
+}

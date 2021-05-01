@@ -1,0 +1,16 @@
+/* Paragraph */
+.paragraph {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.paragraph p{
+  text-align: justify;
+  padding: 0px 10px;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 20px;
+}

@@ -1,0 +1,28 @@
+/* List Paragraph */
+.listParagraph {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.listParagraph li i {
+  margin-right: 25px;
+}
+
+.listParagraph li{
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  padding: 0px 40px;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 20px;
+}
+
+@media (max-width: 750px) {
+  .listParagraph li{
+    padding: 0px 10px;
+  }
+}

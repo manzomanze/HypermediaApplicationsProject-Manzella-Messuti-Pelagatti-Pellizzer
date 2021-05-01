@@ -1,0 +1,182 @@
+/* Navbar */
+.navbar {
+  opacity: 0.95;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: center;
+  justify-content: space-between;
+  height: 6vh;
+  background-color: #333;
+  color: #fff;
+  z-index: 11;
+}
+
+.navbar * {
+  transition: 300ms;
+}
+
+/* Logo */
+.navbar .logo a {
+  color: #333;
+}
+
+.navbar .logo a:hover {
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.navbar .logo h1 {
+  letter-spacing: -10px;
+  margin: 7px 15px;
+  font-weight: 500;
+}
+
+.navbar h1 .text-primary {
+  font-family: "Lobster", cursive;
+}
+
+/* Nav Link */
+.nav-links {
+  display: flex;
+}
+
+.nav-links li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-links li a,
+.nav-links li p {
+  display: block;
+  color: #ec7404;
+  padding: 1px 10px;
+  margin: 0 5px;
+}
+
+.nav-links .subsection{
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li a:hover {
+  letter-spacing: 1px;
+  color: #fff;
+  /* border-bottom: #fff 2px solid; */
+}
+
+/* Submenu */
+.nav-links li .submenu {
+  visibility: visible;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0px;
+  width: auto;
+  background-color: #ec7404;
+}
+
+.nav-links li .submenu li{
+  height: 0;
+}
+
+.nav-links li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+.nav-links li:hover .submenu li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+  border-bottom: 1px #c26004 dotted;
+}
+
+.nav-links li:hover p {
+  color: #ddd;
+}
+
+.nav-links li .submenu a {
+  color: #fff;
+}
+
+/* Burger Button */
+.burger {
+  margin: 20px;
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #ec7404;
+  margin: 5px;
+}
+
+.nav-links a.current {
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 750px) {
+  /* Navbar */
+  .nav-links {
+    position: absolute;
+    top: 6vh;
+    left: 0px;
+    font-size: 3rem;
+    height: 94vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: 500ms;
+  }
+
+  .nav-links li {
+    opacity: 0;
+    padding: 3%;
+  }
+
+  .navbar-visible {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Animations */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* Burger Animation */
+.switch .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.switch .line2 {
+  opacity: 0;
+}
+.switch .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
