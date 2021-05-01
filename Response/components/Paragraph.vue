@@ -14,10 +14,10 @@
 
 <script>
 export default {
-  name: 'TitleParagraphImage',
+  name: 'Paragraph',
   props: {
     title: { type: String, default: () => 'ciao' },
-    paragraph: { type: String, default: () => 'ciaociao' },
+    text: { type: String, default: () => 'ciaociao' },
     image: { type: String, default: () => '' },
   },
   computed: {

@@ -1,17 +1,17 @@
 <template>
   <div>
     <ShowCase />
-    <TitleParagraphImage />
+    <Paragraph />
   </div>
 </template>
 
 <script>
-import TitleParagraphImage from '~/components/TitleParagraphImage'
+import Paragraph from '~/components/Paragraph'
 import ShowCase from '~/components/ShowCase'
 
 export default {
   components: {
-    TitleParagraphImage,
+    Paragraph,
     ShowCase,
   },
 }
