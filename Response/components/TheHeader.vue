@@ -10,7 +10,7 @@ import TopBar from './TopBar'
 import LowBar from './LowBar'
 
 export default {
-  name: 'PageHeader',
+  name: 'TheHeader',
 
   components: {
     TopBar,

@@ -1,25 +1,21 @@
 <template>
   <div>
-    <PageHeader />
+    <TheHeader />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import PageHeader from '../components/PageHeader'
+import TheHeader from '../components/TheHeader'
 
 export default {
   components: {
-    PageHeader,
+    TheHeader,
   },
 }
 </script>
 
 <style>
-/* Import Fonts From Google */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
 /* Reset */
 * {
   box-sizing: border-box;
