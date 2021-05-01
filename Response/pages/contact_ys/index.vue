@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import ParagraphZ from '~/components/Paragraph'
+import Paragraph from '~/components/Paragraph'
 import ShowCase from '~/components/ShowCase'
 
 export default {

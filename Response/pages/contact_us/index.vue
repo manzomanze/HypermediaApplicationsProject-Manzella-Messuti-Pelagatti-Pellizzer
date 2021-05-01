@@ -2,8 +2,8 @@
   <div>
     <ShowCase />
     <Paragraph
+      v-for="paragraph in paragraphs"
       :key="paragraph.id"
-      v-for="paragraph in pragraphs"
       :title="paragraph.title"
       :text="paragraph.text"
       :image="paragraph.image"
@@ -16,9 +16,18 @@ import ShowCase from '../../components/ShowCase'
 import Paragraph from '../../components/Paragraph'
 
 export default {
+  components: {
+    ShowCase,
+    Paragraph,
+  },
   data() {
     return {
       paragraphs: [],
+    }
+  },
+  head() {
+    return {
+      title: 'Response | Contact Us',
     }
   },
   /* async */ created() {
@@ -36,16 +45,6 @@ export default {
         image: '',
       },
     ]
-  },
-  components: {
-    ShowCase,
-    Paragraph,
-  },
-
-  head() {
-    return {
-      title: 'Response | Contact Us',
-    }
   },
 }
 </script>
