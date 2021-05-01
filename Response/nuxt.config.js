@@ -6,12 +6,12 @@ export default {
     //BASE_URL: 'https://test-polimi.herokuapp.com/', // Production URL
     BASE_URL: '', // Development URL
   },
-  serverMiddleware: [
+  /*serverMiddleware: [
     {
       path: '/api',
       handler: '~/server/rest/api.js',
     },
-  ],
+  ],*/
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
