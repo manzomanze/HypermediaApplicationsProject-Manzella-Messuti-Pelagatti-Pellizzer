@@ -20,6 +20,21 @@ export default {
     ShowCase,
     Paragraph,
   },
+
+  /* async asyncData({axios???}) {
+      const config = {
+        headers: {
+        Accept: "application/json"
+        }
+      }
+      try {
+        const res = await axios.get("", config);
+        const paragraphs = res.data.results;
+      } catch (err) {
+        console.log(err);
+        }
+    } */
+
   data() {
     return {
       paragraphs: [],
@@ -30,18 +45,17 @@ export default {
       title: 'Response | Contact Us',
     }
   },
-  /* async */ created() {
+  created() {
     /* fetch from the server */
     this.paragraphs = [
       {
         title: 'CONTACTS',
-        text:
-          'se vulete manda nu sfaccim e messag, in coppa a whatsapp, 349 2386666',
+        text: 'mail: xxxx@xxxx.com NON SO ANDARE A CAPO phone:+39 xxxxxxxxxx',
         image: '',
       },
       {
         title: 'MAPS',
-        text: 'Look at this!!! Oh wow!!!',
+        text: 'We are here:',
         image: '',
       },
     ]
