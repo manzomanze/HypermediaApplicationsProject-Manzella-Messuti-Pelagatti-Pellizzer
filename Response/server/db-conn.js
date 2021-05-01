@@ -1,8 +1,9 @@
 const { Sequelize, DataTypes } = require('sequelize')
 
 // Development
-//const db = new Sequelize('postgres://postgres:postgres@127.0.0.1:5432/response')
-const db = new Sequelize('postgres://postgres:postgres@127.0.0.1:5432/response')
+const db = new Sequelize(
+  'postgres://postgres:postgres@127.0.0.1:5432/response2'
+)
 // Production
 // const pg = require('pg')
 // pg.defaults.ssl = true
@@ -19,7 +20,6 @@ function defineDatabaseStructure() {
   const Employee = db.define(
     'employee',
     {
-      id_employee: { type: DataTypes.INTEGER, primaryKey: true },
       name: DataTypes.STRING,
       surname: DataTypes.STRING,
       location: DataTypes.STRING,
@@ -36,7 +36,6 @@ function defineDatabaseStructure() {
   const Area = db.define(
     'area',
     {
-      id_area: { type: DataTypes.INTEGER, primaryKey: true },
       name: DataTypes.STRING,
       overview: DataTypes.TEXT,
     },
@@ -48,7 +47,6 @@ function defineDatabaseStructure() {
   const Career = db.define(
     'career',
     {
-      id_career: { type: DataTypes.INTEGER, primaryKey: true },
       title: DataTypes.STRING,
       introduction: DataTypes.TEXT,
       requirements: DataTypes.TEXT,
@@ -62,7 +60,6 @@ function defineDatabaseStructure() {
   const Service = db.define(
     'service',
     {
-      id_service: { type: DataTypes.INTEGER, primaryKey: true },
       name: DataTypes.STRING,
       overview: DataTypes.TEXT,
     },
@@ -74,7 +71,6 @@ function defineDatabaseStructure() {
   const CaseStudies = db.define(
     'casestudies',
     {
-      id_case_study: { type: DataTypes.INTEGER, primaryKey: true },
       name: DataTypes.STRING,
       overview: DataTypes.TEXT,
     },
@@ -86,7 +82,6 @@ function defineDatabaseStructure() {
   const ServicesContent = db.define(
     'servicescontent',
     {
-      id_service_content: { type: DataTypes.INTEGER, primaryKey: true },
       title: DataTypes.STRING,
       content: DataTypes.TEXT,
       order: DataTypes.INTEGER,
@@ -99,7 +94,6 @@ function defineDatabaseStructure() {
   const CaseStudiesContent = db.define(
     'casestudiescontent',
     {
-      id_service_content: { type: DataTypes.INTEGER, primaryKey: true },
       title: DataTypes.STRING,
       content: DataTypes.TEXT,
       order: DataTypes.INTEGER,
@@ -112,7 +106,6 @@ function defineDatabaseStructure() {
   const BusinessSector = db.define(
     'businesssector',
     {
-      id_business_sector: { type: DataTypes.INTEGER, primaryKey: true },
       name: DataTypes.STRING,
       description: DataTypes.STRING,
     },
@@ -123,11 +116,21 @@ function defineDatabaseStructure() {
 
   // Creating the 1 -> N association between Article and Comment
   // More on association: https://sequelize.org/master/manual/assocs.html
-  Service.hasMany(ServicesContent, { foreignKey: 'id_service' })
-  CaseStudies.hasMany(CaseStudiesContent, { foreignKey: 'id_content' })
-  Area.hasMany(Service, { foreignKey: 'id_area' })
-  Area.hasMany(Employee, { foreignKey: 'id_area' })
-  BusinessSector.hasMany(CaseStudies, { foreignKey: 'id_business_sector' })
+  Service.hasMany(ServicesContent)
+  ServicesContent.belongsTo(Service)
+
+  CaseStudies.hasMany(CaseStudiesContent)
+  CaseStudiesContent.belongsTo(CaseStudies)
+
+  Area.hasMany(Service)
+  Service.belongsTo(Area)
+
+  Area.hasMany(Employee)
+  Employee.belongsTo(Area)
+
+  BusinessSector.hasMany(CaseStudies)
+  CaseStudies.belongsTo(BusinessSector)
+
   Employee.belongsToMany(CaseStudies, { through: 'EmployeeCaseStudies' })
   Employee.belongsToMany(Service, { through: 'EmployeeService' })
   BusinessSector.belongsToMany(Service, { through: 'BusinessSectorService' })
