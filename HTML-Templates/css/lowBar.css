@@ -1,0 +1,99 @@
+.lowBar {
+  opacity: 0.95;
+  padding: 0 10px;
+  background-color: #bbb;
+  position: fixed;
+  left: 0;
+  top: 6vh;
+  z-index: 9;
+  height: 3vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lowBar * {
+  transition-duration: 300ms;
+}
+
+.lowBar ul {
+  display: flex;
+  flex-direction: row;
+}
+
+#chapters li {
+  padding: 0 10px;
+}
+
+.lowBar a {
+  color: #333;
+}
+
+.lowBar a:hover {
+  letter-spacing: 1px;
+  padding: 0px 1px;
+  color: #fff;
+}
+
+.lowBar .capBurger {
+  position: absolute;
+  right: 0px;
+  display: none;
+  width: 80px;
+}
+
+#arrow{
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ec7404;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 750px) {
+  #chapters {
+    position: absolute;
+    top: 3vh;
+    left: 0px;
+    font-size: 3rem;
+    height: 91vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ccc;
+    transition: 500ms;
+  }
+
+  #chapters li {
+    opacity: 0;
+    padding: 20px;
+  }
+
+  .lowBar .capBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-invisible{
+    transform: translateX(100%);
+  }
+
+  .down-arrow{
+    transform: rotate(-90deg);
+  }
+}
+
+/* Animations */
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

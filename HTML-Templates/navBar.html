@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS IMPORT -->
+    <link rel="stylesheet" href="css/baseStyle.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
+    <link rel="stylesheet" href="css/lowBar.css" />
+    <title>Navbar Template</title>
+  </head>
+  <body>
+    <div id="navbar" class="navbar">
+      <div class="logo">
+        <h1>
+          <a href=""><span class="text-primary">R</span>esponse</a>
+        </h1>
+        <!-- <img src="img/ResponseLogo.png" alt="Logo"> -->
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a class="current" href="#">Industries</a>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="lowBar">
+      <ul id="bread-crumbs">
+        <li>
+          <span class="text-theme-color">/</span>&nbsp;<a href="#">Area</a
+          >&nbsp;
+        </li>
+        <li>
+          <span class="text-theme-color">/</span>&nbsp;<a href="#">AI</a>&nbsp;
+        </li>
+        <li>
+          <span class="text-theme-color">/</span>&nbsp;<a href="#">Nome Bello</a
+          >&nbsp;
+        </li>
+      </ul>
+      <ul id="chapters" class="navbar-invisible">
+        <li>
+          <a href="#">Overview</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Team</a>
+        </li>
+        <li>
+          <a href="#">Case Studies</a>
+        </li>
+      </ul>
+      <div class="capBurger">
+        <p>Cap.&nbsp;</p>
+        <p id="arrow" class="text-theme-color">&lt;</p>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/navBar.js"></script> 
+  </body>
+</html>
