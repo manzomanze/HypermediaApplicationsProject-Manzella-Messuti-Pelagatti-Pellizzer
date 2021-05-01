@@ -10,7 +10,7 @@
     </div>
     <div v-if="isImage" class="img-paragraph">
       <div class="img-container">
-        <img :src="image" alt="" />
+        <img :src="image" alt="Image" />
       </div>
     </div>
   </div>
