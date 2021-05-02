@@ -17,8 +17,13 @@ async function init() {
     CaseStudies,
     CaseStudiesContent,
     Career,
+    AreaContent,
   } = db._tables
   // API to get all the articles
+  app.get('/employees', async (req, res) => {
+    const articles = await Employee.findAll()
+    return res.json(articles)
+  })
   app.get('/career', async (req, res) => {
     const articles = await Career.findAll()
     return res.json(articles)
@@ -31,7 +36,11 @@ async function init() {
     const { id } = req.params
     const article = await Service.findOne({
       where: { id },
-      include: { model: ServicesContent }, // -> this is the way we "include" also comments inside Articles
+      include: {
+        model: ServicesContent,
+        separate: true,
+        order: [['order', 'asc']],
+      }, // -> this is the way we "include" also comments inside Articles
     })
     return res.json(article)
   })
@@ -43,7 +52,11 @@ async function init() {
     const { id } = req.params
     const article = await CaseStudies.findOne({
       where: { id },
-      include: { model: CaseStudiesContent }, // -> this is the way we "include" also comments inside Articles
+      include: {
+        model: CaseStudiesContent,
+        separate: true,
+        order: [['order', 'asc']],
+      }, // -> this is the way we "include" also comments inside Articles
     })
     return res.json(article)
   })
@@ -55,6 +68,11 @@ async function init() {
     const { id } = req.params
     const article = await Area.findOne({
       where: { id },
+      include: {
+        model: AreaContent,
+        separate: true,
+        order: [['order', 'asc']],
+      },
     })
     return res.json(article)
   })

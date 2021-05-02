@@ -44,6 +44,18 @@ function defineDatabaseStructure() {
     }
   )
 
+  const AreaContent = db.define(
+    'areacontent',
+    {
+      title: DataTypes.STRING,
+      text: DataTypes.TEXT,
+      order: DataTypes.INTEGER,
+    },
+    {
+      underscored: true,
+    }
+  )
+
   const Career = db.define(
     'career',
     {
@@ -128,15 +140,24 @@ function defineDatabaseStructure() {
   Area.hasMany(Employee)
   Employee.belongsTo(Area)
 
+  Area.hasMany(AreaContent)
+  AreaContent.belongsTo(Area)
+
   BusinessSector.hasMany(CaseStudies)
   CaseStudies.belongsTo(BusinessSector)
 
   Employee.belongsToMany(CaseStudies, { through: 'EmployeeCaseStudies' })
+  CaseStudies.belongsToMany(Employee, { through: 'EmployeeCaseStudies' })
+
   Employee.belongsToMany(Service, { through: 'EmployeeService' })
+  Service.belongsToMany(Employee, { through: 'EmployeeService' })
+
   BusinessSector.belongsToMany(Service, { through: 'BusinessSectorService' })
+  Service.belongsToMany(BusinessSector, { through: 'BusinessSectorService' })
 
   db._tables = {
     Area,
+    AreaContent,
     Service,
     ServicesContent,
     Employee,
