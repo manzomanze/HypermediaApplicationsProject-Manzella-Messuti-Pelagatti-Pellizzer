@@ -2,6 +2,11 @@ export default {
   // Magia e stregoneria
   ssr: true,
   target: 'server',
+  // Open server to lan
+  server: {     
+    port: 3000, // default: 3000     
+    host: '0.0.0.0', // default: localhost   
+  },
   env: {
     //BASE_URL: 'https://test-polimi.herokuapp.com/', // Production URL
     BASE_URL: '', // Development URL

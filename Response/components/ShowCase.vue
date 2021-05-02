@@ -1,10 +1,7 @@
 <template>
   <div class="showcase">
     <div class="container">
-      <h2>
-        <span class="text-primary">A</span>rtificial
-        <span class="text-primary">I</span>ntelligence
-      </h2>
+      <h2>Artificial Intelligence</h2>
       <h3 class="text-grey">Data has a better idea</h3>
     </div>
   </div>

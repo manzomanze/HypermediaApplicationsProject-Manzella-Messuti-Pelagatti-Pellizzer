@@ -1,11 +1,13 @@
 <template>
   <div ref="slideShowContainer" class="slideShowContainer">
     <h2 class="sectionTitle">{{ title }}</h2>
-    <div v-for="(element, index) in content" :key="index" class="container">
+    <div class="container">
       <div
+        v-for="(element, index) in content"
+        :key="index"
         class="slide slideShowBox"
         onclick="window.location='#';"
-        :style="`background: url(${element.image}) center center/cover`"
+        :style="`background: url('${element.image}') center center/cover`"
       >
         <h3 class="title">{{ element.title }}</h3>
       </div>
@@ -25,10 +27,8 @@ export default {
   props: {
     title: { type: String, default: () => 'Title Here' },
     content: {
-      type: Object,
-      default: () => {
-        return { name: 'N1', image: 'img/AI_01.jpg' }
-      },
+      type: Array,
+      default: null,
     },
   },
   data() {
@@ -43,12 +43,6 @@ export default {
     // Setup the listener
     this.x = window.matchMedia('(max-width: 700px)')
     this.x.addListener(this.screenChange)
-    this.screenChange(this.x)
-  },
-  updated() {
-    // First Build the slideshow
-    this.buildSlideShow()
-    // Setup the listener
     this.screenChange(this.x)
   },
   methods: {

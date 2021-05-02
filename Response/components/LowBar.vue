@@ -28,7 +28,9 @@
     </ul>
     <div class="capBurger" @click="navSlide">
       <p>Cap.&nbsp;</p>
-      <p id="arrow" ref="arrow" class="text-theme-color">&lt;</p>
+      <p id="arrow" ref="arrow" class="text-theme-color">
+        <i class="fas fa-chevron-left"></i>
+      </p>
     </div>
   </div>
 </template>
@@ -122,7 +124,7 @@ export default {
 
 #arrow {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #ec7404;
   letter-spacing: 1px;
 }
