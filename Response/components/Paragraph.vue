@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="normalTitle">
+    <div v-if="title" class="normalTitle">
       <h2>{{ title }}</h2>
     </div>
-    <div class="paragraph">
+    <div v-if="text" class="paragraph">
       <p>
         {{ text }}
       </p>
     </div>
-    <div v-if="isImage" class="img-paragraph">
+    <div v-if="image" class="img-paragraph">
       <div class="img-container">
-        <img v-if="image" :src="image.path" alt="Image" />
+        <img :src="image.path" alt="Image" />
       </div>
     </div>
   </div>
@@ -23,11 +23,6 @@ export default {
     title: { type: String, default: () => 'okay' },
     text: { type: String, default: () => 'ciaociao' },
     image: { type: Object, default: () => null },
-  },
-  computed: {
-    isImage() {
-      return !(this.image === '')
-    },
   },
 }
 </script>

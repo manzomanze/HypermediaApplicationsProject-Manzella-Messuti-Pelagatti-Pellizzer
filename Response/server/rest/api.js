@@ -28,6 +28,23 @@ async function init() {
     const articles = await Employee.findAll()
     return res.json(articles)
   })
+  app.get('/employees/:id', async (req, res) => {
+    const { id } = req.params
+    const article = await Employee.findOne({
+      where: { id },
+      include: [
+        {
+          model: Image,
+          as: 'headshot',
+        },
+        {
+          model: Image,
+          as: 'main_image',
+        },
+      ],
+    })
+    return res.json(article)
+  })
   app.get('/career', async (req, res) => {
     const articles = await Career.findAll()
     return res.json(articles)
@@ -78,20 +95,6 @@ async function init() {
         order: [['order', 'asc']],
         include: { model: Image },
       },
-    })
-    return res.json(article)
-  })
-  app.get('/images/services/:servicescontent_id', async (req, res) => {
-    const { servicescontent_id } = req.params
-    const article = await Image.findOne({
-      where: { servicescontent_id },
-    })
-    return res.json(article)
-  })
-  app.get('/images/areas/:areacontent_id', async (req, res) => {
-    const { areacontent_id } = req.params
-    const article = await Image.findOne({
-      where: { areacontent_id },
     })
     return res.json(article)
   })

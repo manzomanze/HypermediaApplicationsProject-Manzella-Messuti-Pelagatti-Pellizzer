@@ -1,8 +1,8 @@
 <template>
   <div class="showcase">
-    <div class="container">
-      <h2>Artificial Intelligence</h2>
-      <h3 class="text-grey">Data has a better idea</h3>
+    <div class="container" :style="imagePath()">
+      <h2>{{ title }}</h2>
+      <h3 class="text-grey">{{ text }}</h3>
     </div>
   </div>
 </template>
@@ -10,6 +10,20 @@
 <script>
 export default {
   name: 'ShowCase',
+  props: {
+    title: { type: String, default: () => 'okay' },
+    text: { type: String, default: () => 'ciaociao' },
+    image: { type: Object, default: () => null },
+  },
+  methods: {
+    imagePath() {
+      if (this.image == null) {
+        return `background: url('/img/AI_01.jpg') center center/cover no-repeat`
+      } else {
+        return `background: url('${this.image.path}') center center/cover no-repeat`
+      }
+    },
+  },
 }
 </script>
 
@@ -31,7 +45,7 @@ export default {
   text-align: center;
   width: 100%;
   height: 100vh;
-  background: url('~/static/img/AI_01.jpg') center center/cover no-repeat;
+  /* background: url('/img/AI_01.jpg') center center/cover no-repeat; */
 }
 
 .showcase .container h2 {

@@ -185,18 +185,6 @@ function defineDatabaseStructure() {
   BusinessSector.hasMany(BusinessSectorContent)
   BusinessSectorContent.belongsTo(BusinessSector)
 
-  AreaContent.hasOne(Image)
-  Image.belongsTo(AreaContent)
-
-  ServicesContent.hasOne(Image)
-  Image.belongsTo(ServicesContent)
-
-  BusinessSectorContent.hasOne(Image)
-  Image.belongsTo(BusinessSectorContent)
-
-  CaseStudiesContent.hasOne(Image)
-  Image.belongsTo(CaseStudiesContent)
-
   Employee.hasMany(EmployeeImage)
   EmployeeImage.belongsTo(Employee)
 
@@ -211,6 +199,45 @@ function defineDatabaseStructure() {
 
   BusinessSector.belongsToMany(Service, { through: 'businesssectorservice' })
   Service.belongsToMany(BusinessSector, { through: 'businesssectorservice' })
+
+  Image.hasMany(AreaContent)
+  AreaContent.belongsTo(Image)
+
+  Image.hasMany(Area)
+  Area.belongsTo(Image)
+
+  Image.hasMany(BusinessSectorContent)
+  BusinessSectorContent.belongsTo(Image)
+
+  Image.hasMany(BusinessSector)
+  BusinessSector.belongsTo(Image)
+
+  Image.hasMany(Career)
+  Career.belongsTo(Image)
+
+  Image.hasMany(CaseStudies)
+  CaseStudies.belongsTo(Image)
+
+  Image.hasMany(CaseStudiesContent)
+  CaseStudiesContent.belongsTo(Image)
+
+  Image.hasMany(Employee, { foreignKey: 'main_image_id' })
+  Employee.belongsTo(Image, {
+    as: 'main_image',
+    foreignKey: 'main_image_id',
+  })
+
+  Image.hasMany(Employee, { foreignKey: 'headshot_id' })
+  Employee.belongsTo(Image, {
+    as: 'headshot',
+    foreignKey: 'headshot_id',
+  })
+
+  Image.hasMany(Service)
+  Service.belongsTo(Image)
+
+  Image.hasMany(ServicesContent)
+  ServicesContent.belongsTo(Image)
 
   db._tables = {
     Area,

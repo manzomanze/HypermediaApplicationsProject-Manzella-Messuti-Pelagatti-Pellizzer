@@ -1,17 +1,5 @@
 <template>
   <div ref="doc" class="lowBar">
-    <ul id="bread-crumbs">
-      <li>
-        <span class="text-theme-color">/</span>&nbsp;<a href="#">Area</a>&nbsp;
-      </li>
-      <li>
-        <span class="text-theme-color">/</span>&nbsp;<a href="#">AI</a>&nbsp;
-      </li>
-      <li>
-        <span class="text-theme-color">/</span>&nbsp;<a href="#">Nome Bello</a
-        >&nbsp;
-      </li>
-    </ul>
     <ul id="chapters" ref="chapters" class="navbar-invisible">
       <li>
         <a href="#">Overview</a>

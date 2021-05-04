@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HalfShowCase />
     <ShowCase />
     <Paragraph
       v-for="paragraph in paragraphs"
@@ -9,16 +10,21 @@
       :image="paragraph.image"
     />
     <SlideShow :content="slideContents" :title="slideTitle" />
+    <FormSection />
   </div>
 </template>
 
 <script>
+import HalfShowCase from '~/components/HalfShowCase'
+import FormSection from '~/components/FormSection'
 import SlideShow from '~/components/SlideShow'
 import ShowCase from '~/components/ShowCase'
 import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
+    HalfShowCase,
+    FormSection,
     SlideShow,
     ShowCase,
     Paragraph,
@@ -41,7 +47,7 @@ export default {
       {
         title: 'CONTACTS',
         text:
-          'se vulete manda nu sfaccim e messag, in coppa a whatsapp, 349 2386666',
+          'Bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga',
         image: '',
       },
       {
