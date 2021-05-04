@@ -18,9 +18,9 @@ export default {
   methods: {
     imagePath() {
       if (this.image == null) {
-        return `background: url('/img/AI_01.jpg') center center/cover no-repeat`
+        return `background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 97%, rgba(255,255,255,1) 100%), url('/img/AI_01.jpg') center center/cover no-repeat;`
       } else {
-        return `background: url('${this.image.path}') center center/cover no-repeat`
+        return `background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 97%, rgba(255,255,255,1) 100%), url('${this.image.path}') center center/cover no-repeat;`
       }
     },
   },
@@ -59,7 +59,7 @@ export default {
   text-shadow: 2px 2px #444;
 }
 
-.showcase .container::before {
+/* .showcase .container::before {
   content: '';
   position: absolute;
   top: 0;
@@ -67,5 +67,5 @@ export default {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
-}
+} */
 </style>

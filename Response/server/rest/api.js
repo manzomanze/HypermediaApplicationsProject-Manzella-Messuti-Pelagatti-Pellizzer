@@ -89,12 +89,17 @@ async function init() {
     const { id } = req.params
     const article = await Area.findOne({
       where: { id },
-      include: {
-        model: AreaContent,
-        separate: true,
-        order: [['order', 'asc']],
-        include: { model: Image },
-      },
+      include: [
+        {
+          model: AreaContent,
+          separate: true,
+          order: [['order', 'asc']],
+          include: { model: Image },
+        },
+        {
+          model: Image,
+        },
+      ],
     })
     return res.json(article)
   })
