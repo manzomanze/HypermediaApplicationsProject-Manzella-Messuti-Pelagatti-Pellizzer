@@ -126,6 +126,42 @@ function defineDatabaseStructure() {
     }
   )
 
+  const BusinessSectorContent = db.define(
+    'businesssectorcontent',
+    {
+      title: DataTypes.STRING,
+      content: DataTypes.TEXT,
+      order: DataTypes.INTEGER,
+    },
+    {
+      underscored: true,
+    }
+  )
+
+  const Image = db.define(
+    'image',
+    {
+      path: DataTypes.TEXT,
+      alt_description: DataTypes.TEXT,
+      position: DataTypes.STRING,
+    },
+    {
+      underscored: true,
+    }
+  )
+  const EmployeeImage = db.define(
+    'employeeimage',
+    {
+      path: DataTypes.TEXT,
+      alt_description: DataTypes.TEXT,
+      position: DataTypes.STRING,
+      portrait: DataTypes.BOOLEAN,
+    },
+    {
+      underscored: true,
+    }
+  )
+
   // Creating the 1 -> N association between Article and Comment
   // More on association: https://sequelize.org/master/manual/assocs.html
   Service.hasMany(ServicesContent)
@@ -146,14 +182,35 @@ function defineDatabaseStructure() {
   BusinessSector.hasMany(CaseStudies)
   CaseStudies.belongsTo(BusinessSector)
 
-  Employee.belongsToMany(CaseStudies, { through: 'EmployeeCaseStudies' })
-  CaseStudies.belongsToMany(Employee, { through: 'EmployeeCaseStudies' })
+  BusinessSector.hasMany(BusinessSectorContent)
+  BusinessSectorContent.belongsTo(BusinessSector)
 
-  Employee.belongsToMany(Service, { through: 'EmployeeService' })
-  Service.belongsToMany(Employee, { through: 'EmployeeService' })
+  AreaContent.hasOne(Image)
+  Image.belongsTo(AreaContent)
 
-  BusinessSector.belongsToMany(Service, { through: 'BusinessSectorService' })
-  Service.belongsToMany(BusinessSector, { through: 'BusinessSectorService' })
+  ServicesContent.hasOne(Image)
+  Image.belongsTo(ServicesContent)
+
+  BusinessSectorContent.hasOne(Image)
+  Image.belongsTo(BusinessSectorContent)
+
+  CaseStudiesContent.hasOne(Image)
+  Image.belongsTo(CaseStudiesContent)
+
+  Employee.hasMany(EmployeeImage)
+  EmployeeImage.belongsTo(Employee)
+
+  Employee.belongsToMany(CaseStudies, { through: 'employeecasestudies' })
+  CaseStudies.belongsToMany(Employee, { through: 'employeecasestudies' })
+
+  Employee.belongsToMany(CaseStudies, { through: 'employeecasestudies' })
+  CaseStudies.belongsToMany(Employee, { through: 'employeecasestudies' })
+
+  Employee.belongsToMany(Service, { through: 'employeeservice' })
+  Service.belongsToMany(Employee, { through: 'employeeservice' })
+
+  BusinessSector.belongsToMany(Service, { through: 'businesssectorservice' })
+  Service.belongsToMany(BusinessSector, { through: 'businesssectorservice' })
 
   db._tables = {
     Area,
@@ -161,9 +218,13 @@ function defineDatabaseStructure() {
     Service,
     ServicesContent,
     Employee,
+    EmployeeImage,
     CaseStudies,
     CaseStudiesContent,
+    BusinessSector,
+    BusinessSectorContent,
     Career,
+    Image,
   }
 }
 

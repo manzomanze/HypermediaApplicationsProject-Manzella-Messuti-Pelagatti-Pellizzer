@@ -11,13 +11,17 @@ async function init() {
   // Let's extract all the objects we need to perform queries inside the endpoints
   const {
     Area,
+    AreaContent,
     Service,
     ServicesContent,
     Employee,
+    EmployeeImage,
     CaseStudies,
     CaseStudiesContent,
+    BusinessSector,
+    BusinessSectorContent,
     Career,
-    AreaContent,
+    Image,
   } = db._tables
   // API to get all the articles
   app.get('/employees', async (req, res) => {
@@ -72,7 +76,22 @@ async function init() {
         model: AreaContent,
         separate: true,
         order: [['order', 'asc']],
+        include: { model: Image },
       },
+    })
+    return res.json(article)
+  })
+  app.get('/images/services/:servicescontent_id', async (req, res) => {
+    const { servicescontent_id } = req.params
+    const article = await Image.findOne({
+      where: { servicescontent_id },
+    })
+    return res.json(article)
+  })
+  app.get('/images/areas/:areacontent_id', async (req, res) => {
+    const { areacontent_id } = req.params
+    const article = await Image.findOne({
+      where: { areacontent_id },
     })
     return res.json(article)
   })

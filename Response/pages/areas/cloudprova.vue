@@ -28,7 +28,7 @@ export default {
   },
 
   async asyncData({ $axios }) {
-    const { data } = await $axios.get(`${process.env.BASE_URL}/api/areas/1`)
+    const { data } = await $axios.get(`${process.env.BASE_URL}/api/areas/4`)
     const paragraphs = data
     return {
       paragraphs,

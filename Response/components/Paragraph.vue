@@ -10,7 +10,7 @@
     </div>
     <div v-if="isImage" class="img-paragraph">
       <div class="img-container">
-        <img :src="image" alt="Image" />
+        <img v-if="image" :src="image.path" alt="Image" />
       </div>
     </div>
   </div>
@@ -22,7 +22,7 @@ export default {
   props: {
     title: { type: String, default: () => 'okay' },
     text: { type: String, default: () => 'ciaociao' },
-    image: { type: String, default: () => '' },
+    image: { type: Object, default: () => null },
   },
   computed: {
     isImage() {
