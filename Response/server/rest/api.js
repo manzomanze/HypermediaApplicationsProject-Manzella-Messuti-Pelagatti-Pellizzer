@@ -82,7 +82,11 @@ async function init() {
     return res.json(article)
   })
   app.get('/areas', async (req, res) => {
-    const articles = await Area.findAll()
+    const articles = await Area.findAll({
+      include: {
+        model: Image,
+      }
+    })
     return res.json(articles)
   })
   app.get('/areas/:id', async (req, res) => {

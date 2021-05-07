@@ -29,11 +29,17 @@ export default {
     ShowCase,
     Paragraph,
   },
+  async asyncData({ $axios, route }) {
+    const { data } = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
+    const slideContents = data
+    return {
+      slideContents,
+    }
+  },
   data() {
     return {
+      slideTitle: 'Areas',
       paragraphs: [],
-      slideContents: [],
-      slideTitle: '',
     }
   },
   head() {
@@ -48,29 +54,29 @@ export default {
         title: 'CONTACTS',
         text:
           'Bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga',
-        image: '',
+        image: null,
       },
       {
         title: 'MAPS',
         text: 'Look at this!!! Oh wow!!!',
-        image: '',
+        image: null,
       },
     ]
-    this.slideContents = [
-      {
-        title: 'Elem 1',
-        image: '/img/AI_01.jpg',
-      },
-      {
-        title: 'Elem 2',
-        image: '/img/AI_02.jpg',
-      },
-      {
-        title: 'Elem 3',
-        image: '/img/AI_03.jpg',
-      },
-    ]
-    this.slideTitle = 'Super SUS'
+    // this.slideContents = [
+    //   {
+    //     title: 'Elem 1',
+    //     image: '/img/AI_01.jpg',
+    //   },
+    //   {
+    //     title: 'Elem 2',
+    //     image: '/img/AI_02.jpg',
+    //   },
+    //   {
+    //     title: 'Elem 3',
+    //     image: '/img/AI_03.jpg',
+    //   },
+    // ]
+    // this.slideTitle = 'Super SUS'
   },
 }
 </script>

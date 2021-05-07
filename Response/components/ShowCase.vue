@@ -56,6 +56,7 @@ export default {
 }
 
 .showcase .container h3 {
+  max-width: 1000px;
   text-shadow: 2px 2px #444;
 }
 

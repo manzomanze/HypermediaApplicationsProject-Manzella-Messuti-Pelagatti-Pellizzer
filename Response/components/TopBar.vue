@@ -2,14 +2,14 @@
   <div id="navbar" ref="doc" class="navbar">
     <div class="logo">
       <h1>
-        <a href=""><span class="text-primary">R</span>esponse</a>
+        <NuxtLink to="/"><span class="text-primary">R</span>esponse</NuxtLink>
       </h1>
     </div>
     <nav>
       <ul class="nav-links">
         <li>
           <div class="subsection">
-            <a href="#">About Us</a>
+            <NuxtLink to="/">About Us</NuxtLink>
           </div>
         </li>
         <li>
@@ -21,16 +21,16 @@
               <a href="#">All Services</a>
             </li>
             <li>
-              <a href="#">AI</a>
+              <NuxtLink to="/areas/4">AI</NuxtLink>
             </li>
             <li>
-              <a href="#">Cyber Security</a>
+              <NuxtLink to="/areas/1">Cyber Security</NuxtLink>
             </li>
             <li>
-              <a href="#">Digital Services</a>
+              <NuxtLink to="/areas/2">Cloud Services</NuxtLink>
             </li>
             <li>
-              <a href="#">Cloud Services</a>
+              <NuxtLink to="/areas/3">Digital Services</NuxtLink>
             </li>
           </ul>
         </li>
@@ -43,13 +43,16 @@
               <a href="#">All Industries</a>
             </li>
             <li>
-              <a href="#">IND 1</a>
+              <a href="#">Automotive</a>
             </li>
             <li>
-              <a href="#">IND 2</a>
+              <a href="#">Banking & Capital Markets </a>
             </li>
             <li>
-              <a href="#">IND 3</a>
+              <a href="#">Government & Public Sector</a>
+            </li>
+            <li>
+              <a href="#">Telecoms</a>
             </li>
           </ul>
         </li>
@@ -194,6 +197,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  max-width: 150px;
 }
 
 .nav-links > li a,
@@ -243,7 +247,7 @@ export default {
 
 .nav-links li:hover .submenu li {
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   border-bottom: 1px #ec7404 solid;
 }
 
@@ -304,6 +308,7 @@ export default {
   .nav-links > li {
     opacity: 0;
     padding: 6%;
+    max-width: 100%;
   }
 
   .navbar-visible {
@@ -348,12 +353,13 @@ export default {
     align-items: center;
     color: #333;
     height: 0;
+    width: 100%;
   }
 
   .nav-links > li:hover > .submenu > li {
     transition: all 100ms;
     opacity: 1;
-    height: 6vh;
+    height: auto;
     font-size: 2rem;
     width: 100%;
     border-bottom: 1px #ec7404 solid;

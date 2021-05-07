@@ -3,9 +3,9 @@ export default {
   ssr: true,
   target: 'server',
   // Open server to lan
-  server: {     
-    port: 3000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
+  server: {
+    port: 3000, // default: 3000
+    host: 'localhost', // default: localhost
   },
   env: {
     //BASE_URL: 'https://test-polimi.herokuapp.com/', // Production URL
@@ -73,5 +73,7 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    cache: false,
+  },
 }

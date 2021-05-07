@@ -2,15 +2,16 @@
   <div ref="slideShowContainer" class="slideShowContainer">
     <h2 class="sectionTitle">{{ title }}</h2>
     <div class="container">
-      <div
-        v-for="(element, index) in content"
-        :key="index"
+      <NuxtLink
+        v-for="element in content"
+        :key="element.id"
         class="slide slideShowBox"
-        onclick="window.location='#';"
-        :style="`background: url('${element.image}') center center/cover`"
+        :style="imagePath(element.image)"
+        crossorigin="*"
+        :to="`/areas/${element.id}`"
       >
-        <h3 class="title">{{ element.title }}</h3>
-      </div>
+        <h3 class="title">{{ element.name }}</h3>
+      </NuxtLink>
     </div>
     <div class="next" @click="prev">
       <p>&gt;</p>
@@ -46,6 +47,13 @@ export default {
     this.screenChange(this.x)
   },
   methods: {
+    imagePath(image) {
+      if (image == null) {
+        return `background: url('/img/AI_01.jpg') center center/cover`
+      } else {
+        return `background: url('${image.path}') center center/cover`
+      }
+    },
     extractNumber(text) {
       let numb = text.match(/\d/g)
       numb = numb.join('')
@@ -261,6 +269,16 @@ export default {
   width: 100%;
   text-align: center;
   padding: 0px 30px 30px;
+}
+
+.slideShowContainer .container .slide NuxtLink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 2;
 }
 
 .slideShowContainer .container {
