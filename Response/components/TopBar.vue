@@ -7,7 +7,7 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li @click="navSlide">
+        <li @click="hideNav">
           <div class="subsection">
             <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
           </div>
@@ -17,19 +17,19 @@
             <p>Services</p>
           </div>
           <ul class="submenu">
-            <li @click="navSlide">
+            <li @click="hideNav">
               <a href="#">All Services</a>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/areas/4">AI</NuxtLink>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/areas/1">Cyber Security</NuxtLink>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/areas/2">Cloud Services</NuxtLink>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/areas/3">Digital Services</NuxtLink>
             </li>
           </ul>
@@ -39,19 +39,19 @@
             <p>Businesses</p>
           </div>
           <ul class="submenu">
-            <li @click="navSlide">
+            <li @click="hideNav">
               <a href="#">All Businesses</a>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/businesssectors/4">Aerospace & Defense</NuxtLink>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/businesssectors/2">Automotive</NuxtLink>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/businesssectors/1">Banking</NuxtLink>
             </li>
-            <li @click="navSlide">
+            <li @click="hideNav">
               <NuxtLink to="/businesssectors/3">Public Service</NuxtLink>
             </li>
           </ul>
@@ -98,14 +98,33 @@ export default {
       burger: Object,
       nav: Object,
       navLinks: Object,
+      enabled: false,
     }
   },
   mounted() {
     this.burger = this.$refs.doc.querySelector('.burger')
     this.nav = this.$refs.doc.querySelector('.nav-links')
     this.navLinks = this.$refs.doc.querySelectorAll('.nav-links > li')
+
+    // Setup the listener
+    this.x = window.matchMedia('(max-width: 750px)')
+    this.x.addListener(this.screenChange)
+    this.screenChange(this.x)
   },
   methods: {
+    screenChange(x) {
+      if (x.matches) {
+        // Small Screen
+        this.enabled = true
+      } else {
+        this.enabled = false
+      }
+    },
+    hideNav() {
+      if (this.enabled) {
+        this.navSlide()
+      }
+    },
     navSlide() {
       // Show or Hide Navbar links
       this.nav.classList.toggle('navbar-visible')

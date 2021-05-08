@@ -44,7 +44,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: 102vh;
   /* background: url('/img/AI_01.jpg') center center/cover no-repeat; */
 }
 

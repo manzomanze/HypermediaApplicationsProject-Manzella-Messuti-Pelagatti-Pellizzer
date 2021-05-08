@@ -7,7 +7,7 @@
         :key="element.id"
         class="slide slideShowBox"
         :style="imagePath(element.image)"
-        :to="`/${title.toLowerCase()}/${element.id}`"
+        :to="`/${finalLink(title)}/${element.id}`"
       >
         <h3 class="title">{{ element.name }}</h3>
       </NuxtLink>
@@ -203,6 +203,9 @@ export default {
         }
         this.buildSlideShow()
       }
+    },
+    finalLink(str) {
+      return str.replace(/\s/g, '').toLowerCase()
     },
   },
 }
