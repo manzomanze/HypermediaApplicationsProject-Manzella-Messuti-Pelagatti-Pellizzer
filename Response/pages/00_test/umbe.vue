@@ -1,6 +1,5 @@
 <template>
   <div>
-    <HalfShowCase />
     <ShowCase />
     <Paragraph
       v-for="paragraph in paragraphs"
@@ -16,7 +15,6 @@
 </template>
 
 <script>
-import HalfShowCase from '~/components/HalfShowCase'
 import FormSection from '~/components/FormSection'
 import SlideShow from '~/components/SlideShow'
 import SlideShowEmployee from '~/components/SlideShowEmployee'
@@ -25,7 +23,6 @@ import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
-    HalfShowCase,
     FormSection,
     SlideShow,
     SlideShowEmployee,

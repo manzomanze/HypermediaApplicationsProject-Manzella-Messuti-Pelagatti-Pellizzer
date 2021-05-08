@@ -7,9 +7,9 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li>
+        <li @click="navSlide">
           <div class="subsection">
-            <NuxtLink to="/">About Us</NuxtLink>
+            <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
           </div>
         </li>
         <li>
@@ -17,42 +17,42 @@
             <p>Services</p>
           </div>
           <ul class="submenu">
-            <li>
+            <li @click="navSlide">
               <a href="#">All Services</a>
             </li>
-            <li>
+            <li @click="navSlide">
               <NuxtLink to="/areas/4">AI</NuxtLink>
             </li>
-            <li>
+            <li @click="navSlide">
               <NuxtLink to="/areas/1">Cyber Security</NuxtLink>
             </li>
-            <li>
+            <li @click="navSlide">
               <NuxtLink to="/areas/2">Cloud Services</NuxtLink>
             </li>
-            <li>
+            <li @click="navSlide">
               <NuxtLink to="/areas/3">Digital Services</NuxtLink>
             </li>
           </ul>
         </li>
         <li>
           <div class="subsection">
-            <p>Industries</p>
+            <p>Businesses</p>
           </div>
           <ul class="submenu">
-            <li>
-              <a href="#">All Industries</a>
+            <li @click="navSlide">
+              <a href="#">All Businesses</a>
             </li>
-            <li>
-              <a href="#">Automotive</a>
+            <li @click="navSlide">
+              <NuxtLink to="/businesssectors/4">Aerospace & Defense</NuxtLink>
             </li>
-            <li>
-              <a href="#">Banking & Capital Markets </a>
+            <li @click="navSlide">
+              <NuxtLink to="/businesssectors/2">Automotive</NuxtLink>
             </li>
-            <li>
-              <a href="#">Government & Public Sector</a>
+            <li @click="navSlide">
+              <NuxtLink to="/businesssectors/1">Banking</NuxtLink>
             </li>
-            <li>
-              <a href="#">Telecoms</a>
+            <li @click="navSlide">
+              <NuxtLink to="/businesssectors/3">Public Service</NuxtLink>
             </li>
           </ul>
         </li>

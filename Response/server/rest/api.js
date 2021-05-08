@@ -112,6 +112,32 @@ async function init() {
     })
     return res.json(article)
   })
+  app.get('/businesssectors', async (req, res) => {
+    const articles = await BusinessSector.findAll({
+      include: {
+        model: Image,
+      },
+    })
+    return res.json(articles)
+  })
+  app.get('/businesssectors/:id', async (req, res) => {
+    const { id } = req.params
+    const article = await BusinessSector.findOne({
+      where: { id },
+      include: [
+        {
+          model: BusinessSectorContent,
+          separate: true,
+          order: [['order', 'asc']],
+          include: { model: Image },
+        },
+        {
+          model: Image,
+        },
+      ],
+    })
+    return res.json(article)
+  })
 
   // This one is just an example
 }
