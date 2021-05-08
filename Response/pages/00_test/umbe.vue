@@ -9,7 +9,8 @@
       :text="paragraph.text"
       :image="paragraph.image"
     />
-    <SlideShow :content="slideContents" :title="slideTitle" />
+    <SlideShow :content="slideContents" :title="'Areas'" />
+    <SlideShowEmployee :content="employeesContents" :title="'Team'" />
     <FormSection />
   </div>
 </template>
@@ -18,6 +19,7 @@
 import HalfShowCase from '~/components/HalfShowCase'
 import FormSection from '~/components/FormSection'
 import SlideShow from '~/components/SlideShow'
+import SlideShowEmployee from '~/components/SlideShowEmployee'
 import ShowCase from '~/components/ShowCase'
 import Paragraph from '~/components/Paragraph'
 
@@ -26,14 +28,19 @@ export default {
     HalfShowCase,
     FormSection,
     SlideShow,
+    SlideShowEmployee,
     ShowCase,
     Paragraph,
   },
   async asyncData({ $axios, route }) {
-    const { data } = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
-    const slideContents = data
+    const areas = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
+    const slideContents = areas.data
+
+    const employees = await $axios.get(`${process.env.BASE_URL}/api/employees/`)
+    const employeesContents = employees.data
     return {
       slideContents,
+      employeesContents,
     }
   },
   data() {

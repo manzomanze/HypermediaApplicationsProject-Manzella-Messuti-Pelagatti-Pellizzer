@@ -229,7 +229,7 @@ function defineDatabaseStructure() {
 
   Image.hasMany(Employee, { foreignKey: 'headshot_id' })
   Employee.belongsTo(Image, {
-    as: 'headshot',
+    as: 'image',
     foreignKey: 'headshot_id',
   })
 

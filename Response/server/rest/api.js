@@ -25,7 +25,12 @@ async function init() {
   } = db._tables
   // API to get all the articles
   app.get('/employees', async (req, res) => {
-    const articles = await Employee.findAll()
+    const articles = await Employee.findAll({
+      include: {
+        model: Image,
+        as: 'image',
+      },
+    })
     return res.json(articles)
   })
   app.get('/employees/:id', async (req, res) => {
@@ -35,7 +40,7 @@ async function init() {
       include: [
         {
           model: Image,
-          as: 'headshot',
+          as: 'image',
         },
         {
           model: Image,
@@ -85,7 +90,7 @@ async function init() {
     const articles = await Area.findAll({
       include: {
         model: Image,
-      }
+      },
     })
     return res.json(articles)
   })

@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* Normal Title */
 .normalTitle {
   display: flex;

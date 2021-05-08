@@ -9,7 +9,7 @@
         :style="imagePath(element.image)"
         :to="`/${title.toLowerCase()}/${element.id}`"
       >
-        <h3 class="title">{{ element.name }}</h3>
+        <h3 class="title">{{ element.name }} {{ element.surname }}</h3>
       </NuxtLink>
     </div>
     <div class="next" @click="prev">
@@ -298,7 +298,7 @@ export default {
   transition-duration: 250ms;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: #fff;
   position: absolute;
   width: 200px;
