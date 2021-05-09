@@ -15,8 +15,9 @@ footer {
   align-items: center;
   justify-content: center;
   height: 35px;
-  background-color: #ec7404;
+  background-color: #333;
   color: #fff;
+  /* color: #ec7404; */
   z-index: 10;
 }
 </style>

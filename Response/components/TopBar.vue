@@ -51,7 +51,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li @click="hideNav">
           <div class="subsection">
             <NuxtLink to="/team">Our Team</NuxtLink>
           </div>

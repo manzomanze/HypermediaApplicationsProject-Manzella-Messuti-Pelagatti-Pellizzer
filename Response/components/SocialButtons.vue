@@ -1,10 +1,10 @@
 <template>
   <div class="social-bar fa-2x">
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-google"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-    <a href="#"><i class="fab fa-youtube"></i></a>
+    <p class="fakeLink"><i class="fab fa-facebook"></i></p>
+    <p class="fakeLink"><i class="fab fa-twitter"></i></p>
+    <p class="fakeLink"><i class="fab fa-google"></i></p>
+    <p class="fakeLink"><i class="fab fa-linkedin"></i></p>
+    <p class="fakeLink"><i class="fab fa-youtube"></i></p>
   </div>
 </template>
 
@@ -41,6 +41,16 @@ export default {
 }
 
 .social-bar a:hover {
+  color: #ec7404;
+  transform: scale(1.1) translateX(10%);
+}
+
+.social-bar .fakeLink {
+  cursor: pointer;
+  color: #333;
+}
+
+.social-bar .fakeLink:hover {
   color: #ec7404;
   transform: scale(1.1) translateX(10%);
 }
