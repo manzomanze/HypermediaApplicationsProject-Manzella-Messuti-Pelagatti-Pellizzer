@@ -25,6 +25,9 @@
         <i class="fas fa-map-marker-alt"></i>
         <h4>{{ location }}</h4>
       </div>
+      <NuxtLink :to="`/areas/${areaid}`">
+        <img :src="`/images/areas/icon/${areaid}.png`" alt="Area Icon" />
+      </NuxtLink>
     </div>
   </div>
 </template>
@@ -38,6 +41,7 @@ export default {
     location: { type: String, default: () => '' },
     role: { type: String, default: () => '' },
     image: { type: Object, default: () => null },
+    areaid: { type: Number, default: () => 0 },
   },
   methods: {
     imagePath() {
@@ -52,6 +56,18 @@ export default {
 </script>
 
 <style scoped>
+.right-box NuxtLink {
+  height: 50%;
+  width: 40%;
+}
+
+.right-box img {
+  height: 100%;
+  width: 40%;
+  margin-left: 40px;
+  object-fit: cover;
+}
+
 /* Half Showcase */
 .halfShowcase {
   padding: 20px 0px;
@@ -118,7 +134,10 @@ export default {
   padding: 0px 10px;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 1.3rem;
+  text-shadow: 0px 0px #fff;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .halfShowcase .right-box i {
@@ -139,11 +158,12 @@ export default {
 
 .halfShowcase .right-box h2 {
   border-radius: 15px;
-  color: #fff;
   font-size: 2.1rem;
   padding: 0 10px 5px;
   margin-bottom: 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 0px #fff;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .halfShowcase .container h2 {

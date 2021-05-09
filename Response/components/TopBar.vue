@@ -7,11 +7,6 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li @click="hideNav">
-          <div class="subsection">
-            <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
-          </div>
-        </li>
         <li>
           <div class="subsection">
             <p>Services</p>
@@ -58,25 +53,18 @@
         </li>
         <li>
           <div class="subsection">
-            <p>Team</p>
+            <NuxtLink to="/team">Our Team</NuxtLink>
           </div>
-          <ul class="submenu">
-            <li>
-              <a href="#">All Team</a>
-            </li>
-            <li>
-              <a href="#">AI</a>
-            </li>
-            <li>
-              <a href="#">Cyber Security</a>
-            </li>
-            <li>
-              <a href="#">Digital Services</a>
-            </li>
-            <li>
-              <a href="#">Cloud Services</a>
-            </li>
-          </ul>
+        </li>
+        <li @click="hideNav">
+          <div class="subsection">
+            <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
+          </div>
+        </li>
+        <li @click="hideNav">
+          <div class="subsection">
+            <NuxtLink to="/00_test/umbe">Contact Us</NuxtLink>
+          </div>
         </li>
       </ul>
       <div class="burger-container">

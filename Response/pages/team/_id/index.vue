@@ -6,6 +6,7 @@
       :location="paragraphs.location"
       :role="paragraphs.role"
       :image="paragraphs.main_image"
+      :areaid="paragraphs.areaId"
     />
     <Paragraph
       v-if="paragraphs.what_i_do"
@@ -28,17 +29,24 @@
       :text="paragraphs.expert_advice"
       :image="null"
     />
+    <SlideShowSingle :content="paragraphs.area" :title="'Areas'" />
+    <SlideShow :content="paragraphs.services" :title="'Services'" />
+    <SlideShow :content="paragraphs.casestudies" :title="'Case Studies'" />
   </div>
 </template>
 
 <script>
 import HalfShowCase from '~/components/HalfShowCase'
 import Paragraph from '~/components/Paragraph'
+import SlideShow from '~/components/SlideShow'
+import SlideShowSingle from '~/components/SlideShowSingle'
 
 export default {
   components: {
     HalfShowCase,
     Paragraph,
+    SlideShow,
+    SlideShowSingle,
   },
 
   async asyncData({ $axios, route }) {

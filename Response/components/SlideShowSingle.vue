@@ -6,13 +6,12 @@
     <!-- <h2 class="sectionTitle">{{ title }}</h2> -->
     <div class="container">
       <NuxtLink
-        v-for="element in content"
-        :key="element.id"
+        :key="content.id"
         class="slide slideShowBox"
-        :style="imagePath(element.image)"
-        :to="`/${finalLink(title)}/${element.id}`"
+        :style="imagePath(content.image)"
+        :to="`/${finalLink(title)}/${content.id}`"
       >
-        <h3 class="title">{{ element.name }}</h3>
+        <h3 class="title">{{ content.name }}</h3>
       </NuxtLink>
     </div>
     <div class="next" @click="prev">
@@ -30,7 +29,7 @@ export default {
   props: {
     title: { type: String, default: () => 'Title Here' },
     content: {
-      type: Array,
+      type: Object,
       default: null,
     },
   },

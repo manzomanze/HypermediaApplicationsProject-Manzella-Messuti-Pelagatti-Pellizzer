@@ -1,13 +1,16 @@
 <template>
   <div ref="slideShowContainer" class="slideShowContainer">
-    <h2 class="sectionTitle">{{ title }}</h2>
+    <div class="normalTitle">
+      <h2>{{ title }}</h2>
+    </div>
+    <!-- <h2 class="sectionTitle">{{ title }}</h2> -->
     <div class="container">
       <NuxtLink
         v-for="element in content"
         :key="element.id"
         class="slide slideShowBox"
         :style="imagePath(element.image)"
-        :to="`/${title.toLowerCase()}/${element.id}`"
+        :to="`/team/${element.id}`"
       >
         <h3 class="title">{{ element.name }} {{ element.surname }}</h3>
       </NuxtLink>
@@ -209,6 +212,23 @@ export default {
 </script>
 
 <style scoped>
+/* Normal Title */
+.normalTitle {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.normalTitle h2 {
+  text-align: left;
+  padding: 0px 10px;
+  color: #333;
+  font-size: 2rem;
+  margin: 20px;
+}
+
 .slideShowContainer {
   overflow: hidden;
   max-width: 1000px;

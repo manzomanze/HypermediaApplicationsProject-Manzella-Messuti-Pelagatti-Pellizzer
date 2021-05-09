@@ -12,18 +12,21 @@
       :text="paragraph.content"
       :image="paragraph.image"
     />
+    <SlideShow :content="paragraphs.services" :title="'Services'" />
     <!-- v-for per slideshow -->
   </div>
 </template>
 
 <script>
 import ShowCase from '~/components/ShowCase'
+import SlideShow from '~/components/SlideShow'
 import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
     ShowCase,
     Paragraph,
+    SlideShow,
   },
 
   async asyncData({ $axios, route }) {

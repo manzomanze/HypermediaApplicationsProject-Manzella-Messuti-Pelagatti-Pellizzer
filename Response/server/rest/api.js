@@ -24,6 +24,8 @@ async function init() {
     Image,
   } = db._tables
   // API to get all the articles
+
+  // Employees
   app.get('/employees', async (req, res) => {
     const articles = await Employee.findAll({
       include: {
@@ -46,6 +48,18 @@ async function init() {
           model: Image,
           as: 'main_image',
         },
+        {
+          model: Service,
+          include: { model: Image },
+        },
+        {
+          model: CaseStudies,
+          include: { model: Image },
+        },
+        {
+          model: Area,
+          include: { model: Image },
+        },
       ],
     })
     return res.json(article)
@@ -54,22 +68,8 @@ async function init() {
     const articles = await Career.findAll()
     return res.json(articles)
   })
-  app.get('/services', async (req, res) => {
-    const articles = await Service.findAll()
-    return res.json(articles)
-  })
-  app.get('/services/:id', async (req, res) => {
-    const { id } = req.params
-    const article = await Service.findOne({
-      where: { id },
-      include: {
-        model: ServicesContent,
-        separate: true,
-        order: [['order', 'asc']],
-      }, // -> this is the way we "include" also comments inside Articles
-    })
-    return res.json(article)
-  })
+
+  // CaseStudies & CaseStudiesContents
   app.get('/casestudies', async (req, res) => {
     const articles = await CaseStudies.findAll()
     return res.json(articles)
@@ -86,6 +86,8 @@ async function init() {
     })
     return res.json(article)
   })
+
+  // Areas & AreasContents
   app.get('/areas', async (req, res) => {
     const articles = await Area.findAll({
       include: {
@@ -108,10 +110,20 @@ async function init() {
         {
           model: Image,
         },
+        {
+          model: Employee,
+          include: { model: Image, as: 'image' },
+        },
+        {
+          model: Service,
+          include: { model: Image },
+        },
       ],
     })
     return res.json(article)
   })
+
+  // BusinessSector & BusinessSectorContents
   app.get('/businesssectors', async (req, res) => {
     const articles = await BusinessSector.findAll({
       include: {
@@ -133,6 +145,42 @@ async function init() {
         },
         {
           model: Image,
+        },
+        {
+          model: Service,
+          include: { model: Image },
+        },
+      ],
+    })
+    return res.json(article)
+  })
+
+  // Services & ServicesContents
+  app.get('/services', async (req, res) => {
+    const articles = await Service.findAll({
+      include: {
+        model: Image,
+      },
+    })
+    return res.json(articles)
+  })
+  app.get('/services/:id', async (req, res) => {
+    const { id } = req.params
+    const article = await Service.findOne({
+      where: { id },
+      include: [
+        {
+          model: ServicesContent,
+          separate: true,
+          order: [['order', 'asc']],
+          include: { model: Image },
+        },
+        {
+          model: Image,
+        },
+        {
+          model: BusinessSector,
+          include: { model: Image },
         },
       ],
     })
