@@ -5,14 +5,25 @@
     </div>
     <div class="containerForm">
       <form class="callback-form">
+        <div id="alrt">
+          <span class="error">{{ alrtError }}</span
+          >{{ alrtThanks }}
+        </div>
         <div class="form-control">
           <label for="name">Name</label>
-          <input id="name" name="name" placeholder="Your Name" type="text" />
+          <input
+            id="name"
+            v-model="user"
+            name="name"
+            placeholder="Your Name"
+            type="text"
+          />
         </div>
         <div class="form-control">
           <label for="email">Email</label>
           <input
             id="email"
+            v-model="email"
             name="email"
             placeholder="Your Email"
             type="email"
@@ -20,19 +31,31 @@
         </div>
         <div class="form-control">
           <label for="phone">Phone</label>
-          <input id="phone" name="phone" placeholder="Your Phone" type="text" />
+          <input
+            id="phone"
+            v-model="phone"
+            name="phone"
+            placeholder="Your Phone"
+            type="text"
+          />
         </div>
         <div class="form-control">
           <label for="message">Tell Us More</label>
           <textarea
             id="message"
+            v-model="msg"
             name="message"
             cols="15"
             rows="10"
             placeholder="Tell Us More"
           ></textarea>
         </div>
-        <input type="submit" class="btn" value="Send" @click.prevent="" />
+        <input
+          type="submit"
+          class="btn"
+          value="Send"
+          @click.prevent="resetForm"
+        />
       </form>
     </div>
   </div>
@@ -41,6 +64,36 @@
 <script>
 export default {
   name: 'FormSection',
+  data() {
+    return {
+      user: '',
+      email: '',
+      phone: '',
+      msg: '',
+      alrtThanks: '',
+      alrtError: '',
+    }
+  },
+  methods: {
+    resetForm() {
+      if (
+        this.user === '' ||
+        this.email === '' ||
+        this.phone === '' ||
+        this.msg === ''
+      ) {
+        this.alrtError = 'Please enter all fields'
+        setTimeout(() => (this.alrtError = ''), 3000)
+      } else {
+        this.alrtThanks = 'Thanks for submitting'
+        setTimeout(() => (this.alrtThanks = ''), 3000)
+        this.user = ''
+        this.email = ''
+        this.phone = ''
+        this.msg = ''
+      }
+    },
+  },
 }
 </script>
 
@@ -144,6 +197,10 @@ export default {
   border: #ec7404 1px solid;
   border-bottom: #ec7404 3px solid;
   background: rgb(255, 166, 0);
+}
+
+.error {
+  color: red;
 }
 
 @media (max-width: 750px) {
