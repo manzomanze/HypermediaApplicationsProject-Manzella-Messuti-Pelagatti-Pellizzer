@@ -10,12 +10,18 @@
       :text="'They work hard'"
       :image="null"
     />
-    <SlideShowEmployee :content="employeesAI" :title="'AI'" />
-    <SlideShowEmployee :content="employeesCyber" :title="'Cyber Security'" />
-    <SlideShowEmployee :content="employeesCloud" :title="'Cloud Services'" />
+    <SlideShowEmployee :content="employeesAI" :title="'AI Team'" />
+    <SlideShowEmployee
+      :content="employeesCyber"
+      :title="'Cyber Security Team'"
+    />
+    <SlideShowEmployee
+      :content="employeesCloud"
+      :title="'Cloud Services Team'"
+    />
     <SlideShowEmployee
       :content="employeesDigital"
-      :title="'Digital Services'"
+      :title="'Digital Services Team'"
     />
     <Contacts />
     <SocialBlock />

@@ -7,6 +7,11 @@
     </div>
     <nav>
       <ul class="nav-links">
+        <li @click="hideNav">
+          <div class="subsection">
+            <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
+          </div>
+        </li>
         <li>
           <div class="subsection">
             <p>Services</p>
@@ -31,11 +36,11 @@
         </li>
         <li>
           <div class="subsection">
-            <p>Businesses</p>
+            <p>Industries</p>
           </div>
           <ul class="submenu">
             <li @click="hideNav">
-              <a href="#">All Businesses</a>
+              <a href="#">All Industries</a>
             </li>
             <li @click="hideNav">
               <NuxtLink to="/businesssectors/4">Aerospace & Defense</NuxtLink>
@@ -54,11 +59,6 @@
         <li @click="hideNav">
           <div class="subsection">
             <NuxtLink to="/team">Our Team</NuxtLink>
-          </div>
-        </li>
-        <li @click="hideNav">
-          <div class="subsection">
-            <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
           </div>
         </li>
         <li @click="hideNav">
@@ -204,6 +204,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  min-width: 120px;
   max-width: 150px;
 }
 

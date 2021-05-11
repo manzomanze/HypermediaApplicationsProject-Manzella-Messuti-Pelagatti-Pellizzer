@@ -2,7 +2,7 @@
   <div class="showcase">
     <div class="container" :style="imagePath()">
       <h2>{{ title }}</h2>
-      <h3 class="text-grey">{{ text }}</h3>
+      <h3 v-if="text" class="text-grey">{{ text }}</h3>
     </div>
   </div>
 </template>

@@ -10,7 +10,7 @@
     </div>
     <div v-if="image" class="img-paragraph">
       <div class="img-container">
-        <img :src="image.path" alt="Image" />
+        <img :src="image.path" :alt="image.alt_description" />
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@ export default {
 }
 
 .paragraph p {
-  text-align: justify;
+  text-align: left;
   padding: 0px 10px;
   color: #333;
   font-size: 1.2rem;
