@@ -29,7 +29,11 @@
       :text="paragraphs.expert_advice"
       :image="null"
     />
-    <SlideShowSingle :content="paragraphs.area" :title="'Areas'" />
+    <SlideShowSingle
+      :content="paragraphs.area"
+      :title="'Field of Expertise'"
+      :section="'Areas'"
+    />
     <SlideShow :content="paragraphs.services" :title="'Services'" />
     <SlideShow :content="paragraphs.casestudies" :title="'Case Studies'" />
   </div>

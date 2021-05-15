@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="normalTitle">
-      <h2>CONTATTACI!</h2>
+      <h2>We would welcome the opportunity to discuss the scope, write us!</h2>
     </div>
     <div class="containerForm">
       <form class="callback-form">
@@ -120,13 +120,13 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  height: 500px;
+  height: 600px;
   max-width: 1000px;
   margin: auto;
 }
 
 .callback-form {
-  width: 65%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +153,7 @@ export default {
   font-weight: 600;
   border-radius: 5px;
   transition: 250ms;
-  padding: 5px;
+  padding: 15px 5px;
   font-family: 'Open Sans', sans-serif;
   width: 100%;
   border: none;

@@ -4,17 +4,17 @@
       <div class="box">
         <i class="fas fa-hotel fa-3x"></i>
         <h3>Location</h3>
-        <p>50 Main st, Boston MA</p>
+        <p>Piazza Gae Aulenti, 20154 Milano MI</p>
       </div>
       <div class="box">
         <i class="fas fa-phone fa-3x"></i>
         <h3>Phone Number</h3>
-        <p>(617) 555-5555</p>
+        <p>+39 02 000 101</p>
       </div>
       <div class="box">
         <i class="fas fa-envelope fa-3x"></i>
         <h3>Email Address</h3>
-        <p>bellaraga@gmail.com</p>
+        <p>info@response.com</p>
       </div>
     </div>
   </div>

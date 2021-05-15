@@ -71,18 +71,39 @@ async function init() {
 
   // CaseStudies & CaseStudiesContents
   app.get('/casestudies', async (req, res) => {
-    const articles = await CaseStudies.findAll()
+    const articles = await CaseStudies.findAll({
+      include: {
+        model: Image,
+      },
+    })
     return res.json(articles)
   })
   app.get('/casestudies/:id', async (req, res) => {
     const { id } = req.params
     const article = await CaseStudies.findOne({
       where: { id },
-      include: {
-        model: CaseStudiesContent,
-        separate: true,
-        order: [['order', 'asc']],
-      }, // -> this is the way we "include" also comments inside Articles
+      include: [
+        {
+          model: Image,
+          as: 'image',
+        },
+        {
+          model: CaseStudiesContent,
+          separate: true,
+          order: [['order', 'asc']],
+          include: {
+            model: Image,
+            as: 'image',
+          },
+        },
+        {
+          model: Employee,
+          include: {
+            model: Image,
+            as: 'image',
+          },
+        },
+      ], // -> this is the way we "include" also comments inside Articles
     })
     return res.json(article)
   })
