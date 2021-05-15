@@ -10,16 +10,16 @@
         :key="element.id"
         class="slide slideShowBox"
         :style="imagePath(element.image)"
-        :to="`/${finalLink(title)}/${element.id}`"
+        :to="`/${finalLink()}/${element.id}`"
       >
         <h3 class="title">{{ element.name }}</h3>
       </NuxtLink>
     </div>
     <div class="next" @click="prev">
-      <p>&gt;</p>
+      <i class="fas fa-chevron-right"></i>
     </div>
     <div class="prev" @click="next">
-      <p>&lt;</p>
+      <i class="fas fa-chevron-left"></i>
     </div>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
   name: 'SlideShow',
   props: {
     title: { type: String, default: () => 'Title Here' },
+    section: { type: String, default: () => '' },
     content: {
       type: Array,
       default: null,
@@ -207,8 +208,12 @@ export default {
         this.buildSlideShow()
       }
     },
-    finalLink(str) {
-      return str.replace(/\s/g, '').toLowerCase()
+    finalLink() {
+      if (this.section === '') {
+        return this.title.replace(/\s/g, '').toLowerCase()
+      } else {
+        return this.section.replace(/\s/g, '').toLowerCase()
+      }
     },
   },
 }

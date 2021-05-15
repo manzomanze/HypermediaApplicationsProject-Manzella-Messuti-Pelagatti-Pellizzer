@@ -27,7 +27,19 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'language', content: 'EN' },
+      {
+        name: 'keywords',
+        content:
+          'response, consulting, technology, cyber, cybersecurity, cloud, digital, artificial intelligence',
+      },
+      {
+        name: 'description',
+        content:
+          'This is the website of one of the most relevant consulting company in the world, Response',
+      },
+      { name: 'copyright', content: 'Response' },
+      { name: 'author', content: 'Manzella, Messuti, Pelagatti, Pellizzer' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

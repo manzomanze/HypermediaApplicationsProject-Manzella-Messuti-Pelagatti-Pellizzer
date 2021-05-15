@@ -1,10 +1,10 @@
 <template>
   <div class="social-bar fa-2x">
-    <p class="fakeLink"><i class="fab fa-facebook"></i></p>
-    <p class="fakeLink"><i class="fab fa-twitter"></i></p>
-    <p class="fakeLink"><i class="fab fa-google"></i></p>
-    <p class="fakeLink"><i class="fab fa-linkedin"></i></p>
-    <p class="fakeLink"><i class="fab fa-youtube"></i></p>
+    <div class="fakeLink"><i class="fab fa-facebook"></i></div>
+    <div class="fakeLink"><i class="fab fa-twitter"></i></div>
+    <div class="fakeLink"><i class="fab fa-google"></i></div>
+    <div class="fakeLink"><i class="fab fa-linkedin"></i></div>
+    <div class="fakeLink"><i class="fab fa-youtube"></i></div>
   </div>
 </template>
 
