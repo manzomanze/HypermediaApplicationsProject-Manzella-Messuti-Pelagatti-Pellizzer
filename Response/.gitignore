@@ -88,3 +88,7 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Ignore Fonts and External res.
+static/Fonts
+static/fontawesome-free-5.15.3-web

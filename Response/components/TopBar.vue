@@ -191,7 +191,7 @@ export default {
 }
 
 .navbar .logo h1 .text-primary {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster';
 }
 
 /* Nav Link */

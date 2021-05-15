@@ -22,6 +22,11 @@ export default {
 </script>
 
 <style>
+/* Import Fonts */
+@font-face {
+  font-family: Lobster;
+  src: url(/fonts/Lobster-Regular.ttf);
+}
 /* Variables */
 :root {
   --main_color: #00a2ff;
