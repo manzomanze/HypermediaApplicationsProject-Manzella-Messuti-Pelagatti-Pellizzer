@@ -9,7 +9,7 @@
         :key="content.id"
         class="slide slideShowBox"
         :style="imagePath(content.image)"
-        :to="`/${finalLink(title)}/${content.id}`"
+        :to="`/${finalLink()}/${content.id}`"
       >
         <h3 class="title">{{ content.name }}</h3>
       </NuxtLink>
@@ -28,6 +28,7 @@ export default {
   name: 'SlideShow',
   props: {
     title: { type: String, default: () => 'Title Here' },
+    section: { type: String, default: () => '' },
     content: {
       type: Object,
       default: null,
@@ -206,8 +207,12 @@ export default {
         this.buildSlideShow()
       }
     },
-    finalLink(str) {
-      return str.replace(/\s/g, '').toLowerCase()
+    finalLink() {
+      if (this.section === '') {
+        return this.title.replace(/\s/g, '').toLowerCase()
+      } else {
+        return this.section.replace(/\s/g, '').toLowerCase()
+      }
     },
   },
 }

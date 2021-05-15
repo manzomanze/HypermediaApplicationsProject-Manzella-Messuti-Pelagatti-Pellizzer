@@ -82,6 +82,6 @@ export default {
 }
 
 .img-paragraph .img-container {
-  width: 70%;
+  width: 90%;
 }
 </style>
