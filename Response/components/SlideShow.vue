@@ -34,6 +34,7 @@ export default {
       type: Array,
       default: null,
     },
+    defaultImagePath: { type: String, default: () => '/img/all_services.jpg' },
   },
   data() {
     return {
@@ -52,7 +53,7 @@ export default {
   methods: {
     imagePath(image) {
       if (image == null) {
-        return `background: url('/img/AI_01.jpg') center center/cover`
+        return `background: url('${this.defaultImagePath}') center center/cover`
       } else {
         return `background: url('${image.path}') center center/cover`
       }
@@ -278,9 +279,9 @@ export default {
 
 .prev:hover,
 .next:hover {
-  color: #ec7404;
-  border: #ec7404 1px solid;
-  border-bottom: #ec7404 3px solid;
+  color: var(--main_color);
+  border: var(--main_color) 1px solid;
+  border-bottom: var(--main_color) 3px solid;
   background-color: rgba(122, 122, 122, 0.096);
 }
 
@@ -351,10 +352,10 @@ export default {
 
 .slideShowBox:hover {
   opacity: 1;
-  color: #ec7404;
+  color: var(--main_color);
   background-color: rgba(255, 255, 255, 0.11);
-  border: #ec7404 1px solid;
-  border-bottom: #ec7404 4px solid;
+  border: var(--main_color) 1px solid;
+  border-bottom: var(--main_color) 4px solid;
 }
 
 .slideShowBox h3 {

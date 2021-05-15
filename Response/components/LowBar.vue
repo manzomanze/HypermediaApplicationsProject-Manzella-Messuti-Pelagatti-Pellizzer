@@ -113,7 +113,7 @@ export default {
 #arrow {
   font-weight: 600;
   font-size: 1rem;
-  color: #ec7404;
+  color: var(--main_color);
   letter-spacing: 1px;
 }
 

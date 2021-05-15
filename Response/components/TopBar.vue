@@ -9,7 +9,7 @@
       <ul class="nav-links">
         <li @click="hideNav">
           <div class="subsection">
-            <NuxtLink to="/00_test/umbe">About Us</NuxtLink>
+            <NuxtLink to="/about_us">About Us</NuxtLink>
           </div>
         </li>
         <li>
@@ -18,7 +18,7 @@
           </div>
           <ul class="submenu">
             <li @click="hideNav">
-              <a href="#">All Services</a>
+              <NuxtLink to="/services">All Services</NuxtLink>
             </li>
             <li @click="hideNav">
               <NuxtLink to="/areas/4">AI</NuxtLink>
@@ -40,7 +40,7 @@
           </div>
           <ul class="submenu">
             <li @click="hideNav">
-              <a href="#">All Industries</a>
+              <NuxtLink to="/businesssectors">All Industries</NuxtLink>
             </li>
             <li @click="hideNav">
               <NuxtLink to="/businesssectors/4">Aerospace & Defense</NuxtLink>
@@ -63,7 +63,7 @@
         </li>
         <li @click="hideNav">
           <div class="subsection">
-            <NuxtLink to="/00_test/umbe">Contact Us</NuxtLink>
+            <NuxtLink to="/contact_us">Contact Us</NuxtLink>
           </div>
         </li>
       </ul>
@@ -211,7 +211,7 @@ export default {
 .nav-links > li a,
 .nav-links > li p {
   display: block;
-  color: #ec7404;
+  color: var(--main_color);
   padding: 1px 10px;
   margin: 0 5px;
 }
@@ -256,7 +256,7 @@ export default {
 .nav-links li:hover .submenu li {
   width: 100%;
   height: 5vh;
-  border-bottom: 1px #ec7404 solid;
+  border-bottom: 1px var(--main_color) solid;
 }
 
 .nav-links li:hover p {
@@ -264,7 +264,7 @@ export default {
 }
 
 .nav-links li .submenu a {
-  color: #ec7404;
+  color: var(--main_color);
 }
 
 .nav-links li .submenu a:hover {
@@ -287,7 +287,7 @@ export default {
 .burger > div {
   width: 25px;
   height: 3px;
-  background-color: #ec7404;
+  background-color: var(--main_color);
   margin: 5px;
 }
 
@@ -370,7 +370,7 @@ export default {
     height: auto;
     font-size: 2rem;
     width: 100%;
-    border-bottom: 1px #ec7404 solid;
+    border-bottom: 1px var(--main_color) solid;
   }
 
   .nav-links > li:hover > p {
@@ -378,7 +378,7 @@ export default {
   }
 
   .nav-links > li > .submenu > a {
-    color: #ec7404;
+    color: var(--main_color);
   }
 
   .nav-links li .submenu a:hover {

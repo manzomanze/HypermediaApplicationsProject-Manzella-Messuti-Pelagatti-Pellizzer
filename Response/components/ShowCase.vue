@@ -14,11 +14,12 @@ export default {
     title: { type: String, default: () => 'okay' },
     text: { type: String, default: () => 'ciaociao' },
     image: { type: Object, default: () => null },
+    defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
   },
   methods: {
     imagePath() {
       if (this.image == null) {
-        return `background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 97%, rgba(255,255,255,1) 100%), url('/img/AI_01.jpg') center center/cover no-repeat;`
+        return `background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 97%, rgba(255,255,255,1) 100%), url('${this.defaultImagePath}') center center/cover no-repeat;`
       } else {
         return `background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 97%, rgba(255,255,255,1) 100%), url('${this.image.path}') center center/cover no-repeat;`
       }
@@ -50,7 +51,7 @@ export default {
 
 .showcase .container h2 {
   font-size: 3rem;
-  text-shadow: 2px 2px #ec7404;
+  text-shadow: 2px 2px var(--main_color);
   color: #fff;
   padding-bottom: 15px;
 }

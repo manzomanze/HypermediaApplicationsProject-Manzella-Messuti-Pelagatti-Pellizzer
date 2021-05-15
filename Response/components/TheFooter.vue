@@ -17,7 +17,7 @@ footer {
   height: 35px;
   background-color: #333;
   color: #fff;
-  /* color: #ec7404; */
+  /* color: var(--main_color); */
   z-index: 10;
 }
 </style>

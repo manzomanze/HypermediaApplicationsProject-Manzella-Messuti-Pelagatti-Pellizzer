@@ -2,13 +2,8 @@
   <div>
     <ShowCase
       :title="'Our Team'"
-      :text="''"
+      :text="'Meet our employees'"
       :image="{ path: '/images/employee/allteam.png' }"
-    />
-    <Paragraph
-      :title="'Meet our employees'"
-      :text="'They work hard'"
-      :image="null"
     />
     <SlideShowEmployee :content="employeesAI" :title="'AI Team'" />
     <SlideShowEmployee
@@ -23,25 +18,18 @@
       :content="employeesDigital"
       :title="'Digital Services Team'"
     />
-    <Contacts />
-    <SocialBlock />
+    <br />
   </div>
 </template>
 
 <script>
 import SlideShowEmployee from '~/components/SlideShowEmployee'
 import ShowCase from '~/components/ShowCase'
-import SocialBlock from '~/components/SocialBlock'
-import Contacts from '~/components/Contacts'
-import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
     SlideShowEmployee,
     ShowCase,
-    Paragraph,
-    SocialBlock,
-    Contacts,
   },
   async asyncData({ $axios, route }) {
     const areas4 = await $axios.get(`${process.env.BASE_URL}/api/areas/4`)

@@ -74,7 +74,7 @@ export default {
   display: flex;
   position: relative;
   margin: auto;
-  text-shadow: 1px 1px #ec7404;
+  text-shadow: 1px 1px var(--main_color);
   color: #fff;
   margin-top: 9vh;
   max-width: 1000px;

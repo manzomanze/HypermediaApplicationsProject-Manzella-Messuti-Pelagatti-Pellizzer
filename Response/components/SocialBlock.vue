@@ -43,7 +43,7 @@ export default {
 
 .socialBlock .container .slide:hover {
   transform: scale(1.4) translateY(-5%);
-  color: #ec7404;
+  color: var(--main_color);
 }
 
 .socialBlock .container .slide {

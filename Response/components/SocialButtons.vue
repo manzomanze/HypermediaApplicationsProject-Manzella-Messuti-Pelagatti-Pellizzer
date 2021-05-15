@@ -41,7 +41,7 @@ export default {
 }
 
 .social-bar a:hover {
-  color: #ec7404;
+  color: var(--main_color);
   transform: scale(1.1) translateX(10%);
 }
 
@@ -51,7 +51,7 @@ export default {
 }
 
 .social-bar .fakeLink:hover {
-  color: #ec7404;
+  color: var(--main_color);
   transform: scale(1.1) translateX(10%);
 }
 

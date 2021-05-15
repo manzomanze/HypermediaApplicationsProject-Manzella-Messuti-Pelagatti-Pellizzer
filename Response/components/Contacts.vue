@@ -42,7 +42,7 @@ export default {
 
 .contact-info .container .box:hover {
   transform: scale(1.1) translateY(-1%);
-  color: #ec7404;
+  color: var(--main_color);
 }
 
 .contact-info .container .box {

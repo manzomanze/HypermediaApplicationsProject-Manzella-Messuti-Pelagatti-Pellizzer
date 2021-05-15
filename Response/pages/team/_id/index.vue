@@ -35,7 +35,11 @@
       :section="'Areas'"
     />
     <SlideShow :content="paragraphs.services" :title="'Services'" />
-    <SlideShow :content="paragraphs.casestudies" :title="'Case Studies'" />
+    <SlideShow
+      :content="paragraphs.casestudies"
+      :title="'Case Studies'"
+      default-image-path="/img/all_casestudies.jpg"
+    />
   </div>
 </template>
 

@@ -146,7 +146,7 @@ export default {
 .form-control input:focus,
 .form-control textarea:focus {
   outline: none;
-  border-bottom: #ec7404 2px solid;
+  border-bottom: var(--main_color) 2px solid;
 }
 
 .form-control input {
@@ -194,9 +194,9 @@ export default {
   width: 150px;
   height: 30px;
   font-weight: 800;
-  border: #ec7404 1px solid;
-  border-bottom: #ec7404 3px solid;
-  background: rgb(255, 166, 0);
+  border: var(--main_color) 1px solid;
+  border-bottom: var(--main_color) 3px solid;
+  background: var(--light_color);
 }
 
 .error {

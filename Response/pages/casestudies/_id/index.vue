@@ -4,6 +4,7 @@
       :title="paragraphs.name"
       :text="paragraphs.overview"
       :image="paragraphs.image"
+      default-image-path="/img/all_casestudies.jpg"
     />
     <Paragraph
       v-for="paragraph in paragraphs.casestudiescontents"

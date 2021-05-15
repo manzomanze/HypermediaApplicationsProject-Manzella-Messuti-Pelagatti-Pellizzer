@@ -22,6 +22,12 @@ export default {
 </script>
 
 <style>
+/* Variables */
+:root {
+  --main_color: #00a2ff;
+  --light_color: #82e6ff;
+}
+
 /* Reset */
 * {
   box-sizing: border-box;
@@ -63,7 +69,7 @@ body::-webkit-scrollbar {
 .text-primary {
   font-weight: 700;
   font-size: 2.2rem;
-  color: #ec7404;
+  color: var(--main_color);
   letter-spacing: 2px;
 }
 
@@ -80,6 +86,6 @@ body::-webkit-scrollbar {
 }
 
 .text-theme-color {
-  color: #ec7404;
+  color: var(--main_color);
 }
 </style>

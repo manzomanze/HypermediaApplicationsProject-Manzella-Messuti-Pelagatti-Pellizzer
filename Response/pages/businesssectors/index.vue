@@ -1,42 +1,26 @@
 <template>
   <div>
-    <ShowCase />
-    <Paragraph
-      v-for="paragraph in paragraphs"
-      :key="paragraph.id"
-      :title="paragraph.title"
-      :text="paragraph.text"
-      :image="paragraph.image"
+    <ShowCase
+      title="All Industries"
+      text="With over 270,000 partnerships with a broad spectrum of technology vendors, Response has both the resources and expertise to react quickly to client needs—a key asset in a digital era when deployment needs to be measured in weeks rather than months."
+      :image="{ path: '/img/all_industries.png' }"
     />
-    <ListElements :content="slideContents" :title="'Areas'" />
-    <SlideShow :content="businesssectorsContents" :title="'Business Sectors'" />
-    <SlideShowEmployee :content="employeesContents" :title="'Team'" />
-    <FormSection />
-    <Contacts />
-    <SocialBlock />
+    <ListElements
+      :content="businesssectorsContents"
+      section="businesssectors"
+      default-image-path="/img/all_industries.png"
+    />
   </div>
 </template>
 
 <script>
-import FormSection from '~/components/FormSection'
-import SlideShow from '~/components/SlideShow'
 import ListElements from '~/components/ListElements'
-import SlideShowEmployee from '~/components/SlideShowEmployee'
 import ShowCase from '~/components/ShowCase'
-import SocialBlock from '~/components/SocialBlock'
-import Contacts from '~/components/Contacts'
-import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
-    FormSection,
-    SlideShow,
     ListElements,
-    SlideShowEmployee,
     ShowCase,
-    Paragraph,
-    SocialBlock,
-    Contacts,
   },
   async asyncData({ $axios, route }) {
     const areas = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
@@ -44,6 +28,9 @@ export default {
 
     const employees = await $axios.get(`${process.env.BASE_URL}/api/employees/`)
     const employeesContents = employees.data
+
+    const services = await $axios.get(`${process.env.BASE_URL}/api/services/`)
+    const servicessContents = services.data
 
     const businesssectors = await $axios.get(
       `${process.env.BASE_URL}/api/businesssectors/`
@@ -53,6 +40,7 @@ export default {
       slideContents,
       employeesContents,
       businesssectorsContents,
+      servicessContents,
     }
   },
   data() {
