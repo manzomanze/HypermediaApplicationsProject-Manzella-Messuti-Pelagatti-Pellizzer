@@ -22,10 +22,11 @@
           "callback": "start"
         },
         {
-          "my_id": "xo1",
+          "my_id": "xor1",
           "next_id": "end",
           "my_type": "XOR",
-          "choices": ["xor2", "guide"]
+          "choices": ["xor2", "guide"],
+          "callback": "guide"
         },
         {
           "my_id": "guide",
@@ -46,10 +47,11 @@
           "callback": "guide"
         },
         {
-          "my_id": "xo2",
+          "my_id": "xor2",
           "next_id": null,
           "my_type": "XOR",
-          "choices": ["contactform", "contactpage"]
+          "choices": ["contactform", "contactpage"],
+          "callback": "guide"
         },
         {
           "my_id": "contactform",
@@ -60,6 +62,12 @@
         {
           "my_id": "contactpage",
           "next_id": null,
+          "my_type": "TASK",
+          "callback": "guide"
+        },
+        {
+          "my_id": "end",
+          "next_id": "start",
           "my_type": "END"
         }
       ],
