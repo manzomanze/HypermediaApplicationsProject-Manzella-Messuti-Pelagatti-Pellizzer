@@ -1,8 +1,10 @@
 {
-  "name": "Hypermedia Example",
+  "name": "Chatbot",
   "data": {
     "kb": {
       "guide": "Do you want to start the guide?",
+      "xor1": "Guide vs Contacts? Who's gonna win?",
+      "xor2": "Contact form vs Contact page. What do you choose?",
       "home": "I will guide you through the site. Welcome to the homepage",
       "about": "Welcome to the About page of our website. Here you can find all the information about our company",
       "end": "The process is completed",

@@ -10,8 +10,9 @@ export default {
   env: {
     //BASE_URL: 'https://test-polimi.herokuapp.com/', // Production URL
     BASE_URL: '', // Development URL
-    configurationId: '6cfabbb7-1bee-484f-abfc-b742d15b92dc',
-  },
+/*     configurationId: '6cfabbb7-1bee-484f-abfc-b742d15b92dc', HYPERMEDIA EXAMPLE
+*/  configurationId: 'b6e3956a-8d35-4f64-b39d-910ed18bb470',
+},
   serverMiddleware: [
     {
       path: '/api',
