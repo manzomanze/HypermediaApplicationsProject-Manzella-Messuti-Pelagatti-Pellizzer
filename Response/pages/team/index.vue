@@ -3,7 +3,7 @@
     <ShowCase
       :title="'Our Team'"
       :text="'Meet our employees'"
-      :image="{ path: '/images/employee/allteam.png' }"
+      :image="{ path: '/images/employee/AllTeam.png' }"
     />
     <SlideShowEmployee :content="employeesAI" :title="'AI Team'" />
     <SlideShowEmployee

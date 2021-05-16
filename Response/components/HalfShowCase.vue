@@ -26,7 +26,7 @@
         <h4>{{ location }}</h4>
       </div>
       <NuxtLink :to="`/areas/${areaid}`">
-        <img :src="`/images/areas/icon/${areaid}.png`" alt="Area Icon" />
+        <img :src="`/images/areas/Icon/${areaid}.png`" alt="Area Icon" />
       </NuxtLink>
     </div>
   </div>
