@@ -1,0 +1,69 @@
+{
+  "name": "Hypermedia Example",
+  "data": {
+    "kb": {
+      "guide": "Do you want to start the guide?",
+      "home": "I will guide you through the site. Welcome to the homepage",
+      "about": "Welcome to the About page of our website. Here you can find all the information about our company",
+      "end": "The process is completed",
+      "steps_v": ["/", "/about"],
+      "continue_v": ["continue", "ok", "go"],
+      "guide_v": ["guide"],
+      "main_exit_v": ["no", "reset"],
+      "main_err": "Option not available",
+      "stay_message": "I don't understand. Do you want to continue?"
+    },
+    "process": {
+      "activities": [
+        {
+          "my_id": "start",
+          "next_id": "xor1",
+          "my_type": "START",
+          "callback": "start"
+        },
+        {
+          "my_id": "xo1",
+          "next_id": "end",
+          "my_type": "XOR",
+          "choices": ["xor2", "guide"]
+        },
+        {
+          "my_id": "guide",
+          "next_id": "home",
+          "my_type": "TASK",
+          "callback": "guide"
+        },
+        {
+          "my_id": "home",
+          "next_id": "about",
+          "my_type": "TASK",
+          "callback": "guide"
+        },
+        {
+          "my_id": "about",
+          "next_id": null,
+          "my_type": "TASK",
+          "callback": "guide"
+        },
+        {
+          "my_id": "xo2",
+          "next_id": null,
+          "my_type": "XOR",
+          "choices": ["contactform", "contactpage"]
+        },
+        {
+          "my_id": "contactform",
+          "next_id": null,
+          "my_type": "TASK",
+          "callback": "guide"
+        },
+        {
+          "my_id": "contactpage",
+          "next_id": null,
+          "my_type": "END"
+        }
+      ],
+      "first_activity_id": "start"
+    }
+  }
+}
