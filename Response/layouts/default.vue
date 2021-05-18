@@ -32,6 +32,40 @@ export default {
   font-family: Lobster;
   src: url(/fonts/Lobster-Regular.ttf);
 }
+
+/* light */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/OpenSans-Light.ttf) format('ttf');
+}
+/* Regular */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/OpenSans-Regular.ttf) format('ttf');
+}
+/* Bold */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/OpenSans-Bold.ttf) format('ttf');
+}
+/* Extra Bold */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/OpenSans-ExtraBold.ttf) format('ttf');
+}
+
 /* Variables */
 :root {
   --main_color: #00a2ff;
