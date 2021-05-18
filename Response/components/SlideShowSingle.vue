@@ -44,9 +44,9 @@ export default {
     // First Build the slideshow
     this.buildSlideShow()
     // Setup the listener
-    this.x = window.matchMedia('(max-width: 700px)')
-    this.x.addListener(this.screenChange)
-    this.screenChange(this.x)
+    // this.x = window.matchMedia('(max-width: 700px)')
+    // this.x.addListener(this.screenChange)
+    // this.screenChange(this.x)
   },
   methods: {
     imagePath(image) {

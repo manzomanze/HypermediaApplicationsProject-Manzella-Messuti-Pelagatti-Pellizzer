@@ -16,10 +16,10 @@
       </NuxtLink>
     </div>
     <div class="next" @click="prev">
-      <p>&gt;</p>
+      <i class="fas fa-chevron-right"></i>
     </div>
     <div class="prev" @click="next">
-      <p>&lt;</p>
+      <i class="fas fa-chevron-left"></i>
     </div>
   </div>
 </template>
@@ -29,15 +29,18 @@ export default {
   name: 'SlideShow',
   props: {
     title: { type: String, default: () => 'Title Here' },
+    section: { type: String, default: () => '' },
     content: {
       type: Array,
       default: null,
     },
+    defaultImagePath: { type: String, default: () => '/img/all_services.jpg' },
   },
   data() {
     return {
       clickable: true,
       maxWidth: Object,
+      x: Object,
     }
   },
   mounted() {
@@ -45,13 +48,18 @@ export default {
     this.buildSlideShow()
     // Setup the listener
     this.x = window.matchMedia('(max-width: 700px)')
-    this.x.addListener(this.screenChange)
+
+    this.x.addEventListener('change', this.screenChange)
+    // this.x.addListener(this.screenChange)
     this.screenChange(this.x)
+  },
+  beforeDestroy() {
+    this.x.removeEventListener('change', this.screenChange)
   },
   methods: {
     imagePath(image) {
       if (image == null) {
-        return `background: url('/img/AI_01.jpg') center center/cover`
+        return `background: url('${this.defaultImagePath}') center center/cover`
       } else {
         return `background: url('${image.path}') center center/cover`
       }
@@ -205,6 +213,13 @@ export default {
           slides[i].style.marginBottom = '0px'
         }
         this.buildSlideShow()
+      }
+    },
+    finalLink() {
+      if (this.section === '') {
+        return this.title.replace(/\s/g, '').toLowerCase()
+      } else {
+        return this.section.replace(/\s/g, '').toLowerCase()
       }
     },
   },

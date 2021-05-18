@@ -40,6 +40,7 @@ export default {
     return {
       clickable: true,
       maxWidth: Object,
+      x: Object,
     }
   },
   mounted() {
@@ -47,8 +48,13 @@ export default {
     this.buildSlideShow()
     // Setup the listener
     this.x = window.matchMedia('(max-width: 700px)')
-    this.x.addListener(this.screenChange)
+
+    this.x.addEventListener('change', this.screenChange)
+    // this.x.addListener(this.screenChange)
     this.screenChange(this.x)
+  },
+  beforeDestroy() {
+    this.x.removeEventListener('change', this.screenChange)
   },
   methods: {
     imagePath(image) {

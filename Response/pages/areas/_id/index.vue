@@ -13,6 +13,7 @@
       :image="paragraph.image"
     />
     <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
+    <!-- <SlideShow :content="paragraphs.employees" :title="'Team'" /> -->
     <SlideShow :content="paragraphs.services" :title="'Services'" />
     <!-- v-for per slideshow -->
   </div>
