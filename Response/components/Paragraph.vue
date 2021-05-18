@@ -60,6 +60,7 @@ export default {
   color: #333;
   font-size: 1.2rem;
   margin: 20px;
+  white-space: pre-line;
 }
 
 /* Image Paragraph */
