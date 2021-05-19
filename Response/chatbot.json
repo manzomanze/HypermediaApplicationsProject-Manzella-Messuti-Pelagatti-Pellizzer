@@ -2,14 +2,44 @@
   "name": "Chatbot",
   "data": {
     "kb": {
-      "guide": "Do you want to start the guide?",
-      "xor1": "Guide vs Contacts? Who's gonna win?",
-      "xor2": "Contact form vs Contact page. What do you choose?",
-      "home": "I will guide you through the site. Welcome to the homepage",
-      "about": "Welcome to the About page of our website. Here you can find all the information about our company",
-      "end": "The process is completed",
-      "steps_v": ["/", "/about"],
-      "continue_v": ["continue", "ok", "go"],
+      "guide": "guide: Do you want to start the guide?",
+      "xor1": {
+        "initials": ["xor1: Guide vs Contacts? Who's gonna win?"],
+        "choices": [
+          {
+            "id": "xor2",
+            "intents": ["contacts"],
+            "utterance": ["nice choice", "gg"]
+          },
+          {
+            "id": "guide",
+            "intents": ["guide"],
+            "utterance": ["nice choice too", "ez"]
+          }
+        ]
+      },
+      "xor2": {
+        "initials": ["xor2: Contact form vs Contact page. What do you choose?"],
+        "choices": [
+          {
+            "id": "contact_form",
+            "intents": ["form"],
+            "utterance": ["Do you want me to take you there?"]
+          },
+          {
+            "id": "contact_page",
+            "intents": ["contacts"],
+            "utterance": ["nice choice 4", "ez"]
+          }
+        ]
+      },
+      "home": "home: I will guide you through the site. Welcome to the homepage",
+      "about": "about: Welcome to the About page of our website. Here you can find all the information about our company",
+      "contact_form": "contact form",
+      "contact_page": "contact page",
+      "end": "end: The process is completed",
+      "steps_v": ["/", "/contact_us", "/about_us", "contact_us"],
+      "continue_v": ["continue", "ok", "go", "yes"],
       "guide_v": ["guide"],
       "main_exit_v": ["no", "reset"],
       "main_err": "Option not available",
@@ -28,7 +58,7 @@
           "next_id": "end",
           "my_type": "XOR",
           "choices": ["xor2", "guide"],
-          "callback": "guide"
+          "callback": "generic_xor"
         },
         {
           "my_id": "guide",
@@ -52,17 +82,17 @@
           "my_id": "xor2",
           "next_id": null,
           "my_type": "XOR",
-          "choices": ["contactform", "contactpage"],
-          "callback": "guide"
+          "choices": ["contact_form", "contact_page"],
+          "callback": "generic_xor"
         },
         {
-          "my_id": "contactform",
+          "my_id": "contact_form",
           "next_id": null,
           "my_type": "TASK",
           "callback": "guide"
         },
         {
-          "my_id": "contactpage",
+          "my_id": "contact_page",
           "next_id": null,
           "my_type": "TASK",
           "callback": "guide"
