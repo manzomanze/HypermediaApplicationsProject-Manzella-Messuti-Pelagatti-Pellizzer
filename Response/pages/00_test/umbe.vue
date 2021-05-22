@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LowBar :something="['overview']" />
     <ShowCase />
     <Paragraph
       v-for="paragraph in paragraphs"
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import LowBar from '~/components/LowBar'
 import FormSection from '~/components/FormSection'
 import SlideShow from '~/components/SlideShow'
 import ListElements from '~/components/ListElements'
@@ -29,6 +31,7 @@ import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
+    LowBar,
     FormSection,
     SlideShow,
     ListElements,

@@ -302,7 +302,7 @@ export default {
     position: absolute;
     top: 6vh;
     left: 0px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height: 94vh;
     width: 100%;
     display: flex;
@@ -350,6 +350,7 @@ export default {
     visibility: visible;
     display: flex;
     margin: 20px;
+    margin-bottom: 0;
     opacity: 1;
     transform: translateX(0px);
   }
@@ -368,7 +369,7 @@ export default {
     transition: all 100ms;
     opacity: 1;
     height: auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 100%;
     border-bottom: 1px var(--main_color) solid;
   }

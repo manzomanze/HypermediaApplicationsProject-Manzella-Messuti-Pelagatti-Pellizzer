@@ -1,5 +1,8 @@
 <template>
   <div>
+    <LowBar
+      :something="['biography', 'fieldofexpertise', 'services', 'casestudies']"
+    />
     <HalfShowCase
       :name="paragraphs.name"
       :surname="paragraphs.surname"
@@ -8,6 +11,8 @@
       :image="paragraphs.main_image"
       :areaid="paragraphs.areaId"
     />
+
+    <div id="biography" class="anchor"></div>
     <Paragraph
       v-if="paragraphs.what_i_do"
       :key="'what_i_do'"
@@ -29,12 +34,18 @@
       :text="paragraphs.expert_advice"
       :image="null"
     />
+
+    <div id="fieldofexpertise" class="anchor"></div>
     <SlideShowSingle
       :content="paragraphs.area"
       :title="'Field of Expertise'"
       :section="'Areas'"
     />
+
+    <div id="services" class="anchor"></div>
     <SlideShow :content="paragraphs.services" :title="'Services'" />
+
+    <div id="casestudies" class="anchor"></div>
     <SlideShow
       :content="paragraphs.casestudies"
       :title="'Case Studies'"

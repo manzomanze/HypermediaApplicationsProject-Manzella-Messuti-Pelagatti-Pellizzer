@@ -1,10 +1,12 @@
 <template>
   <div>
+    <LowBar :something="['overview', 'services']" />
     <ShowCase
       :title="paragraphs.name"
       :text="paragraphs.description"
       :image="paragraphs.image"
     />
+    <div id="overview" class="anchor"></div>
     <Paragraph
       v-for="paragraph in paragraphs.businesssectorcontents"
       :key="paragraph.id"
@@ -12,6 +14,7 @@
       :text="paragraph.content"
       :image="paragraph.image"
     />
+    <div id="services" class="anchor"></div>
     <SlideShow :content="paragraphs.services" :title="'Services'" />
     <!-- v-for per slideshow -->
   </div>
