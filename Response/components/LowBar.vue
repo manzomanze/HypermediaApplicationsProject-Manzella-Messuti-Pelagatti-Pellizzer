@@ -171,7 +171,7 @@ export default {
     position: absolute;
     top: 3vh;
     left: 0px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     height: 91vh;
     width: 100%;
     display: flex;
@@ -180,6 +180,12 @@ export default {
     justify-content: flex-start;
     background-color: #ccc;
     transition: 500ms;
+  }
+
+  .lowBar a:hover {
+    letter-spacing: 0px;
+    padding: 0px 0px;
+    color: #fff;
   }
 
   #chapters li {

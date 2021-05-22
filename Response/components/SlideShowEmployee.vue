@@ -269,7 +269,7 @@ export default {
   width: 40px;
   height: 40px;
   font-weight: 700;
-  top: 55%;
+  top: 60%;
   border-radius: 5px;
   border: #fff 1px solid;
   border-bottom: #fff 3px solid;
