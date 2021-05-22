@@ -1,10 +1,12 @@
 <template>
   <div>
+    <LowBar :something="['overview']" />
     <ShowCase
       title="About Us"
       :text="null"
       default-image-path="/img/about_us.png"
     />
+    <div id="overview" class="anchor"></div>
     <Paragraph
       v-for="paragraph in paragraphs"
       :key="paragraph.id"
@@ -16,11 +18,13 @@
 </template>
 
 <script>
+import LowBar from '~/components/LowBar'
 import ShowCase from '~/components/ShowCase'
 import Paragraph from '~/components/Paragraph'
 
 export default {
   components: {
+    LowBar,
     ShowCase,
     Paragraph,
   },

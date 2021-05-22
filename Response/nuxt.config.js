@@ -5,14 +5,14 @@ export default {
   // Open server to lan
   server: {
     port: 3000, // default: 3000
-    host: 'localhost', // default: localhost
+    host: '192.168.22.100', // 'localhost', // default: localhost // '192.168.22.100'
   },
   env: {
     //BASE_URL: 'https://test-polimi.herokuapp.com/', // Production URL
     BASE_URL: '', // Development URL
-/*     configurationId: '6cfabbb7-1bee-484f-abfc-b742d15b92dc', HYPERMEDIA EXAMPLE
-*/  configurationId: 'b6e3956a-8d35-4f64-b39d-910ed18bb470',
-},
+    // configurationId: '6cfabbb7-1bee-484f-abfc-b742d15b92dc', HYPERMEDIA EXAMPLE
+    configurationId: 'b6e3956a-8d35-4f64-b39d-910ed18bb470',
+  },
   serverMiddleware: [
     {
       path: '/api',
@@ -43,15 +43,11 @@ export default {
       { name: 'copyright', content: 'Response' },
       { name: 'author', content: 'Manzella, Messuti, Pelagatti, Pellizzer' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/static/fontawesome-free-5.15.3-web/css/all.min.css'
-  ],
+  css: ['~/static/fontawesome-free-5.15.3-web/css/all.min.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/mmcc.js'],

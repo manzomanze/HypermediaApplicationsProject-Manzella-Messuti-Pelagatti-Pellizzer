@@ -1,17 +1,50 @@
 <template>
-  <div ref="doc" class="lowBar">
-    <ul id="chapters" ref="chapters" class="navbar-invisible">
-      <li>
-        <a href="#">Overview</a>
+  <div v-if="!(something.length === 0)" ref="doc" class="lowBar">
+    <ul id="chapters" ref="chapters" class="navbar-invisible" @click="hideNav">
+      <li v-if="something.includes('overview')">
+        <a href="#overview">Overview</a>
       </li>
-      <li>
-        <a href="#">Services</a>
+      <li v-if="something.includes('biography')">
+        <a href="#biography">Biography</a>
       </li>
-      <li>
-        <a href="#">Team</a>
+      <li v-if="something.includes('fieldofexpertise')">
+        <a href="#fieldofexpertise">Field of Expertise</a>
       </li>
-      <li>
-        <a href="#">Case Studies</a>
+      <li v-if="something.includes('services')">
+        <a href="#services">Services</a>
+      </li>
+      <li v-if="something.includes('allservices')">
+        <a href="#allservices">All Services</a>
+      </li>
+      <li v-if="something.includes('allindustries')">
+        <a href="#allindustries">All Industries</a>
+      </li>
+      <li v-if="something.includes('team')">
+        <a href="#team">Team</a>
+      </li>
+      <li v-if="something.includes('casestudies')">
+        <a href="#casestudies">Case Studies</a>
+      </li>
+      <li v-if="something.includes('aiteam')">
+        <a href="#aiteam">AI Team</a>
+      </li>
+      <li v-if="something.includes('cybersecurity')">
+        <a href="#cybersecurity">Cyber Security</a>
+      </li>
+      <li v-if="something.includes('cloudservices')">
+        <a href="#cloudservices">Cloud Services</a>
+      </li>
+      <li v-if="something.includes('digitalservices')">
+        <a href="#digitalservices">Digital Services</a>
+      </li>
+      <li v-if="something.includes('tellus')">
+        <a href="#tellus">Tell Us More</a>
+      </li>
+      <li v-if="something.includes('map')">
+        <a href="#map">Where We Are</a>
+      </li>
+      <li v-if="something.includes('ourcontacts')">
+        <a href="#ourcontacts">Our Contacts</a>
       </li>
     </ul>
     <div class="capBurger" @click="navSlide">
@@ -26,6 +59,9 @@
 <script>
 export default {
   name: 'LowBar',
+  props: {
+    something: { type: Array, default: () => [] },
+  },
   data() {
     return {
       arrow: Object,
@@ -58,6 +94,19 @@ export default {
             index / 7 + 0.5
           }s`
         }
+      })
+    },
+    hideNav() {
+      // Hide Navbar links
+      this.chapters.classList.add('navbar-invisible')
+      // Burger Animation
+      this.arrow.classList.remove('down-arrow')
+
+      // Link fade animation
+      this.capLinks.forEach((link, index) => {
+        setTimeout(() => {
+          link.style.animation = ''
+        }, 300)
       })
     },
   },

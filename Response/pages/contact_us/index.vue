@@ -1,5 +1,6 @@
 <template>
   <div>
+    <LowBar :something="['tellus', 'map', 'ourcontacts']" />
     <ShowCase
       title="Contact Us!"
       :image="{
@@ -8,13 +9,16 @@
       }"
       text="Thank you for your interest in Response. Whatever your inquiry, we will direct you to the right contact information."
     />
+    <div id="tellus" class="anchor"></div>
     <FormSection />
+    <div id="map" class="anchor"></div>
     <Paragraph
       :key="paragraphs[0].id"
       :title="paragraphs[0].title"
       :text="paragraphs[0].text"
       :image="paragraphs[0].image"
     />
+    <div id="ourcontacts" class="anchor"></div>
     <Contacts />
     <SocialBlock />
   </div>

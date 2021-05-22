@@ -1,20 +1,20 @@
 <template>
   <header>
     <TopBar />
-    <LowBar />
+    <!-- <LowBar /> -->
   </header>
 </template>
 
 <script>
 import TopBar from './TopBar'
-import LowBar from './LowBar'
+// import LowBar from './LowBar'
 
 export default {
   name: 'TheHeader',
 
   components: {
     TopBar,
-    LowBar,
+    // LowBar,
   },
 }
 </script>

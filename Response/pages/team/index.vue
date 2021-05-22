@@ -1,19 +1,34 @@
 <template>
   <div>
+    <LowBar
+      :something="[
+        'aiteam',
+        'cybersecurity',
+        'cloudservices',
+        'digitalservices',
+      ]"
+    />
     <ShowCase
       :title="'Our Team'"
       :text="'Meet our employees'"
       :image="{ path: '/images/employee/AllTeam.png' }"
     />
+    <div id="aiteam" class="anchor"></div>
     <SlideShowEmployee :content="employeesAI" :title="'AI Team'" />
+
+    <div id="cybersecurity" class="anchor"></div>
     <SlideShowEmployee
       :content="employeesCyber"
       :title="'Cyber Security Team'"
     />
+
+    <div id="cloudservices" class="anchor"></div>
     <SlideShowEmployee
       :content="employeesCloud"
       :title="'Cloud Services Team'"
     />
+
+    <div id="digitalservices" class="anchor"></div>
     <SlideShowEmployee
       :content="employeesDigital"
       :title="'Digital Services Team'"
@@ -23,11 +38,13 @@
 </template>
 
 <script>
+import LowBar from '~/components/LowBar'
 import SlideShowEmployee from '~/components/SlideShowEmployee'
 import ShowCase from '~/components/ShowCase'
 
 export default {
   components: {
+    LowBar,
     SlideShowEmployee,
     ShowCase,
   },

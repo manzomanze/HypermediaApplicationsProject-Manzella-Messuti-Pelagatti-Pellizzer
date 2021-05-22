@@ -132,4 +132,9 @@ body::-webkit-scrollbar {
 .text-theme-color {
   color: var(--main_color);
 }
+
+.anchor {
+  position: relative;
+  top: -9vh;
+}
 </style>

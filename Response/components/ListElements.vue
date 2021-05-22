@@ -4,7 +4,7 @@
       <NuxtLink
         v-for="element in content"
         :key="element.id"
-        class="slide slideShowBox"
+        :class="isLargeBox()"
         :style="imagePath(element.image)"
         :to="`/${finalLink()}/${element.id}`"
       >
@@ -25,6 +25,7 @@ export default {
       default: null,
     },
     defaultImagePath: { type: String, default: () => '/img/all_services.jpg' },
+    isLarge: { type: Boolean, default: () => false },
   },
   data() {
     return {
@@ -33,6 +34,11 @@ export default {
     }
   },
   methods: {
+    isLargeBox() {
+      return this.isLarge
+        ? 'slide slideShowBox largeSlideBox'
+        : 'slide slideShowBox'
+    },
     imagePath(image) {
       if (image == null) {
         return `background: url('${this.defaultImagePath}') center center/cover`
@@ -93,7 +99,7 @@ export default {
   align-items: center;
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px;
+  max-width: 1000px;
   min-height: 210px;
   /* overflow: hidden; */
 }
@@ -155,6 +161,20 @@ export default {
   }
 
   .slideShowBox {
+    height: 100px;
+    width: 80%;
+  }
+}
+</style>
+
+<style>
+.slide.slideShowBox.largeSlideBox {
+  width: 100%;
+  height: 16vh;
+}
+
+@media (max-width: 750px) {
+  .slide.slideShowBox.largeSlideBox {
     height: 100px;
     width: 80%;
   }
