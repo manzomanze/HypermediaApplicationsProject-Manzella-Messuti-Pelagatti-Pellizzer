@@ -13,7 +13,7 @@
           </div>
         </li>
         <li>
-          <div class="subsection">
+          <div class="subsection" onclick="">
             <p>Services</p>
           </div>
           <ul class="submenu">
@@ -35,7 +35,7 @@
           </ul>
         </li>
         <li>
-          <div class="subsection">
+          <div class="subsection" onclick="">
             <p>Industries</p>
           </div>
           <ul class="submenu">
@@ -334,7 +334,9 @@ export default {
   }
 
   /* Submenu */
+  /*
   .nav-links > li > .submenu {
+    transition-delay: 200ms;
     display: none;
     visibility: hidden;
     opacity: 0;
@@ -342,16 +344,17 @@ export default {
     align-items: center;
     justify-content: center;
     width: auto;
+    height: 0%;
     background-color: #333;
     transform: translateX(100px);
   }
-
   .nav-links > li:hover > .submenu {
     visibility: visible;
     display: flex;
     margin: 20px;
     margin-bottom: 0;
     opacity: 1;
+    height: 100%;
     transform: translateX(0px);
   }
 
@@ -364,16 +367,19 @@ export default {
     height: 0;
     width: 100%;
   }
-
+  */
+  .nav-links > li > .submenu > li {
+    font-size: 1.7rem;
+  }
   .nav-links > li:hover > .submenu > li {
-    transition: all 100ms;
+    transition: 500ms;
     opacity: 1;
-    height: auto;
-    font-size: 1.5rem;
+    height: 2.2rem;
+    font-size: 1.7rem;
     width: 100%;
     border-bottom: 1px var(--main_color) solid;
   }
-
+  /*
   .nav-links > li:hover > p {
     color: #ddd;
   }
@@ -385,6 +391,7 @@ export default {
   .nav-links li .submenu a:hover {
     color: #ddd;
   }
+  */
 }
 /* Burger Animation */
 .switch .line1 {

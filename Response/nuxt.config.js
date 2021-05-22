@@ -5,7 +5,7 @@ export default {
   // Open server to lan
   server: {
     port: 3000, // default: 3000
-    host: '192.168.22.100', // 'localhost', // default: localhost // '192.168.22.100'
+    host: 'localhost', // default: localhost // '192.168.22.100',
   },
   env: {
     //BASE_URL: 'https://test-polimi.herokuapp.com/', // Production URL
