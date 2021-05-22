@@ -13,6 +13,9 @@
       <li v-if="something.includes('services')">
         <a href="#services">Services</a>
       </li>
+      <li v-if="something.includes('businesssectors')">
+        <a href="#businesssectors">Business Sectors</a>
+      </li>
       <li v-if="something.includes('allservices')">
         <a href="#allservices">All Services</a>
       </li>
