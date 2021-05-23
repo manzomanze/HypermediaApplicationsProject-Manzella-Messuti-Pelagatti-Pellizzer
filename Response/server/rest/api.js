@@ -203,6 +203,14 @@ async function init() {
           model: BusinessSector,
           include: { model: Image },
         },
+        {
+          model: Employee,
+          include: { model: Image, as: 'image' },
+        },
+        {
+          model: Area,
+          include: { model: Image },
+        },
       ],
     })
     return res.json(article)

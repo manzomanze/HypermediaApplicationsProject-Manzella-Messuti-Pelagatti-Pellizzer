@@ -9,6 +9,11 @@
       :text="paragraph.text"
       :image="paragraph.image"
     />
+    <ListElements
+      :content="casestudiessContents"
+      section="casestudies"
+      default-image-path="/img/all_casestudies.jpg"
+    />
     <ListElements :content="slideContents" :title="'Areas'" />
     <SlideShow :content="businesssectorsContents" :title="'Business Sectors'" />
     <SlideShowEmployee :content="employeesContents" :title="'Team'" />
@@ -52,10 +57,16 @@ export default {
       `${process.env.BASE_URL}/api/businesssectors/`
     )
     const businesssectorsContents = businesssectors.data
+
+    const casestudies = await $axios.get(
+      `${process.env.BASE_URL}/api/casestudies/`
+    )
+    const casestudiessContents = casestudies.data
     return {
       slideContents,
       employeesContents,
       businesssectorsContents,
+      casestudiessContents,
     }
   },
   data() {

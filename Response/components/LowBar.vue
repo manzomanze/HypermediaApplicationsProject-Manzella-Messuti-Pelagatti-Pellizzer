@@ -22,6 +22,9 @@
       <li v-if="something.includes('allindustries')">
         <a href="#allindustries">All Industries</a>
       </li>
+      <li v-if="something.includes('area')">
+        <a href="#area">Area</a>
+      </li>
       <li v-if="something.includes('team')">
         <a href="#team">Team</a>
       </li>

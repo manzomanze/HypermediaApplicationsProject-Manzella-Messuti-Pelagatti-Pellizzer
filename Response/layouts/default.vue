@@ -78,10 +78,12 @@ export default {
   padding: 0;
   margin: 0;
 
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  /*
+  -webkit-user-select: none; /* Safari * /
+  -moz-user-select: none; /* Firefox * /
+  -ms-user-select: none; /* IE10+/Edge * /
+  user-select: none; /* Standard * /
+  */
 }
 
 body {
