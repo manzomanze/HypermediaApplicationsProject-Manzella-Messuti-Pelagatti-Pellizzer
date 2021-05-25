@@ -136,7 +136,7 @@ export default {
 }
 
 .lowBar * {
-  transition-duration: 300ms;
+  transition: all 200ms, font-size 0s;
 }
 
 .lowBar ul {
@@ -185,7 +185,7 @@ export default {
     align-items: center;
     justify-content: flex-start;
     background-color: #ccc;
-    transition: 500ms;
+    transition: all 500ms, font-size 0s;
   }
 
   .lowBar a:hover {

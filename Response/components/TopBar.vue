@@ -156,7 +156,7 @@ export default {
 }
 
 .navbar * {
-  transition: 200ms;
+  transition: all 200ms, font-size 0s;
 }
 
 /* Logo */
@@ -310,7 +310,6 @@ export default {
     flex-direction: column;
     background-color: #333;
     transform: translateX(100%);
-    transition: 200ms;
   }
 
   .nav-links > li {
@@ -372,7 +371,6 @@ export default {
     font-size: 1.7rem;
   }
   .nav-links > li:hover > .submenu > li {
-    transition: 500ms;
     opacity: 1;
     height: 2.2rem;
     font-size: 1.7rem;
