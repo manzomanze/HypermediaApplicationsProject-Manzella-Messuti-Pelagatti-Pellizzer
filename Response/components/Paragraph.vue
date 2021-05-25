@@ -83,4 +83,13 @@ export default {
 .img-paragraph .img-container {
   width: 90%;
 }
+@media (max-width: 1050px) {
+  @media (min-width: 750px) {
+    .normalTitle,
+    .paragraph,
+    .img-paragraph {
+      padding: 0 30px;
+    }
+  }
+}
 </style>
