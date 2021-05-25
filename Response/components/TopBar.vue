@@ -373,7 +373,7 @@ export default {
   .nav-links > li:hover > .submenu > li {
     opacity: 1;
     height: 2.2rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 100%;
     border-bottom: 1px var(--main_color) solid;
   }

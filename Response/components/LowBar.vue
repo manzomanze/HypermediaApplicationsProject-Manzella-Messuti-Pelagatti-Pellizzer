@@ -177,7 +177,7 @@ export default {
     position: absolute;
     top: 3vh;
     left: 0px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     height: 91vh;
     width: 100%;
     display: flex;
