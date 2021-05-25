@@ -36,6 +36,8 @@ export default {
 }
 
 .normalTitle h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   text-align: left;
   padding: 0px 10px;
   color: #333;

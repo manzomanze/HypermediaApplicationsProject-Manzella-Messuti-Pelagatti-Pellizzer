@@ -50,6 +50,8 @@ export default {
 }
 
 .showcase .container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 3rem;
   text-shadow: 2px 2px var(--main_color);
   color: #fff;

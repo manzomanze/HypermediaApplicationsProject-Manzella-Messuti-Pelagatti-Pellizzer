@@ -146,6 +146,11 @@ export default {
 
 #chapters li {
   padding: 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.capBurger > p:first-child {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .lowBar a {

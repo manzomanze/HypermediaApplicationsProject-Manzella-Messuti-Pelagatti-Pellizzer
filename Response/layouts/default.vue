@@ -66,6 +66,23 @@ export default {
   src: url(/fonts/OpenSans-ExtraBold.ttf) format('ttf');
 }
 
+/* Montserrat */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+
 /* Variables */
 :root {
   --main_color: #00a2ff;
