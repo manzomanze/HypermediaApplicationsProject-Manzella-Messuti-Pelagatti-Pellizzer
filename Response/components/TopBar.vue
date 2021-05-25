@@ -392,6 +392,19 @@ export default {
   }
   */
 }
+
+@media (max-width: 350px) {
+  .nav-links > li > .submenu > li {
+    font-size: 1.3rem;
+  }
+  .nav-links > li:hover > .submenu > li {
+    opacity: 1;
+    height: 2.2rem;
+    font-size: 1.3rem;
+    width: 100%;
+    border-bottom: 1px var(--main_color) solid;
+  }
+}
 /* Burger Animation */
 .switch .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);

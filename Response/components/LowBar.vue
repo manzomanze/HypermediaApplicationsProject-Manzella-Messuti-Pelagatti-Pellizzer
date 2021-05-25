@@ -218,6 +218,11 @@ export default {
     transform: rotate(-90deg);
   }
 }
+@media (max-width: 350px) {
+  #chapters {
+    font-size: 1.8rem;
+  }
+}
 </style>
 
 <style>
