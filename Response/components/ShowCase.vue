@@ -50,14 +50,17 @@ export default {
 }
 
 .showcase .container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   font-size: 3rem;
   text-shadow: 2px 2px var(--main_color);
   color: #fff;
   padding-bottom: 15px;
+  margin: 0px 45px;
 }
 
 .showcase .container h3 {
-  margin: 0px 20px;
+  margin: 0px 45px;
   max-width: 1000px;
   text-shadow: 2px 2px #444;
 }

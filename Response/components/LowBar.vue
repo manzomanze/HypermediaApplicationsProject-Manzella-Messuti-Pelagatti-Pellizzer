@@ -136,7 +136,7 @@ export default {
 }
 
 .lowBar * {
-  transition-duration: 300ms;
+  transition: all 200ms, font-size 0s;
 }
 
 .lowBar ul {
@@ -146,6 +146,11 @@ export default {
 
 #chapters li {
   padding: 0 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.capBurger > p:first-child {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .lowBar a {
@@ -177,7 +182,7 @@ export default {
     position: absolute;
     top: 3vh;
     left: 0px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     height: 91vh;
     width: 100%;
     display: flex;
@@ -185,7 +190,7 @@ export default {
     align-items: center;
     justify-content: flex-start;
     background-color: #ccc;
-    transition: 500ms;
+    transition: all 500ms, font-size 0s;
   }
 
   .lowBar a:hover {
@@ -211,6 +216,11 @@ export default {
 
   .down-arrow {
     transform: rotate(-90deg);
+  }
+}
+@media (max-width: 350px) {
+  #chapters {
+    font-size: 1.8rem;
   }
 }
 </style>

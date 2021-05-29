@@ -156,7 +156,8 @@ export default {
 }
 
 .navbar * {
-  transition: 200ms;
+  transition: all 200ms, font-size 0s;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Logo */
@@ -310,7 +311,6 @@ export default {
     flex-direction: column;
     background-color: #333;
     transform: translateX(100%);
-    transition: 200ms;
   }
 
   .nav-links > li {
@@ -369,13 +369,12 @@ export default {
   }
   */
   .nav-links > li > .submenu > li {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .nav-links > li:hover > .submenu > li {
-    transition: 500ms;
     opacity: 1;
     height: 2.2rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 100%;
     border-bottom: 1px var(--main_color) solid;
   }
@@ -392,6 +391,19 @@ export default {
     color: #ddd;
   }
   */
+}
+
+@media (max-width: 350px) {
+  .nav-links > li > .submenu > li {
+    font-size: 1.3rem;
+  }
+  .nav-links > li:hover > .submenu > li {
+    opacity: 1;
+    height: 2.2rem;
+    font-size: 1.3rem;
+    width: 100%;
+    border-bottom: 1px var(--main_color) solid;
+  }
 }
 /* Burger Animation */
 .switch .line1 {

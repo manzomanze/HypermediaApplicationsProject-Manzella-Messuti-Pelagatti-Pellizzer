@@ -14,10 +14,10 @@
       :text="paragraph.text"
       :image="paragraph.image"
     />
-    <div id="team" class="anchor"></div>
-    <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
     <div id="services" class="anchor"></div>
     <SlideShow :content="paragraphs.services" :title="'Services'" />
+    <div id="team" class="anchor"></div>
+    <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
   </div>
 </template>
 

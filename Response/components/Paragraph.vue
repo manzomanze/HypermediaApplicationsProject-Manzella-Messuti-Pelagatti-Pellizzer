@@ -36,6 +36,8 @@ export default {
 }
 
 .normalTitle h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   text-align: left;
   padding: 0px 10px;
   color: #333;
@@ -82,5 +84,14 @@ export default {
 
 .img-paragraph .img-container {
   width: 90%;
+}
+@media (max-width: 1050px) {
+  @media (min-width: 750px) {
+    .normalTitle,
+    .paragraph,
+    .img-paragraph {
+      padding: 0 30px;
+    }
+  }
 }
 </style>
