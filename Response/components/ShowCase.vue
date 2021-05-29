@@ -1,7 +1,9 @@
 <template>
   <div class="showcase">
-    <div class="container" :style="imagePath()">
-      <h2>{{ title }}</h2>
+    <div class="container" :style="`${imagePath()}`">
+      <h2 :style="`font-family:${titleFont}; font-size: ${titleFontSize}rem`">
+        {{ title }}
+      </h2>
       <h3 v-if="text" class="text-grey">{{ text }}</h3>
     </div>
   </div>
@@ -15,6 +17,8 @@ export default {
     text: { type: String, default: () => 'ciaociao' },
     image: { type: Object, default: () => null },
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
+    titleFontSize: { type: String, default: () => '3' },
+    titleFont: { type: String, default: () => "'Montserrat', sans-serif" },
   },
   methods: {
     imagePath() {
@@ -28,7 +32,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* Showcase */
 .showcase {
   position: relative;
@@ -74,4 +78,10 @@ export default {
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 } */
+
+@media (max-width: 750px) {
+  .showcase .container h2 {
+    font-size: 3rem !important;
+  }
+}
 </style>
