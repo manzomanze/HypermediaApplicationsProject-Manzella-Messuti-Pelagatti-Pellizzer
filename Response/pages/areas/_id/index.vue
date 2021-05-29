@@ -47,8 +47,6 @@ export default {
       `${process.env.BASE_URL}/api/casestudiesfromarea/${route.params.id}`
     )
     const caseStudies = caseStudiesData.data
-    console.log('AAAAAAAAAAAAAAAAAAA')
-    console.log(caseStudiesData)
     const paragraphs = data
     return {
       paragraphs,
