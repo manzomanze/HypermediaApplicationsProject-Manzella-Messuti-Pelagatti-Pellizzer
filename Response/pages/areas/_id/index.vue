@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LowBar :something="['overview', 'team', 'services']" />
+    <LowBar :something="['overview', 'team', 'casestudies', 'services']" />
     <ShowCase
       :title="paragraphs.name"
       :text="paragraphs.overview"
@@ -18,6 +18,8 @@
     <SlideShow :content="paragraphs.services" :title="'Services'" />
     <div id="team" class="anchor"></div>
     <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
+    <div id="casestudies" class="anchor"></div>
+    <SlideShow :content="caseStudies" :title="'Case Studies'" />
   </div>
 </template>
 
@@ -41,9 +43,16 @@ export default {
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/areas/${route.params.id}`
     )
+    const caseStudiesData = await $axios.get(
+      `${process.env.BASE_URL}/api/casestudiesfromarea/${route.params.id}`
+    )
+    const caseStudies = caseStudiesData.data
+    console.log('AAAAAAAAAAAAAAAAAAA')
+    console.log(caseStudiesData)
     const paragraphs = data
     return {
       paragraphs,
+      caseStudies,
     }
   },
 }

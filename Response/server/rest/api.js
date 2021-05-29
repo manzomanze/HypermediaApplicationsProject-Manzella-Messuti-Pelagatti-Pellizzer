@@ -15,7 +15,6 @@ async function init() {
     Service,
     ServicesContent,
     Employee,
-    EmployeeImage,
     CaseStudies,
     CaseStudiesContent,
     BusinessSector,
@@ -111,16 +110,20 @@ async function init() {
   app.get('/casestudiesfromarea/:id', async (req, res) => {
     const { id } = req.params
     const article = await CaseStudies.findAll({
-      include: {
-        model: Employee,
-        required: true,
-        include: {
-          model: Area,
-          //separate: true,
-          order: [['order', 'asc']],
-          where: { id },
+      include: [
+        {
+          model: Employee,
+          required: true,
+          include: {
+            model: Area,
+            order: [['order', 'asc']],
+            where: { id },
+          },
         },
-      },
+        {
+          model: Image,
+        },
+      ],
     })
     return res.json(article)
   })

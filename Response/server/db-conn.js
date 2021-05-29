@@ -149,18 +149,6 @@ function defineDatabaseStructure() {
       underscored: true,
     }
   )
-  const EmployeeImage = db.define(
-    'employeeimage',
-    {
-      path: DataTypes.TEXT,
-      alt_description: DataTypes.TEXT,
-      position: DataTypes.STRING,
-      portrait: DataTypes.BOOLEAN,
-    },
-    {
-      underscored: true,
-    }
-  )
 
   // Creating the 1 -> N association between Article and Comment
   // More on association: https://sequelize.org/master/manual/assocs.html
@@ -184,9 +172,6 @@ function defineDatabaseStructure() {
 
   BusinessSector.hasMany(BusinessSectorContent)
   BusinessSectorContent.belongsTo(BusinessSector)
-
-  Employee.hasMany(EmployeeImage)
-  EmployeeImage.belongsTo(Employee)
 
   Employee.belongsToMany(CaseStudies, { through: 'employeecasestudies' })
   CaseStudies.belongsToMany(Employee, { through: 'employeecasestudies' })
@@ -245,7 +230,6 @@ function defineDatabaseStructure() {
     Service,
     ServicesContent,
     Employee,
-    EmployeeImage,
     CaseStudies,
     CaseStudiesContent,
     BusinessSector,
