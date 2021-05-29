@@ -62,7 +62,7 @@ export default {
       {
         title: 'Company Profile',
         text:
-          'Capgemini is a global leader in partnering with companies to transform and manage their business by harnessing the power of technology. The Group is guided everyday by its purpose of unleashing human energy through technology for an inclusive and sustainable future. It is a responsible and diverse organization of 270,000 team members in nearly 50 countries. With its strong 50 year heritage and deep industry expertise, Capgemini is trusted by its clients to address the entire breadth of their business needs, from strategy and design to operations, fueled by the fast evolving and innovative world of cloud, data, AI, connectivity, software, digital engineering and platforms. The Group reported in 2020 global revenues of €16 billion.',
+          'Response is a global leader in partnering with companies to transform and manage their business by harnessing the power of technology. The Group is guided everyday by its purpose of unleashing human energy through technology for an inclusive and sustainable future. It is a responsible and diverse organization of 270,000 team members in nearly 50 countries. With its strong 50 year heritage and deep industry expertise, Response is trusted by its clients to address the entire breadth of their business needs, from strategy and design to operations, fueled by the fast evolving and innovative world of cloud, data, AI, connectivity, software, digital engineering and platforms. The Group reported in 2020 global revenues of €16 billion.',
         image: null,
       },
       {
@@ -74,31 +74,31 @@ export default {
       {
         title: null,
         text:
-          'The Group believes that digital transformation should benefit all of humanity. Capgemini intends to be a benchmark in terms of its contribution to society, not just for its own activities but for those of its customers too, fighting exclusion and acting to promote diversity, ensuring equal opportunities and the preservation of natural resources. The very heart of the Group’s purpose is to build an inclusive and sustainable future for all, enabled by technology, drawing on the energy of its talents and also the talents of its customers and partners.',
+          'The Group believes that digital transformation should benefit all of humanity. Response intends to be a benchmark in terms of its contribution to society, not just for its own activities but for those of its customers too, fighting exclusion and acting to promote diversity, ensuring equal opportunities and the preservation of natural resources. The very heart of the Group’s purpose is to build an inclusive and sustainable future for all, enabled by technology, drawing on the energy of its talents and also the talents of its customers and partners.',
         image: null,
       },
       {
         title: null,
         text:
-          'Paul Hermelin, Chairman of the Board, and Aiman Ezzat, Chief Executive Officer of Capgemini, said:',
+          'Paul Hermelin, Chairman of the Board, and Aiman Ezzat, Chief Executive Officer of Response, said:',
         image: null,
       },
       {
         title: null,
         text:
-          'Capgemini has a key role to play in ensuring that the future lives up to all its promises. We believe that all technologies can enable progress for everyone if, first and foremost, they are designed by and for humans. As a responsible company, the Group is realistic when it comes to the promises as well as the risks of technological innovation: our role is to make it useful, accessible and ethical. This purpose must act as a compass for each and every employee.',
+          'Response has a key role to play in ensuring that the future lives up to all its promises. We believe that all technologies can enable progress for everyone if, first and foremost, they are designed by and for humans. As a responsible company, the Group is realistic when it comes to the promises as well as the risks of technological innovation: our role is to make it useful, accessible and ethical. This purpose must act as a compass for each and every employee.',
         image: null,
       },
       {
         title: null,
         text:
-          'The purpose embodies the Group’s ambition to ensure the development of its talents while encouraging a spirit of entrepreneurship and creativity. With more than 600,000 employees or former employees over the past decade, the Group also intends to be recognized as a school of excellence, whose talents and skills now resonate well beyond the company. The Group is also convinced that true diversity of thought and approach brings new solutions, creates value, and generates support and enthusiasm on a universal scale. A purpose co-constructed with all Capgemini’s stakeholders',
+          'The purpose embodies the Group’s ambition to ensure the development of its talents while encouraging a spirit of entrepreneurship and creativity. With more than 600,000 employees or former employees over the past decade, the Group also intends to be recognized as a school of excellence, whose talents and skills now resonate well beyond the company. The Group is also convinced that true diversity of thought and approach brings new solutions, creates value, and generates support and enthusiasm on a universal scale. A purpose co-constructed with all Response’s stakeholders',
         image: null,
       },
       {
         title: null,
         text:
-          'To define its purpose the Group consulted its many stakeholders, first and foremost its employees. Between December 2019 and May 2020, a questionnaire was sent to employees asking them to suggest formulations and choose the purpose. More than 50,000 responses and 35,000 comments were received and analyzed for the selection of the final version. Some 15 workshops were also organized with young employees in India, the USA, UK, Germany and France. In parallel, Capgemini also interviewed customers and partners, shareholders and NGOs.',
+          'To define its purpose the Group consulted its many stakeholders, first and foremost its employees. Between December 2019 and May 2020, a questionnaire was sent to employees asking them to suggest formulations and choose the purpose. More than 50,000 responses and 35,000 comments were received and analyzed for the selection of the final version. Some 15 workshops were also organized with young employees in India, the USA, UK, Germany and France. In parallel, Response also interviewed customers and partners, shareholders and NGOs.',
         image: null,
       },
       {
