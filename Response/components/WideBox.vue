@@ -23,7 +23,9 @@
       </p>
       <div class="flexbox">
         <div>
-          <NuxtLink to="/areas/4" class="big-btn">Artificial Intelligence</NuxtLink>
+          <NuxtLink to="/areas/4" class="big-btn"
+            >Artificial Intelligence</NuxtLink
+          >
           <NuxtLink to="/areas/1" class="big-btn">Cyber Security</NuxtLink>
         </div>
         <div>
