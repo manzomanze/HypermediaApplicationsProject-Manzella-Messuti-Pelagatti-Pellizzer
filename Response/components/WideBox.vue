@@ -1,11 +1,54 @@
 <template>
-  <div>
+  <div class="main-div">
     <div class="main-box">
-      <h3 class="main-slide">Who Are We?</h3>
-      <h4 class="secondary-slide">Find Out</h4>
+      <h3>Who are we?</h3>
+      <p>
+        A global leader in consulting, technology services and digital
+        transformation, Response is at the forefront of innovation to address
+        the entire breadth of clients’ opportunities in the evolving world of
+        cloud, digital and platforms.
+      </p>
+      <NuxtLink to="/about_us" class="btn">Read More About Us</NuxtLink>
     </div>
-    <div class="main-box"></div>
-    <div class="main-box"></div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="main-box">
+      <h3>Which are our areas of expertise?</h3>
+      <p>
+        The Group’s sectorial expertise ensures that we are always up to speed
+        with the challenges facing our clients and developing solutions tailored
+        to their specific objectives. The Group has a presence in four sectors:
+      </p>
+      <div class="flexbox">
+        <div>
+          <NuxtLink to="#" class="big-btn">Artificial Intelligence</NuxtLink>
+          <NuxtLink to="#" class="big-btn">Cyber Security</NuxtLink>
+        </div>
+        <div>
+          <NuxtLink to="#" class="big-btn">Cloud Services</NuxtLink>
+          <NuxtLink to="#" class="big-btn">Digital Services</NuxtLink>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="main-box">
+      <h3>Contact Us!</h3>
+      <p>Got a question? We’re here to help!</p>
+      <NuxtLink to="/contact_us" class="btn">Contact Us</NuxtLink>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
@@ -14,52 +57,128 @@ export default {}
 </script>
 
 <style scoped>
-div {
-  max-width: 1200px;
-  margin: 50px auto;
+.main-div {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.5) 35%,
+      rgba(255, 255, 255, 0.5) 65%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('/img/Cubes.jpg') center center/cover no-repeat;
 }
-div > .main-box:nth-child(odd) {
-  margin: 30px auto;
-  margin-left: 5px;
-}
-div > .main-box:nth-child(even) {
-  margin: 30px auto;
-  margin-right: 5px;
-}
-.main-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px auto;
-  height: 270px;
-  width: 90%;
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-  border: 3px solid #00a2ff;
-  border-radius: 10px;
-}
-
+/* Imposto le transizioni */
 .main-box,
 .main-box * {
   transition: 200ms;
 }
 
+.main-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.main-box > .flexbox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-box > .flexbox > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
 .main-box > h3 {
-  padding: 20px;
-  color: #fff;
-  font-size: 3rem;
+  margin: 15px 0px;
+  width: 100%;
+  text-align: left;
+  color: #4d80b9;
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
-.main-box:hover > h4 {
-  display: block;
-  transform: translateX(0%);
-  opacity: 1;
+.main-box > p {
+  width: 100%;
+  margin: 15px auto;
+  margin-left: 10%;
+  font-size: 27px;
+  line-height: 40px;
 }
-.main-box > h4 {
-  opacity: 0;
-  overflow: hidden;
-  padding: 20px;
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  height: 50px;
   color: #fff;
-  font-size: 2.5rem;
-  transform: translateX(-100%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #4d80b9;
+  border: 2px solid #4d80b9;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.btn:hover {
+  color: #4d80b9;
+  padding: 10px 20px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  border: 2px solid #4d80b9;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.big-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  width: 350px;
+  height: 100px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #4d80b9;
+  border: 3px solid #4d80b9;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.big-btn:hover {
+  color: #4d80b9;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  border: 3px solid #4d80b9;
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 750px) {
+  .main-box {
+    width: 85%;
+  }
+  .main-box > h3 {
+    margin: 15px 0px;
+    width: 100%;
+    text-align: left;
+  }
+  .main-box > p {
+    margin-left: 7%;
+    margin-right: 1%;
+  }
 }
 </style>

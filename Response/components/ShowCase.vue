@@ -1,6 +1,6 @@
 <template>
   <div class="showcase">
-    <div class="container" :style="`${imagePath()}`">
+    <div class="container" :style="`${imagePath()}; height: ${height}vh;`">
       <h2 :style="`font-family:${titleFont}; font-size: ${titleFontSize}rem`">
         {{ title }}
       </h2>
@@ -19,6 +19,7 @@ export default {
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
     titleFontSize: { type: String, default: () => '3' },
     titleFont: { type: String, default: () => "'Montserrat', sans-serif" },
+    height: { type: String, default: () => '102' },
   },
   methods: {
     imagePath() {
@@ -49,7 +50,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 102vh;
+  /* height: 102vh; */
   /* background: url('/img/AI_01.jpg') center center/cover no-repeat; */
 }
 

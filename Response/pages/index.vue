@@ -6,6 +6,7 @@
       :image="{ path: '/img/test_bellaraga.jpg' }"
       :title-font-size="'7'"
       :title-font="`'Lobster'`"
+      :height="`60`"
     />
     <WideBox />
   </div>
