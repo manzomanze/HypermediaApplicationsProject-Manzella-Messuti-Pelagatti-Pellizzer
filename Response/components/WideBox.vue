@@ -23,12 +23,12 @@
       </p>
       <div class="flexbox">
         <div>
-          <NuxtLink to="#" class="big-btn">Artificial Intelligence</NuxtLink>
-          <NuxtLink to="#" class="big-btn">Cyber Security</NuxtLink>
+          <NuxtLink to="/areas/4" class="big-btn">Artificial Intelligence</NuxtLink>
+          <NuxtLink to="/areas/1" class="big-btn">Cyber Security</NuxtLink>
         </div>
         <div>
-          <NuxtLink to="#" class="big-btn">Cloud Services</NuxtLink>
-          <NuxtLink to="#" class="big-btn">Digital Services</NuxtLink>
+          <NuxtLink to="/areas/2" class="big-btn">Cloud Services</NuxtLink>
+          <NuxtLink to="/areas/3" class="big-btn">Digital Services</NuxtLink>
         </div>
       </div>
     </div>
