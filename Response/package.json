@@ -15,7 +15,7 @@
     "core-js": "^3.9.1",
     "express": "^4.17.1",
     "mmcc": "gitlab:i3lab/mmcc/frontend/mmcc-vue",
-    "nuxt": "^2.15.4",
+    "nuxt": "^2.2.0",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.6.2"
