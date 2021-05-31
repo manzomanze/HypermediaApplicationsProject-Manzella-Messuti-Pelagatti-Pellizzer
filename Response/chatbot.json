@@ -24,21 +24,22 @@
           {
             "id": "contact_form",
             "intents": ["form"],
-            "utterance": ["Do you want me to take you there?"]
+            "payload": {"guide":"/contact_us#tellus"}
           },
           {
             "id": "contact_page",
             "intents": ["contacts"],
-            "utterance": ["nice choice 4", "ez"]
+            "utterance": ["nice choice 4", "ez"],
+            "payload": {"guide":"/contact_us"}
           }
         ]
       },
       "home": "home: I will guide you through the site. Welcome to the homepage",
       "about": "about: Welcome to the About page of our website. Here you can find all the information about our company",
-      "contact_form": "contact form",
+      "contact_form": "welcome to the contact form",
       "contact_page": "contact page",
       "end": "end: The process is completed",
-      "steps_v": ["/", "/contact_us", "/about_us", "contact_us"],
+      "steps_v": ["/", "/", "/about_us"],
       "continue_v": ["continue", "ok", "go", "yes"],
       "guide_v": ["guide"],
       "main_exit_v": ["no", "reset"],
@@ -55,7 +56,7 @@
         },
         {
           "my_id": "xor1",
-          "next_id": "end",
+          "next_id": null,
           "my_type": "XOR",
           "choices": ["xor2", "guide"],
           "callback": "generic_xor"
