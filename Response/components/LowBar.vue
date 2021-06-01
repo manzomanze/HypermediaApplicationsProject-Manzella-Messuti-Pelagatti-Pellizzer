@@ -189,7 +189,10 @@ export default {
   letter-spacing: 1px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) {
+  * {
+    text-align: center;
+  }
   #chapters {
     position: absolute;
     top: 3vh;

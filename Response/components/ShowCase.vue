@@ -37,6 +37,7 @@ export default {
 /* Showcase */
 .showcase {
   position: relative;
+  overflow: hidden;
 }
 
 .showcase .container * {

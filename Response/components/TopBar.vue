@@ -302,7 +302,7 @@ export default {
 }
 
 /* Mobile */
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   /* Navbar */
   .nav-links {
     position: absolute;
