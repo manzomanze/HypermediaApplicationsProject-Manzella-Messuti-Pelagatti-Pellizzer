@@ -4,7 +4,7 @@
       <h2>{{ title }}</h2>
     </div>
     <div v-if="text" class="paragraph">
-      <p>{{ text }}</p>
+      <p v-html="text"></p>
     </div>
     <div v-if="image" class="img-paragraph">
       <div class="img-container">

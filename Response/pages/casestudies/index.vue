@@ -4,7 +4,7 @@
     <ShowCase
       :title="'Case Studies'"
       :text="'Relevant settings where the various Response teams have applied their knowledge and expertise'"
-      :image="{ path: '/images/employee/AllTeam.png' }"
+      :image="{ path: '/img/all_casestudies.jpg' }"
     />
     <div id="csai" class="anchor"></div>
     <SlideShow
@@ -20,14 +20,14 @@
       title="Cloud Case Studies"
     />
 
-    <div id="digitalservices" class="anchor"></div>
+    <div id="csdigital" class="anchor"></div>
     <SlideShow
       :content="casestudies3"
       section="casestudies"
       title="Digital Services Case Studies"
     />
 
-    <div id="cybersecurity" class="anchor"></div>
+    <div id="cscybersec" class="anchor"></div>
     <SlideShow
       :content="casestudies1"
       section="casestudies"

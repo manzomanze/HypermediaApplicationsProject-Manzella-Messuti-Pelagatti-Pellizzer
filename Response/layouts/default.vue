@@ -156,4 +156,17 @@ body::-webkit-scrollbar {
   position: relative;
   top: -9vh;
 }
+
+/* Text Styles */
+.text-bold-primary {
+  font-weight: 600;
+  color: var(--main_color);
+  font-style: italic;
+}
+.text-bold {
+  font-weight: 600;
+}
+.text-italic {
+  font-style: italic;
+}
 </style>
