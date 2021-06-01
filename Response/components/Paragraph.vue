@@ -41,7 +41,7 @@ export default {
   text-align: left;
   padding: 0px 10px;
   color: #333;
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 20px;
 }
 
@@ -58,7 +58,7 @@ export default {
   text-align: left;
   padding: 0px 10px;
   color: #333;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 20px;
   white-space: pre-line;
 }

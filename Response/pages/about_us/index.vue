@@ -14,6 +14,9 @@
       :text="paragraph.text"
       :image="paragraph.image"
     />
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 

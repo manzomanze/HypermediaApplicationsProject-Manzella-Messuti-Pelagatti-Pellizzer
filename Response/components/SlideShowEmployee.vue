@@ -247,7 +247,8 @@ export default {
 .slideShowContainer {
   overflow: hidden;
   max-width: 1000px;
-  margin: 30px auto;
+  /* margin: 30px auto; */
+  margin: 120px auto;
   position: relative;
   width: 100%;
   min-height: 300px;
