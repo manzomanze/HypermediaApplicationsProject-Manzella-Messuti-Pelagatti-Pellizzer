@@ -58,6 +58,11 @@
         </li>
         <li @click="hideNav">
           <div class="subsection">
+            <NuxtLink to="/casestudies">Case Studies</NuxtLink>
+          </div>
+        </li>
+        <li @click="hideNav">
+          <div class="subsection">
             <NuxtLink to="/team">Our Team</NuxtLink>
           </div>
         </li>

@@ -2,24 +2,22 @@
   "name": "Chatbot",
   "data": {
     "kb": {
-      "guide": "guide: Do you want to start the guide?",
+      "guide": "Do you want to start the guide?",
       "xor1": {
-        "initials": ["xor1: Guide vs Contacts? Who's gonna win?"],
+        "initials": ["Hi i'm BISSABISCI, you can choose to follow a guide through the website or go to the contact information for further support and guidance. write guide or contacts"],
         "choices": [
           {
             "id": "xor2",
-            "intents": ["contacts"],
-            "utterance": ["nice choice", "gg"]
+            "intents": ["contacts"]
           },
           {
             "id": "guide",
-            "intents": ["guide"],
-            "utterance": ["nice choice too", "ez"]
+            "intents": ["guide"]
           }
         ]
       },
       "xor2": {
-        "initials": ["xor2: Contact form vs Contact page. What do you choose?"],
+        "initials": ["you can either reach the contact form directly or the contact page in general. write form or contacts"],
         "choices": [
           {
             "id": "contact_form",
@@ -29,16 +27,15 @@
           {
             "id": "contact_page",
             "intents": ["contacts"],
-            "utterance": ["nice choice 4", "ez"],
             "payload": {"guide":"/contact_us"}
           }
         ]
       },
-      "home": "home: I will guide you through the site. Welcome to the homepage",
-      "about": "about: Welcome to the About page of our website. Here you can find all the information about our company",
-      "contact_form": "welcome to the contact form",
-      "contact_page": "contact page",
-      "end": "end: The process is completed",
+      "home": "I will guide you through the site. Welcome to the homepage, here you can see all the areas of expertise of Response",
+      "about": "Welcome to the About page of our website. Here you can find all the information about Response",
+      "contact_form": "Welcome to the contact form\nIf you want to restart the chatbot just ask ",
+      "contact_page": "Welcome to the contact page\nIf you want to restart the chatbot just ask ",
+      "end": "The process is completed let's restart",
       "steps_v": ["/", "/", "/about_us"],
       "continue_v": ["continue", "ok", "go", "yes"],
       "guide_v": ["guide"],
@@ -56,7 +53,7 @@
         },
         {
           "my_id": "xor1",
-          "next_id": null,
+          "next_id": "end",
           "my_type": "XOR",
           "choices": ["xor2", "guide"],
           "callback": "generic_xor"
@@ -100,7 +97,7 @@
         },
         {
           "my_id": "end",
-          "next_id": "start",
+          "next_id": null,
           "my_type": "END"
         }
       ],

@@ -52,6 +52,18 @@
       <li v-if="something.includes('ourcontacts')">
         <a href="#ourcontacts">Our Contacts</a>
       </li>
+      <li v-if="something.includes('csai')">
+        <a href="#csai">AI Case Studies</a>
+      </li>
+      <li v-if="something.includes('cscloud')">
+        <a href="#cscloud">Cloud Case Studies</a>
+      </li>
+      <li v-if="something.includes('csdigital')">
+        <a href="#csdigital">Digital Case Studies</a>
+      </li>
+      <li v-if="something.includes('cscybersec')">
+        <a href="#cscybersec">Cybersecurity Case Studies</a>
+      </li>
     </ul>
     <div class="capBurger" @click="navSlide">
       <p>Cap.&nbsp;</p>
