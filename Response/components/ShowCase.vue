@@ -80,7 +80,7 @@ export default {
   background: rgba(0, 0, 0, 0.3);
 } */
 
-@media (max-width: 750px) {
+@media (max-width: 550px) {
   .showcase .container h2 {
     font-size: 3rem !important;
   }

@@ -59,7 +59,7 @@ export default {}
 </script>
 
 <style scoped>
-.main-div {
+/* .main-div {
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 1) 0%,
@@ -68,7 +68,7 @@ export default {}
       rgba(255, 255, 255, 1) 100%
     ),
     url('/img/Cubes.jpg') center center/cover no-repeat;
-}
+} */
 /* Imposto le transizioni */
 .main-box,
 .main-box * {

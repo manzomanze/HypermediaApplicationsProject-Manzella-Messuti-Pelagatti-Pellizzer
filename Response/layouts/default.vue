@@ -122,6 +122,14 @@ a {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.8) 45%,
+      rgba(255, 255, 255, 0.8) 65%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url('/img/sfondo.jpg') center center;
 }
 
 body::-webkit-scrollbar {
