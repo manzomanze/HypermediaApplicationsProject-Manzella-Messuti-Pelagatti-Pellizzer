@@ -29,7 +29,9 @@ export default {
 <style>
 /* Import Fonts */
 @font-face {
-  font-family: Lobster;
+  /* font-family: Lobster; */
+  font-family: 'Lobster';
+  font-display: swap;
   src: url(/fonts/Lobster-Regular.ttf);
 }
 

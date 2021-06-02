@@ -13,16 +13,19 @@
           </div>
         </div>
       </div>
+
+      <label for="chat-input" style="display: none">bissa bissa</label>
       <input
+        id="chat-input"
         class="chat-input"
         v-model="messageToSend"
         type="text"
         placeholder="Hi, I would like to..."
+        name="chat-input"
         @keypress.enter="sendMessage"
       />
     </div>
     <div ref="chatbutton" class="button chat-closed" @click="showChat">
-      <!-- <img src="/img/chat2.png" alt="" /> -->
       <i class="fas fa-comments fa-2x"></i>
     </div>
   </div>
@@ -99,6 +102,8 @@ export default {
   margin: auto;
   display: block;
   left: 50%;
+  bottom: 5px;
+  position: absolute;
   transform: translateX(-50%);
   padding: 0px 10px;
 }
@@ -128,7 +133,8 @@ export default {
 }
 
 .chat-container {
-  border: 1px solid rgb(1, 134, 211);
+  /* border: 1px solid rgb(1, 134, 211); */
+  border: 2px solid rgb(1, 134, 211);
   border-radius: 4px;
   height: 500px;
   width: 300px;
@@ -137,12 +143,12 @@ export default {
   right: 5px;
   border-radius: 10px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.514);
-  background-color: rgba(255, 255, 255, 0.514);
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .chat-window {
   overflow-y: auto;
-  height: calc(100% - 34px);
+  height: calc(100% - 40px);
   border-radius: 10px;
   border-bottom-left-radius: 0px;
 }
@@ -190,10 +196,10 @@ export default {
   max-width: 93%;
 }
 
-input {
+/* input {
   width: 100%;
   position: absolute;
-}
+} */
 
 .chat-closed {
   background-color: #4d80b9;

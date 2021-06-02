@@ -138,9 +138,9 @@ export default {
   background-color: #bbb;
   position: fixed;
   left: 0;
-  top: 6vh;
+  top: 60px;
   z-index: 9;
-  height: 3vh;
+  height: 30px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -195,10 +195,10 @@ export default {
   }
   #chapters {
     position: absolute;
-    top: 3vh;
+    top: 30px;
     left: 0px;
     font-size: 2.2rem;
-    height: 91vh;
+    height: calc(100vh - 90px);
     width: 100%;
     display: flex;
     flex-direction: column;

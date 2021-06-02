@@ -100,7 +100,7 @@ export default {
     this.navLinks = this.$refs.doc.querySelectorAll('.nav-links > li')
 
     // Setup the listener
-    this.x = window.matchMedia('(max-width: 750px)')
+    this.x = window.matchMedia('(max-width: 900px)')
     this.x.addListener(this.screenChange)
     this.screenChange(this.x)
   },
@@ -154,7 +154,7 @@ export default {
   align-items: flex-start;
   text-align: center;
   justify-content: space-between;
-  height: 6vh;
+  height: 60px;
   background-color: #333;
   color: #fff;
   z-index: 11;
@@ -175,7 +175,7 @@ export default {
 }
 
 .navbar .logo {
-  height: 6vh;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +223,7 @@ export default {
 }
 
 .nav-links .subsection {
-  height: 6vh;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -261,7 +261,7 @@ export default {
 
 .nav-links li:hover .submenu li {
   width: 100%;
-  height: 5vh;
+  height: 50px;
   border-bottom: 1px var(--main_color) solid;
 }
 
@@ -283,8 +283,8 @@ export default {
 }
 
 .burger-container {
-  width: 6vh;
-  height: 6vh;
+  width: 60px;
+  height: 60px;
   display: none;
   align-items: center;
   justify-content: center;
@@ -306,10 +306,10 @@ export default {
   /* Navbar */
   .nav-links {
     position: absolute;
-    top: 6vh;
+    top: 60px;
     left: 0px;
     font-size: 2.5rem;
-    height: 94vh;
+    height: calc(100vh - 60px);
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -320,7 +320,7 @@ export default {
 
   .nav-links > li {
     opacity: 0;
-    padding: 6%;
+    padding: 4%;
     max-width: 100%;
   }
 
