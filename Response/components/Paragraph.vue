@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="title" class="normalTitle">
-      <h2>{{ title }}</h2>
+      <h2 v-html="title"></h2>
     </div>
     <div v-if="text" class="paragraph">
       <p v-html="text"></p>

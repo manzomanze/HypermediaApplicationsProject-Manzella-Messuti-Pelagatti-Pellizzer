@@ -1,6 +1,9 @@
 <template>
   <div>
-    <LowBar :something="['tellus', 'map', 'ourcontacts']" />
+    <LowBar
+      :something="['tellus', 'map', 'ourcontacts']"
+      :page-name="'Contact Us'"
+    />
     <ShowCase
       title="Contact Us!"
       :image="{

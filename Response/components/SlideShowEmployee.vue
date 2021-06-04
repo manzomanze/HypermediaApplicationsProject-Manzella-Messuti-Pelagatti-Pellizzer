@@ -10,7 +10,7 @@
         :key="element.id"
         class="slide slideShowBox"
         :style="imagePath(element.image)"
-        :to="`/team/${element.id}`"
+        :to="`/team/${element.id}#top`"
       >
         <h3 class="title">{{ element.name }} {{ element.surname }}</h3>
       </NuxtLink>

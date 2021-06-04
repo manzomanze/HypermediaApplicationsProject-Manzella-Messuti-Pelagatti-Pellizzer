@@ -9,7 +9,7 @@
         :key="content.id"
         class="slide slideShowBox"
         :style="imagePath(content.image)"
-        :to="`/${finalLink()}/${content.id}`"
+        :to="`/${finalLink()}/${content.id}#top`"
       >
         <h3 class="title">{{ content.name }}</h3>
       </NuxtLink>

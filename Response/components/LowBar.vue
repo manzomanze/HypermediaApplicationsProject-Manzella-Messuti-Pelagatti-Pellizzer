@@ -1,5 +1,23 @@
 <template>
   <div v-if="!(something.length === 0)" ref="doc" class="lowBar">
+    <div class="bread">
+      <ul>
+        <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb">
+          <p>
+            <span class="text-bold">/</span>&nbsp;<a :href="breadcrumb.link"
+              >{{ breadcrumb.name }}&nbsp;</a
+            >
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="text-bold">/</span>&nbsp;<a href="#top"
+              ><span class="text-bold-primary">{{ pageName }}</span></a
+            >
+          </p>
+        </li>
+      </ul>
+    </div>
     <ul id="chapters" ref="chapters" class="navbar-invisible" @click="hideNav">
       <li v-if="something.includes('overview')">
         <a href="#overview">Overview</a>
@@ -79,6 +97,8 @@ export default {
   name: 'LowBar',
   props: {
     something: { type: Array, default: () => [] },
+    breadcrumbs: { type: Array, default: () => [] },
+    pageName: { type: String, default: () => '' },
   },
   data() {
     return {
@@ -231,6 +251,9 @@ export default {
 
   .down-arrow {
     transform: rotate(-90deg);
+  }
+  .bread > ul > li:not(:last-child) {
+    display: none;
   }
 }
 @media (max-width: 350px) {

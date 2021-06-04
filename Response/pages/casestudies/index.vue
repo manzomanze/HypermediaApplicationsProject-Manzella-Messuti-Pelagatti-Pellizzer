@@ -1,6 +1,9 @@
 <template>
   <div>
-    <LowBar :something="['csai', 'cscloud', 'csdigital', 'cscybersec']" />
+    <LowBar
+      :something="['csai', 'cscloud', 'csdigital', 'cscybersec']"
+      :page-name="'All Case Studies'"
+    />
     <ShowCase
       :title="'Case Studies'"
       :text="'Relevant settings where the various Response teams have applied their knowledge and expertise'"

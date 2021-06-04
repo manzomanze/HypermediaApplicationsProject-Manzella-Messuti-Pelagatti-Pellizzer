@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LowBar :something="['overview']" />
+    <LowBar :something="['overview']" :page-name="'About Us'" />
     <ShowCase
       title="About Us"
       :text="null"

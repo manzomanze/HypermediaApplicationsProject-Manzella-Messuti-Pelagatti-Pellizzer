@@ -2,14 +2,14 @@
   <div id="navbar" ref="doc" class="navbar">
     <div class="logo">
       <h1>
-        <NuxtLink to="/"><span class="text-primary">R</span>esponse</NuxtLink>
+        <NuxtLink to="/#top"><span class="text-primary">R</span>esponse</NuxtLink>
       </h1>
     </div>
     <nav>
       <ul class="nav-links">
         <li @click="hideNav">
           <div class="subsection">
-            <NuxtLink to="/about_us">About Us</NuxtLink>
+            <NuxtLink to="/about_us#top">About Us</NuxtLink>
           </div>
         </li>
         <li>
@@ -18,19 +18,19 @@
           </div>
           <ul class="submenu">
             <li @click="hideNav">
-              <NuxtLink to="/services">All Services</NuxtLink>
+              <NuxtLink to="/services#top">All Services</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/areas/4">AI</NuxtLink>
+              <NuxtLink to="/areas/4#top">AI</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/areas/1">Cyber Security</NuxtLink>
+              <NuxtLink to="/areas/1#top">Cyber Security</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/areas/2">Cloud Services</NuxtLink>
+              <NuxtLink to="/areas/2#top">Cloud Services</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/areas/3">Digital Services</NuxtLink>
+              <NuxtLink to="/areas/3#top">Digital Services</NuxtLink>
             </li>
           </ul>
         </li>
@@ -40,35 +40,35 @@
           </div>
           <ul class="submenu">
             <li @click="hideNav">
-              <NuxtLink to="/businesssectors">All Industries</NuxtLink>
+              <NuxtLink to="/businesssectors#top">All Industries</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/businesssectors/4">Aerospace & Defense</NuxtLink>
+              <NuxtLink to="/businesssectors/4#top">Aerospace & Defense</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/businesssectors/2">Automotive</NuxtLink>
+              <NuxtLink to="/businesssectors/2#top">Automotive</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/businesssectors/1">Banking</NuxtLink>
+              <NuxtLink to="/businesssectors/1#top">Banking</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/businesssectors/3">Public Service</NuxtLink>
+              <NuxtLink to="/businesssectors/3#top">Public Service</NuxtLink>
             </li>
           </ul>
         </li>
         <li @click="hideNav">
           <div class="subsection">
-            <NuxtLink to="/casestudies">Case Studies</NuxtLink>
+            <NuxtLink to="/casestudies#top">Case Studies</NuxtLink>
           </div>
         </li>
         <li @click="hideNav">
           <div class="subsection">
-            <NuxtLink to="/team">Our Team</NuxtLink>
+            <NuxtLink to="/team#top">Our Team</NuxtLink>
           </div>
         </li>
         <li @click="hideNav">
           <div class="subsection">
-            <NuxtLink to="/contact_us">Contact Us</NuxtLink>
+            <NuxtLink to="/contact_us#top">Contact Us</NuxtLink>
           </div>
         </li>
       </ul>

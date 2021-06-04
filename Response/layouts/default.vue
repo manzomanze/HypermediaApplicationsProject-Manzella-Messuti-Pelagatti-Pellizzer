@@ -1,9 +1,11 @@
 <template>
   <div>
+    <div class="anchor" id="top"></div>
     <TheHeader />
     <SocialButtons />
     <Nuxt />
     <Chat :chat-list="list" />
+    <SocialBlock />
     <TheFooter />
   </div>
 </template>
@@ -91,6 +93,10 @@ export default {
   --light_color: #82e6ff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset */
 * {
   box-sizing: border-box;
@@ -164,11 +170,15 @@ body::-webkit-scrollbar {
 
 .anchor {
   position: relative;
-  top: -9vh;
+  top: -90px;
 }
 
 /* Text Styles */
 .text-bold-primary {
+  font-weight: 600;
+  color: var(--main_color);
+}
+.text-bold-primary-italic {
   font-weight: 600;
   color: var(--main_color);
   font-style: italic;

@@ -7,6 +7,7 @@
         'cloudservices',
         'digitalservices',
       ]"
+      :page-name="'All Team'"
     />
     <ShowCase
       :title="'Our Team'"

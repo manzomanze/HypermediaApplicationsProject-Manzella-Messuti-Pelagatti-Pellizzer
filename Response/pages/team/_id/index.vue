@@ -2,6 +2,8 @@
   <div>
     <LowBar
       :something="['biography', 'fieldofexpertise', 'services', 'casestudies']"
+      :page-name="paragraphs.name + ' ' + paragraphs.surname"
+      :breadcrumbs="breadcrumbs"
     />
     <HalfShowCase
       :name="paragraphs.name"
@@ -67,7 +69,6 @@ export default {
     SlideShow,
     SlideShowSingle,
   },
-
   async asyncData({ $axios, route }) {
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/employees/${route.params.id}`
@@ -76,6 +77,23 @@ export default {
     return {
       paragraphs,
     }
+  },
+  data() {
+    return {
+      breadcrumbs: [],
+    }
+  },
+  created() {
+    this.breadcrumbs = [
+      {
+        name: 'All Team',
+        link: '/team#top',
+      },
+      {
+        name: this.paragraphs.area.name,
+        link: '/areas/' + this.paragraphs.area.id + '#top',
+      },
+    ]
   },
 }
 </script>

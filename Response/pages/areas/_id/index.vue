@@ -1,6 +1,10 @@
 <template>
   <div>
-    <LowBar :something="['overview', 'team', 'casestudies', 'services']" />
+    <LowBar
+      :something="['overview', 'team', 'casestudies', 'services']"
+      :page-name="paragraphs.name"
+      :breadcrumbs="breadcrumbs"
+    />
     <ShowCase
       :title="paragraphs.name"
       :text="paragraphs.overview"
@@ -38,7 +42,6 @@ export default {
     SlideShowEmployee,
     Paragraph,
   },
-
   async asyncData({ $axios, route }) {
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/areas/${route.params.id}`
@@ -52,6 +55,19 @@ export default {
       paragraphs,
       caseStudies,
     }
+  },
+  data() {
+    return {
+      breadcrumbs: [],
+    }
+  },
+  created() {
+    this.breadcrumbs = [
+      {
+        name: 'All Services',
+        link: '/services#top',
+      },
+    ]
   },
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LowBar :something="['allservices']" />
+    <LowBar :something="['allservices']" :page-name="'All Services'" />
     <ShowCase
       title="All Services"
       text="With over 270,000 partnerships with a broad spectrum of technology vendors, Response has both the resources and expertise to react quickly to client needs—a key asset in a digital era when deployment needs to be measured in weeks rather than months."
