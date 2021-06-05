@@ -4,8 +4,9 @@
       <ul>
         <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb">
           <p>
-            <span class="text-bold">/</span>&nbsp;<a :href="breadcrumb.link"
-              >{{ breadcrumb.name }}&nbsp;</a
+            <span class="text-bold">/</span>&nbsp;<NuxtLink
+              :to="breadcrumb.link"
+              >{{ breadcrumb.name }}&nbsp;</NuxtLink
             >
           </p>
         </li>
@@ -209,6 +210,10 @@ export default {
   letter-spacing: 1px;
 }
 
+.capBurger {
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   * {
     text-align: center;
@@ -254,6 +259,20 @@ export default {
   }
   .bread > ul > li:not(:last-child) {
     display: none;
+  }
+  .bread > ul > li {
+    width: 100%;
+  }
+  .bread > ul > li > p {
+    width: calc(100%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .bread {
+    max-width: 80%;
+    max-height: 100%;
+    overflow: hidden;
   }
 }
 @media (max-width: 350px) {
