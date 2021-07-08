@@ -76,7 +76,7 @@ export default {
   margin: auto;
   text-shadow: 1px 1px var(--main_color);
   color: #fff;
-  margin-top: 9vh;
+  margin-top: 90px;
   max-width: 1000px;
 }
 
@@ -195,7 +195,7 @@ export default {
     flex-direction: column;
     position: relative;
     margin: auto;
-    margin-top: 9vh;
+    margin-top: 90px;
     max-width: 1000px;
   }
 
