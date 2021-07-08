@@ -2,7 +2,7 @@
   <div>
     <div class="anchor" id="top"></div>
     <TheHeader />
-    <SocialButtons />
+    <!-- <SocialButtons /> -->
     <Nuxt />
     <Chat :chat-list="list" />
     <SocialBlock />
@@ -13,14 +13,14 @@
 <script>
 import TheHeader from '~/components/TheHeader'
 import TheFooter from '~/components/TheFooter'
-import SocialButtons from '~/components/SocialButtons'
+// import SocialButtons from '~/components/SocialButtons'
 import Chat from '~/components/Chat'
 import MMCCMixin from '~/mixins/mmcc-mixin'
 
 export default {
   components: {
     TheHeader,
-    SocialButtons,
+    // SocialButtons,
     TheFooter,
     Chat,
   },

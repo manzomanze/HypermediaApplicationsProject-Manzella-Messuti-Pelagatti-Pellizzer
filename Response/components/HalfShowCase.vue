@@ -112,7 +112,7 @@ export default {
   align-items: flex-start;
   text-align: left;
   width: 50%;
-  height: 50vh;
+  height: 60vh;
   border-radius: 40px;
 }
 
@@ -152,7 +152,7 @@ export default {
   align-items: flex-start;
   text-align: left;
   width: 50%;
-  height: 50vh;
+  height: 60vh;
   border-radius: 40px;
 }
 

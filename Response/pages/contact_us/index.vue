@@ -23,14 +23,14 @@
     />
     <div id="ourcontacts" class="anchor"></div>
     <Contacts />
-    <SocialBlock />
+    <!-- <SocialBlock /> -->
   </div>
 </template>
 
 <script>
 import FormSection from '~/components/FormSection'
 import ShowCase from '~/components/ShowCase'
-import SocialBlock from '~/components/SocialBlock'
+// import SocialBlock from '~/components/SocialBlock'
 import Contacts from '~/components/Contacts'
 import Paragraph from '~/components/Paragraph'
 
@@ -39,7 +39,7 @@ export default {
     FormSection,
     ShowCase,
     Paragraph,
-    SocialBlock,
+    // SocialBlock,
     Contacts,
   },
   async asyncData({ $axios, route }) {
