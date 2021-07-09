@@ -1,16 +1,19 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar
       :something="['overview', 'team', 'casestudies', 'services']"
       :page-name="paragraphs.name"
       :breadcrumbs="breadcrumbs"
     />
+    <!--Include a showcase-->
     <ShowCase
       :title="paragraphs.name"
       :text="paragraphs.overview"
       :image="paragraphs.image"
     />
     <div id="overview" class="anchor"></div>
+    <!--Include paragraphs of text-->
     <Paragraph
       v-for="paragraph in paragraphs.areacontents"
       :key="paragraph.id"
@@ -19,10 +22,13 @@
       :image="paragraph.image"
     />
     <div id="services" class="anchor"></div>
+    <!--Include the services' slideshow-->
     <SlideShow :content="paragraphs.services" :title="'Services'" />
     <div id="team" class="anchor"></div>
+    <!--Include the team members' slideshow-->
     <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
     <div id="casestudies" class="anchor"></div>
+    <!--Include the case studies' slideshow-->
     <SlideShow :content="caseStudies" :title="'Case Studies'" />
   </div>
 </template>
@@ -42,6 +48,7 @@ export default {
     SlideShowEmployee,
     Paragraph,
   },
+  // Fetch from the database the paragraphs and the case studies
   async asyncData({ $axios, route }) {
     const { data } = await $axios.get(
       `${process.env.BASE_URL}/api/areas/${route.params.id}`
