@@ -1,15 +1,18 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar
       :something="['csai', 'cscloud', 'csdigital', 'cscybersec']"
       :page-name="'All Case Studies'"
     />
+    <!--Include a showcase-->
     <ShowCase
       :title="'Case Studies'"
       :text="'Relevant settings where the various Response teams have applied their knowledge and expertise'"
       :image="{ path: '/img/all_casestudies.jpg' }"
     />
     <div id="csai" class="anchor"></div>
+    <!--Include AI case studies' slideshow-->
     <SlideShow
       :content="casestudies4"
       section="casestudies"
@@ -17,6 +20,7 @@
     />
 
     <div id="cscloud" class="anchor"></div>
+    <!--Include Cloud case studies' slideshow-->
     <SlideShow
       :content="casestudies2"
       section="casestudies"
@@ -24,6 +28,7 @@
     />
 
     <div id="csdigital" class="anchor"></div>
+    <!--Include Digital case studies' slideshow-->
     <SlideShow
       :content="casestudies3"
       section="casestudies"
@@ -31,6 +36,7 @@
     />
 
     <div id="cscybersec" class="anchor"></div>
+    <!--Include Cybersecurity case studies' slideshow-->
     <SlideShow
       :content="casestudies1"
       section="casestudies"
@@ -51,6 +57,7 @@ export default {
     SlideShow,
     ShowCase,
   },
+  // Fetch from the database the case studies belonging to each area
   async asyncData({ $axios, route }) {
     const areas4 = await $axios.get(
       `${process.env.BASE_URL}/api/casestudiesfromarea/4`
@@ -79,32 +86,10 @@ export default {
       casestudies1,
     }
   },
-  data() {
-    return {
-      slideTitle: 'Areas',
-      paragraphs: [],
-    }
-  },
   head() {
     return {
       title: 'Response | About Us',
     }
-  },
-  created() {
-    /* fetch from the server */
-    this.paragraphs = [
-      {
-        title: 'CONTACTS',
-        text:
-          'Bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga',
-        image: null,
-      },
-      {
-        title: 'MAPS',
-        text: 'Look at this!!! Oh wow!!!',
-        image: null,
-      },
-    ]
   },
 }
 </script>
