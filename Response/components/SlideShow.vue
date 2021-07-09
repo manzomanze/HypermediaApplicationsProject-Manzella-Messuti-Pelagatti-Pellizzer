@@ -3,8 +3,9 @@
     <div class="normalTitle">
       <h2>{{ title }}</h2>
     </div>
-    <!-- <h2 class="sectionTitle">{{ title }}</h2> -->
     <div class="container">
+      <!-- Every tile is a link -->
+      <!-- Show all elements in the input array -->
       <NuxtLink
         v-for="element in content"
         :key="element.id"
@@ -15,6 +16,7 @@
         <h3 class="title">{{ element.name }}</h3>
       </NuxtLink>
     </div>
+    <!-- Button for next and previous -->
     <div class="next" @click="prev">
       <i class="fas fa-chevron-right"></i>
     </div>
@@ -46,14 +48,14 @@ export default {
   mounted() {
     // First Build the slideshow
     this.buildSlideShow()
-    // Setup the listener
+    // Setup the listener for the smartphone view
     this.x = window.matchMedia('(max-width: 700px)')
-
     this.x.addEventListener('change', this.screenChange)
     // this.x.addListener(this.screenChange)
     this.screenChange(this.x)
   },
   beforeDestroy() {
+    // Remove listener 
     this.x.removeEventListener('change', this.screenChange)
   },
   methods: {

@@ -3,7 +3,8 @@
     <div class="normalTitle">
       <h2>{{ title }}</h2>
     </div>
-    <!-- <h2 class="sectionTitle">{{ title }}</h2> -->
+    <!-- Used only for Field of Expertise -->
+    <!-- Ment for only one tile -->
     <div class="container">
       <NuxtLink
         :key="content.id"

@@ -1,5 +1,6 @@
 <template>
   <div ref="slideShowContainer" class="slideShowContainer">
+    <!-- Show all elements coming from database in a list -->
     <div class="container">
       <NuxtLink
         v-for="element in content"

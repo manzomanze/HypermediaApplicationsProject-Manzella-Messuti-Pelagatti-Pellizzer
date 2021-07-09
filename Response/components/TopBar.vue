@@ -8,6 +8,10 @@
       </h1>
     </div>
     <nav>
+      <!-- Actual navigation bar -->
+      <!-- Every main section has class subsection -->
+      <!-- Every sublist of links has class submenu -->
+      <!-- Every link has an attribute @click used to hide the menu section in mobile view after pressing the link -->
       <ul class="nav-links">
         <li @click="hideNav">
           <div class="subsection">
@@ -432,6 +436,7 @@ export default {
 </style>
 
 <style>
+/* NOT SCOPED otherwise the name of the animation would change */
 /* Animations */
 @keyframes navLinkFade {
   from {

@@ -5,6 +5,7 @@
     </div>
     <div class="containerForm">
       <form class="callback-form">
+        <!-- Only 'responsive' part which is used to alert the user when an empty submission is fired -->
         <div id="alrt">
           <span class="error">{{ alrtError }}</span
           >{{ alrtThanks }}
@@ -103,12 +104,12 @@ export default {
   display: flex;
   justify-content: left;
   position: relative;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
 .normalTitle h2 {
-  text-align: left;
+  text-align: center;
   padding: 0px 10px;
   color: #333;
   font-size: 2rem;

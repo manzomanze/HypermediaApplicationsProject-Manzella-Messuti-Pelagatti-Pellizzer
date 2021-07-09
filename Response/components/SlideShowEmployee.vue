@@ -3,7 +3,8 @@
     <div class="normalTitle">
       <h2>{{ title }}</h2>
     </div>
-    <!-- <h2 class="sectionTitle">{{ title }}</h2> -->
+    <!-- Modified versione of slideshow which receives data reguarding employees -->
+    <!-- The style of the tiles is the main difference -->
     <div class="container">
       <NuxtLink
         v-for="element in content"

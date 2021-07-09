@@ -13,9 +13,10 @@
 export default {
   name: 'ShowCase',
   props: {
-    title: { type: String, default: () => 'okay' },
-    text: { type: String, default: () => 'ciaociao' },
+    title: { type: String, default: () => '' },
+    text: { type: String, default: () => '' },
     image: { type: Object, default: () => null },
+    // Default image of the components (if something has no image)
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
     titleFontSize: { type: String, default: () => '3' },
     titleFont: { type: String, default: () => "'Montserrat', sans-serif" },

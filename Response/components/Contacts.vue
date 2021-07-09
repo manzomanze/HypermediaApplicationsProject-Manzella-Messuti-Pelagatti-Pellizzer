@@ -1,5 +1,6 @@
 <template>
   <div class="contact-info">
+    <!-- Useful info about Response -->
     <div class="container">
       <div class="box">
         <i class="fas fa-hotel fa-3x"></i>

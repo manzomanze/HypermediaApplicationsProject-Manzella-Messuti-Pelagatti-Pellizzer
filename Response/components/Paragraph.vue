@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Show only what received from the page -->
     <div v-if="title" class="normalTitle">
       <h2 v-html="title"></h2>
     </div>
@@ -18,8 +19,8 @@
 export default {
   name: 'Paragraph',
   props: {
-    title: { type: String, default: () => 'okay' },
-    text: { type: String, default: () => 'ciaociao' },
+    title: { type: String, default: () => '' },
+    text: { type: String, default: () => '' },
     image: { type: Object, default: () => null },
   },
 }

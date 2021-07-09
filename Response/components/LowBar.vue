@@ -1,5 +1,6 @@
 <template>
   <div v-if="!(something.length === 0)" ref="doc" class="lowBar">
+    <!-- Shows all Breadcrumbs coming from the page -->
     <div class="bread">
       <ul>
         <li v-for="(breadcrumb, index) in breadcrumbs" :key="index">
@@ -19,6 +20,8 @@
         </li>
       </ul>
     </div>
+    <!-- List of all possible chapters -->
+    <!-- Only those needed by the page are shown -->
     <ul id="chapters" ref="chapters" class="navbar-invisible" @click="hideNav">
       <li v-if="something.includes('overview')">
         <a href="#overview">Overview</a>
@@ -87,6 +90,7 @@
         <a href="#cscybersec">Cybersecurity Case Studies</a>
       </li>
     </ul>
+    <!-- Button to open/close the menu in smartphone view -->
     <div class="capBurger" @click="navSlide">
       <p>Cap.&nbsp;</p>
       <p id="arrow" ref="arrow" class="text-theme-color">
@@ -100,8 +104,11 @@
 export default {
   name: 'LowBar',
   props: {
+    // List of all anchors needed
     something: { type: Array, default: () => [] },
+    // List of all breadcrumbs needed
     breadcrumbs: { type: Array, default: () => [] },
+    // Name of the page
     pageName: { type: String, default: () => '' },
   },
   data() {
@@ -113,6 +120,7 @@ export default {
     }
   },
   mounted() {
+    // Once mounted load all the necessary dom connection for later usage
     this.arrow = this.$refs.arrow
     this.capBurger = this.$refs.doc.querySelector('.capBurger')
     this.chapters = this.$refs.chapters
@@ -286,6 +294,7 @@ export default {
 </style>
 
 <style>
+/* NOT SCOPED because the name of the animation would change at runtime */
 /* Animations */
 @keyframes navLinkFade {
   from {

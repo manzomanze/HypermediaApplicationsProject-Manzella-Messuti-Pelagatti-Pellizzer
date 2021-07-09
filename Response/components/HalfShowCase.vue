@@ -1,5 +1,6 @@
 <template>
   <div class="halfShowcase">
+    <!-- Photo of employee -->
     <div class="left-box" :style="imagePath()">
       <h2>{{ name }} {{ surname }}</h2>
       <div class="occupation">
@@ -13,6 +14,7 @@
         <h4>{{ location }}</h4>
       </div>
     </div>
+    <!-- Name, Position, Location and Icon of the area -->
     <div class="right-box">
       <h2>{{ name }} {{ surname }}</h2>
       <div class="occupation">
