@@ -1,12 +1,15 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar :something="['allareas']" :page-name="'All Areas'" />
+    <!--Include a showcase-->
     <ShowCase
       title="All Areas"
       text=""
       :image="{ path: '/img/all_areas.jpg' }"
     />
     <div id="allareas" class="anchor"></div>
+    <!--Include the list of all the areas-->
     <ListElements
       :is-large="true"
       :content="slideContents"
@@ -27,25 +30,12 @@ export default {
     ListElements,
     ShowCase,
   },
+  // Fetch from the database all the areas
   async asyncData({ $axios, route }) {
     const areas = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
     const slideContents = areas.data
-
-    const employees = await $axios.get(`${process.env.BASE_URL}/api/employees/`)
-    const employeesContents = employees.data
-
-    const services = await $axios.get(`${process.env.BASE_URL}/api/services/`)
-    const servicessContents = services.data
-
-    const businesssectors = await $axios.get(
-      `${process.env.BASE_URL}/api/businesssectors/`
-    )
-    const businesssectorsContents = businesssectors.data
     return {
       slideContents,
-      employeesContents,
-      businesssectorsContents,
-      servicessContents,
     }
   },
   data() {
@@ -58,22 +48,6 @@ export default {
     return {
       title: 'Response | About Us',
     }
-  },
-  created() {
-    /* fetch from the server */
-    this.paragraphs = [
-      {
-        title: 'CONTACTS',
-        text:
-          'Bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga',
-        image: null,
-      },
-      {
-        title: 'MAPS',
-        text: 'Look at this!!! Oh wow!!!',
-        image: null,
-      },
-    ]
   },
 }
 </script>
