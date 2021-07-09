@@ -1,9 +1,11 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar
       :something="['tellus', 'map', 'ourcontacts']"
       :page-name="'Contact Us'"
     />
+    <!--Include a showcase-->
     <ShowCase
       title="Contact Us!"
       :image="{
@@ -13,8 +15,10 @@
       text="Thank you for your interest in Response. Whatever your inquiry, we will direct you to the right contact information."
     />
     <div id="tellus" class="anchor"></div>
+    <!--Include the form-->
     <FormSection />
     <div id="map" class="anchor"></div>
+    <!--Include the map-->
     <Paragraph
       :key="paragraphs[0].id"
       :title="paragraphs[0].title"
@@ -22,15 +26,14 @@
       :image="paragraphs[0].image"
     />
     <div id="ourcontacts" class="anchor"></div>
+    <!--Include Social Links-->
     <Contacts />
-    <!-- <SocialBlock /> -->
   </div>
 </template>
 
 <script>
 import FormSection from '~/components/FormSection'
 import ShowCase from '~/components/ShowCase'
-// import SocialBlock from '~/components/SocialBlock'
 import Contacts from '~/components/Contacts'
 import Paragraph from '~/components/Paragraph'
 
@@ -39,29 +42,10 @@ export default {
     FormSection,
     ShowCase,
     Paragraph,
-    // SocialBlock,
     Contacts,
-  },
-  async asyncData({ $axios, route }) {
-    const areas = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
-    const slideContents = areas.data
-
-    const employees = await $axios.get(`${process.env.BASE_URL}/api/employees/`)
-    const employeesContents = employees.data
-
-    const businesssectors = await $axios.get(
-      `${process.env.BASE_URL}/api/businesssectors/`
-    )
-    const businesssectorsContents = businesssectors.data
-    return {
-      slideContents,
-      employeesContents,
-      businesssectorsContents,
-    }
   },
   data() {
     return {
-      slideTitle: 'Areas',
       paragraphs: [],
       showcaseImage: Object,
     }
@@ -72,7 +56,6 @@ export default {
     }
   },
   created() {
-    /* fetch from the server */
     this.paragraphs = [
       {
         text:
