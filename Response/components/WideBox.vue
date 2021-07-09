@@ -1,5 +1,5 @@
 <template>
-<!-- Hardcoded homepage because the page is not ment to be dynamic -->
+  <!-- Hardcoded homepage because the page is not ment to be dynamic -->
   <div class="main-div">
     <div class="main-box">
       <h3>Who are we?</h3>
