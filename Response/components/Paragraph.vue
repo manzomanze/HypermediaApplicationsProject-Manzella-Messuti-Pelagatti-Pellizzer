@@ -31,7 +31,7 @@ export default {
   display: flex;
   justify-content: left;
   position: relative;
-  max-width: 1000px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -50,7 +50,7 @@ export default {
   display: flex;
   justify-content: left;
   position: relative;
-  max-width: 1000px;
+  max-width: 1300px;
   margin: auto;
 }
 

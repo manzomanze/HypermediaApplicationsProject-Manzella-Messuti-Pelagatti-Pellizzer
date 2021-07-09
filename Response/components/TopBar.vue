@@ -2,7 +2,9 @@
   <div id="navbar" ref="doc" class="navbar">
     <div class="logo">
       <h1>
-        <NuxtLink to="/#top"><span class="text-primary">R</span>esponse</NuxtLink>
+        <NuxtLink to="/#top"
+          ><span class="text-primary">R</span>esponse</NuxtLink
+        >
       </h1>
     </div>
     <nav>
@@ -14,11 +16,11 @@
         </li>
         <li>
           <div class="subsection" onclick="">
-            <p>Services</p>
+            <p>Areas</p>
           </div>
           <ul class="submenu">
             <li @click="hideNav">
-              <NuxtLink to="/services#top">All Services</NuxtLink>
+              <NuxtLink to="/areas#top">All Areas</NuxtLink>
             </li>
             <li @click="hideNav">
               <NuxtLink to="/areas/4#top">AI</NuxtLink>
@@ -34,6 +36,11 @@
             </li>
           </ul>
         </li>
+        <li @click="hideNav">
+          <div class="subsection">
+            <NuxtLink to="/services#top">Services</NuxtLink>
+          </div>
+        </li>
         <li>
           <div class="subsection" onclick="">
             <p>Industries</p>
@@ -43,7 +50,9 @@
               <NuxtLink to="/businesssectors#top">All Industries</NuxtLink>
             </li>
             <li @click="hideNav">
-              <NuxtLink to="/businesssectors/4#top">Aerospace & Defense</NuxtLink>
+              <NuxtLink to="/businesssectors/4#top"
+                >Aerospace & Defense</NuxtLink
+              >
             </li>
             <li @click="hideNav">
               <NuxtLink to="/businesssectors/2#top">Automotive</NuxtLink>
@@ -320,7 +329,7 @@ export default {
 
   .nav-links > li {
     opacity: 0;
-    padding: 4%;
+    padding: 2%;
     max-width: 100%;
   }
 

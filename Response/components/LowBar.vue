@@ -2,7 +2,7 @@
   <div v-if="!(something.length === 0)" ref="doc" class="lowBar">
     <div class="bread">
       <ul>
-        <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb">
+        <li v-for="(breadcrumb, index) in breadcrumbs" :key="index">
           <p>
             <span class="text-bold">/</span>&nbsp;<NuxtLink
               :to="breadcrumb.link"
@@ -40,6 +40,9 @@
       </li>
       <li v-if="something.includes('allindustries')">
         <a href="#allindustries">All Industries</a>
+      </li>
+      <li v-if="something.includes('allareas')">
+        <a href="#allareas">All Areas</a>
       </li>
       <li v-if="something.includes('area')">
         <a href="#area">Area</a>
