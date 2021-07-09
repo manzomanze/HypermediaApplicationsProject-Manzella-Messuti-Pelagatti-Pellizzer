@@ -46,7 +46,7 @@ export default {
   },
   head() {
     return {
-      title: 'Response | About Us',
+      title: 'Response | All Areas',
     }
   },
 }

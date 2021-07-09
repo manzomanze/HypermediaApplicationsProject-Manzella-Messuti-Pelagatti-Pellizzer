@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar
       :something="[
         'aiteam',
@@ -9,27 +10,32 @@
       ]"
       :page-name="'All Team'"
     />
+    <!--Include a showcase-->
     <ShowCase
       :title="'Our Team'"
       :text="'Meet our employees'"
       :image="{ path: '/images/employee/AllTeam.png' }"
     />
     <div id="aiteam" class="anchor"></div>
+    <!--Include AI team members' slideshow-->
     <SlideShowEmployee :content="employeesAI" :title="'AI Team'" />
 
     <div id="cybersecurity" class="anchor"></div>
+    <!--Include Cybersecurity team members' slideshow-->
     <SlideShowEmployee
       :content="employeesCyber"
       :title="'Cyber Security Team'"
     />
 
     <div id="cloudservices" class="anchor"></div>
+    <!--Include Cloud team members' slideshow-->
     <SlideShowEmployee
       :content="employeesCloud"
       :title="'Cloud Services Team'"
     />
 
     <div id="digitalservices" class="anchor"></div>
+    <!--Include Digital team members' slideshow-->
     <SlideShowEmployee
       :content="employeesDigital"
       :title="'Digital Services Team'"
@@ -69,32 +75,10 @@ export default {
       employeesCyber,
     }
   },
-  data() {
-    return {
-      slideTitle: 'Areas',
-      paragraphs: [],
-    }
-  },
   head() {
     return {
-      title: 'Response | About Us',
+      title: 'Response | Team',
     }
-  },
-  created() {
-    /* fetch from the server */
-    this.paragraphs = [
-      {
-        title: 'CONTACTS',
-        text:
-          'Bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga bellaraga',
-        image: null,
-      },
-      {
-        title: 'MAPS',
-        text: 'Look at this!!! Oh wow!!!',
-        image: null,
-      },
-    ]
   },
 }
 </script>

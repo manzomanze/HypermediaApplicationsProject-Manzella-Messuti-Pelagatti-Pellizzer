@@ -68,6 +68,11 @@ export default {
       breadcrumbs: [],
     }
   },
+  head() {
+    return {
+      title: `Response | ${this.paragraphs.name}`,
+    }
+  },
   created() {
     this.breadcrumbs = [
       {

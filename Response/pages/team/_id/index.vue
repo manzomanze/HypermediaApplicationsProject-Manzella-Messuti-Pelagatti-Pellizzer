@@ -1,10 +1,12 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar
       :something="['biography', 'fieldofexpertise', 'services', 'casestudies']"
       :page-name="paragraphs.name + ' ' + paragraphs.surname"
       :breadcrumbs="breadcrumbs"
     />
+    <!--Include minimal personal information-->
     <HalfShowCase
       :name="paragraphs.name"
       :surname="paragraphs.surname"
@@ -13,7 +15,7 @@
       :image="paragraphs.main_image"
       :areaid="paragraphs.areaId"
     />
-
+    <!--Include multiple parapgrapghs of text-->
     <div id="biography" class="anchor"></div>
     <Paragraph
       v-if="paragraphs.what_i_do"
@@ -37,6 +39,7 @@
       :image="null"
     />
 
+    <!--Include a link to the field of expertise-->
     <div id="fieldofexpertise" class="anchor"></div>
     <SlideShowSingle
       :content="paragraphs.area"
@@ -45,8 +48,10 @@
     />
 
     <div id="services" class="anchor"></div>
+    <!--Include the services' slideshow-->
     <SlideShow :content="paragraphs.services" :title="'Services'" />
 
+    <!--Include the case studies' slideshow-->
     <div id="casestudies" class="anchor"></div>
     <SlideShow
       :content="paragraphs.casestudies"
@@ -81,6 +86,11 @@ export default {
   data() {
     return {
       breadcrumbs: [],
+    }
+  },
+  head() {
+    return {
+      title: 'Response | Team Member',
     }
   },
   created() {

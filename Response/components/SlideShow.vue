@@ -55,7 +55,7 @@ export default {
     this.screenChange(this.x)
   },
   beforeDestroy() {
-    // Remove listener 
+    // Remove listener
     this.x.removeEventListener('change', this.screenChange)
   },
   methods: {

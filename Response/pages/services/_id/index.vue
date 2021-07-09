@@ -1,10 +1,12 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar
       :something="['overview', 'area', 'team']"
       :page-name="paragraphs.name"
       :breadcrumbs="breadcrumbs"
     />
+    <!--Include a showcase-->
     <ShowCase
       :title="paragraphs.name"
       :text="paragraphs.overview"
@@ -12,6 +14,7 @@
       default-image-path="/img/all_services.jpg"
     />
     <div id="overview" class="anchor"></div>
+    <!--Include paragraphs of text-->
     <Paragraph
       v-for="paragraph in paragraphs.servicescontents"
       :key="paragraph.id"
@@ -20,12 +23,14 @@
       :image="paragraph.image"
     />
     <div id="area" class="anchor"></div>
+    <!--Include the link to the domain area-->
     <SlideShowSingle
       :content="paragraphs.area"
       :title="'Service Area'"
       :section="'Areas'"
     />
     <div id="team" class="anchor"></div>
+    <!--Include the team members' slideshow-->
     <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
   </div>
 </template>
@@ -53,6 +58,11 @@ export default {
   data() {
     return {
       breadcrumbs: [],
+    }
+  },
+  head() {
+    return {
+      title: `Response | ${this.paragraphs.name}`,
     }
   },
   created() {
