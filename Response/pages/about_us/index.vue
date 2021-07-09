@@ -1,12 +1,15 @@
 <template>
   <div>
+    <!--Include the bar with breadcrumb and anchors-->
     <LowBar :something="['overview']" :page-name="'About Us'" />
+    <!--Include a showcase-->
     <ShowCase
       title="About Us"
       :text="null"
       default-image-path="/img/about_us.png"
     />
     <div id="overview" class="anchor"></div>
+    <!--Include multiple paragraph of text-->
     <Paragraph
       v-for="paragraph in paragraphs"
       :key="paragraph.id"
@@ -31,26 +34,8 @@ export default {
     ShowCase,
     Paragraph,
   },
-  async asyncData({ $axios, route }) {
-    const areas = await $axios.get(`${process.env.BASE_URL}/api/areas/`)
-    const slideContents = areas.data
-
-    const employees = await $axios.get(`${process.env.BASE_URL}/api/employees/`)
-    const employeesContents = employees.data
-
-    const businesssectors = await $axios.get(
-      `${process.env.BASE_URL}/api/businesssectors/`
-    )
-    const businesssectorsContents = businesssectors.data
-    return {
-      slideContents,
-      employeesContents,
-      businesssectorsContents,
-    }
-  },
   data() {
     return {
-      slideTitle: 'Areas',
       paragraphs: [],
     }
   },
@@ -60,7 +45,7 @@ export default {
     }
   },
   created() {
-    /* fetch from the server */
+    //Hardcoded text, because the page is not dynamic
     this.paragraphs = [
       {
         title: 'Company Profile',
