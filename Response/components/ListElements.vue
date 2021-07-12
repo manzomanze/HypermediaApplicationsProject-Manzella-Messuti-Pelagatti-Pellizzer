@@ -48,6 +48,8 @@ export default {
       }
     },
     finalLink() {
+      // if there are spaces in the title we delete them.
+      // All uppercases are transformed to lowercases
       if (this.section === '') {
         return this.title.replace(/\s/g, '').toLowerCase()
       } else {

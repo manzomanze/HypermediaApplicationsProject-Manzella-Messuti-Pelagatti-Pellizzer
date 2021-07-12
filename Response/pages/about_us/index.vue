@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--Include the bar with breadcrumb and anchors-->
-    <LowBar :something="['overview']" :page-name="'About Us'" />
+    <LowBar :all-chapters="['overview']" :page-name="'About Us'" />
     <!--Include a showcase-->
     <ShowCase
       title="About Us"
@@ -45,7 +45,7 @@ export default {
     }
   },
   created() {
-    //Hardcoded text, because the page is not dynamic
+    // Hardcoded text, because the page is not dynamic
     this.paragraphs = [
       {
         title: 'Company Profile',

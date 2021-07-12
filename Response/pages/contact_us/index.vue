@@ -2,7 +2,7 @@
   <div>
     <!--Include the bar with breadcrumb and anchors-->
     <LowBar
-      :something="['tellus', 'map', 'ourcontacts']"
+      :all-chapters="['tellus', 'map', 'ourcontacts']"
       :page-name="'Contact Us'"
     />
     <!--Include a showcase-->

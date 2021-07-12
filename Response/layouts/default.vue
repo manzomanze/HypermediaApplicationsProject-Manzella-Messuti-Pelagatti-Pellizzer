@@ -1,8 +1,7 @@
 <template>
   <div>
     <div class="anchor" id="top"></div>
-    <TheHeader />
-    <!-- <SocialButtons /> -->
+    <TopBar />
     <Nuxt />
     <Chat :chat-list="list" />
     <SocialBlock />
@@ -11,16 +10,14 @@
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader'
 import TheFooter from '~/components/TheFooter'
-// import SocialButtons from '~/components/SocialButtons'
+import TopBar from '~/components/TopBar'
 import Chat from '~/components/Chat'
 import MMCCMixin from '~/mixins/mmcc-mixin'
 
 export default {
   components: {
-    TheHeader,
-    // SocialButtons,
+    TopBar,
     TheFooter,
     Chat,
   },
@@ -184,7 +181,7 @@ body::-webkit-scrollbar {
   font-style: italic;
 }
 .text-bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 .text-italic {
   font-style: italic;

@@ -2,7 +2,7 @@
   <div>
     <!--Include the bar with breadcrumb and anchors-->
     <LowBar
-      :something="['csai', 'cscloud', 'csdigital', 'cscybersec']"
+      :all-chapters="['csai', 'cscloud', 'csdigital', 'cscybersec']"
       :page-name="'All Case Studies'"
     />
     <!--Include a showcase-->

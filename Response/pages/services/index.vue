@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--Include the bar with breadcrumb and anchors-->
-    <LowBar :something="['allservices']" :page-name="'All Services'" />
+    <LowBar :all-chapters="['allservices']" :page-name="'All Services'" />
     <!--Include a showcase-->
     <ShowCase
       title="All Services"

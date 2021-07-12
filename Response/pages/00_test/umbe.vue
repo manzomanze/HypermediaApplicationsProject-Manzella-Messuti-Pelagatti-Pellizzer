@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LowBar :something="['overview']" />
+    <LowBar :all-chapters="['overview']" />
     <ShowCase />
     <Paragraph
       v-for="paragraph in paragraphs"

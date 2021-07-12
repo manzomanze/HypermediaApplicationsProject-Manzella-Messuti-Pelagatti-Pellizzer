@@ -79,7 +79,7 @@ export default {
   text-shadow: 1px 1px var(--main_color);
   color: #fff;
   margin-top: 90px;
-  max-width: 1000px;
+  max-width: 1300px;
 }
 
 .halfShowcase .container * {
@@ -183,14 +183,14 @@ export default {
   background: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .halfShowcase {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .halfShowcase {
     padding: 20px auto 0px;
     display: flex;

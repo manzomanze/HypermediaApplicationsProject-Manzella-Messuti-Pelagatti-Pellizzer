@@ -1,11 +1,11 @@
 <template>
   <div>
     <!--Include the bar with breadcrumb and anchors-->
-    <LowBar :something="['allareas']" :page-name="'All Areas'" />
+    <LowBar :all-chapters="['allareas']" :page-name="'All Areas'" />
     <!--Include a showcase-->
     <ShowCase
       title="All Areas"
-      text=""
+      text="With our global network of over 100 innovation hubs around the world, we apply industry expertise, diverse skill sets and next-generation technology to each business challenge. In particular we can help you by applying our skills in our fields of expertise to your business."
       :image="{ path: '/img/all_areas.jpg' }"
     />
     <div id="allareas" class="anchor"></div>

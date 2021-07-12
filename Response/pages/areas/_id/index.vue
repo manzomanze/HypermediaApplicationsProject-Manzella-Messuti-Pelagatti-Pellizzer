@@ -2,7 +2,7 @@
   <div>
     <!--Include the bar with breadcrumb and anchors-->
     <LowBar
-      :something="['overview', 'team', 'casestudies', 'services']"
+      :all-chapters="['overview', 'team', 'casestudies', 'services']"
       :page-name="paragraphs.name"
       :breadcrumbs="breadcrumbs"
     />
@@ -76,8 +76,8 @@ export default {
   created() {
     this.breadcrumbs = [
       {
-        name: 'All Services',
-        link: '/services#top',
+        name: 'All Areas',
+        link: '/areas#top',
       },
     ]
   },

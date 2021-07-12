@@ -2,7 +2,12 @@
   <div>
     <!--Include the bar with breadcrumb and anchors-->
     <LowBar
-      :something="['biography', 'fieldofexpertise', 'services', 'casestudies']"
+      :all-chapters="[
+        'biography',
+        'fieldofexpertise',
+        'services',
+        'casestudies',
+      ]"
       :page-name="paragraphs.name + ' ' + paragraphs.surname"
       :breadcrumbs="breadcrumbs"
     />

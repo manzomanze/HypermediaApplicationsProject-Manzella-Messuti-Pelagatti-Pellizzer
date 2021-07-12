@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!(something.length === 0)" ref="doc" class="lowBar">
+  <div v-if="!(allChapters.length === 0)" ref="doc" class="lowBar">
     <!-- Shows all Breadcrumbs coming from the page -->
     <div class="bread">
       <ul>
@@ -23,70 +23,70 @@
     <!-- List of all possible chapters -->
     <!-- Only those needed by the page are shown -->
     <ul id="chapters" ref="chapters" class="navbar-invisible" @click="hideNav">
-      <li v-if="something.includes('overview')">
+      <li v-if="allChapters.includes('overview')">
         <a href="#overview">Overview</a>
       </li>
-      <li v-if="something.includes('biography')">
+      <li v-if="allChapters.includes('biography')">
         <a href="#biography">Biography</a>
       </li>
-      <li v-if="something.includes('fieldofexpertise')">
+      <li v-if="allChapters.includes('fieldofexpertise')">
         <a href="#fieldofexpertise">Field of Expertise</a>
       </li>
-      <li v-if="something.includes('services')">
+      <li v-if="allChapters.includes('services')">
         <a href="#services">Services</a>
       </li>
-      <li v-if="something.includes('businesssectors')">
+      <li v-if="allChapters.includes('businesssectors')">
         <a href="#businesssectors">Business Sectors</a>
       </li>
-      <li v-if="something.includes('allservices')">
+      <li v-if="allChapters.includes('allservices')">
         <a href="#allservices">All Services</a>
       </li>
-      <li v-if="something.includes('allindustries')">
+      <li v-if="allChapters.includes('allindustries')">
         <a href="#allindustries">All Industries</a>
       </li>
-      <li v-if="something.includes('allareas')">
+      <li v-if="allChapters.includes('allareas')">
         <a href="#allareas">All Areas</a>
       </li>
-      <li v-if="something.includes('area')">
+      <li v-if="allChapters.includes('area')">
         <a href="#area">Area</a>
       </li>
-      <li v-if="something.includes('team')">
+      <li v-if="allChapters.includes('team')">
         <a href="#team">Team</a>
       </li>
-      <li v-if="something.includes('casestudies')">
+      <li v-if="allChapters.includes('casestudies')">
         <a href="#casestudies">Case Studies</a>
       </li>
-      <li v-if="something.includes('aiteam')">
+      <li v-if="allChapters.includes('aiteam')">
         <a href="#aiteam">AI Team</a>
       </li>
-      <li v-if="something.includes('cybersecurity')">
+      <li v-if="allChapters.includes('cybersecurity')">
         <a href="#cybersecurity">Cyber Security</a>
       </li>
-      <li v-if="something.includes('cloudservices')">
+      <li v-if="allChapters.includes('cloudservices')">
         <a href="#cloudservices">Cloud Services</a>
       </li>
-      <li v-if="something.includes('digitalservices')">
+      <li v-if="allChapters.includes('digitalservices')">
         <a href="#digitalservices">Digital Services</a>
       </li>
-      <li v-if="something.includes('tellus')">
+      <li v-if="allChapters.includes('tellus')">
         <a href="#tellus">Tell Us More</a>
       </li>
-      <li v-if="something.includes('map')">
+      <li v-if="allChapters.includes('map')">
         <a href="#map">Where We Are</a>
       </li>
-      <li v-if="something.includes('ourcontacts')">
+      <li v-if="allChapters.includes('ourcontacts')">
         <a href="#ourcontacts">Our Contacts</a>
       </li>
-      <li v-if="something.includes('csai')">
+      <li v-if="allChapters.includes('csai')">
         <a href="#csai">AI Case Studies</a>
       </li>
-      <li v-if="something.includes('cscloud')">
+      <li v-if="allChapters.includes('cscloud')">
         <a href="#cscloud">Cloud Case Studies</a>
       </li>
-      <li v-if="something.includes('csdigital')">
+      <li v-if="allChapters.includes('csdigital')">
         <a href="#csdigital">Digital Case Studies</a>
       </li>
-      <li v-if="something.includes('cscybersec')">
+      <li v-if="allChapters.includes('cscybersec')">
         <a href="#cscybersec">Cybersecurity Case Studies</a>
       </li>
     </ul>
@@ -105,7 +105,7 @@ export default {
   name: 'LowBar',
   props: {
     // List of all anchors needed
-    something: { type: Array, default: () => [] },
+    allChapters: { type: Array, default: () => [] },
     // List of all breadcrumbs needed
     breadcrumbs: { type: Array, default: () => [] },
     // Name of the page

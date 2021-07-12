@@ -2,7 +2,7 @@
   <div>
     <!--Include the bar with breadcrumb and anchors-->
     <LowBar
-      :something="[
+      :all-chapters="[
         'aiteam',
         'cybersecurity',
         'cloudservices',

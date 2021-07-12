@@ -235,6 +235,10 @@ export default {
   margin: 0 5px;
 }
 
+.nav-links .subsection > p {
+  cursor: default;
+}
+
 .nav-links .subsection {
   height: 60px;
   display: flex;
