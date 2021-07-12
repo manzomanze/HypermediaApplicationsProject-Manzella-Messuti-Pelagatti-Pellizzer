@@ -8,11 +8,11 @@
         "choices": [
           {
             "id": "xor2",
-            "intents": ["contacts"]
+            "intents": ["contacts", "Contacts"]
           },
           {
             "id": "guide",
-            "intents": ["guide"]
+            "intents": ["guide", "Guide"]
           }
         ]
       },
@@ -21,12 +21,12 @@
         "choices": [
           {
             "id": "contact_form",
-            "intents": ["form"],
+            "intents": ["form", "Form"],
             "payload": {"guide":"/contact_us#tellus"}
           },
           {
             "id": "contact_page",
-            "intents": ["contacts"],
+            "intents": ["contacts", "Contacts"],
             "payload": {"guide":"/contact_us"}
           }
         ]
@@ -35,11 +35,11 @@
       "about": "Welcome to the About page of our website. Here you can find all the information about Response",
       "contact_form": "Welcome to the contact form\nIf you want to restart the chatbot just ask ",
       "contact_page": "Welcome to the contact page\nIf you want to restart the chatbot just ask ",
-      "end": "The process is completed let's restart",
+      "end": "The process is completed. Reload the page if you want to restart it",
       "steps_v": ["/", "/", "/about_us"],
-      "continue_v": ["continue", "ok", "go", "yes"],
+      "continue_v": ["continue", "Continue", "ok", "Ok", "go", "Go", "yes", "Yes"],
       "guide_v": ["guide"],
-      "main_exit_v": ["no", "reset"],
+      "main_exit_v": ["no", "No", "reset", "Reset"],
       "main_err": "Option not available",
       "stay_message": "I don't understand. Do you want to continue?"
     },
