@@ -272,7 +272,8 @@ export default {
   width: 40px;
   height: 40px;
   font-weight: 700;
-  top: 60%;
+  /* top: 60%; */
+  bottom: 80px;
   border-radius: 5px;
   border: #fff 1px solid;
   border-bottom: #fff 3px solid;
