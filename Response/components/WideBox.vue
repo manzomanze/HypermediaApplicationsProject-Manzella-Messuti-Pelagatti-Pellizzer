@@ -106,7 +106,7 @@ export default {}
   width: 100%;
   text-align: left;
   color: #4d80b9;
-  font-size: 60px;
+  font-size: 45px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }

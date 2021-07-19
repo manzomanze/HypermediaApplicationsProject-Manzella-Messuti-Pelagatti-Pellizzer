@@ -112,8 +112,8 @@ export default {
   text-align: center;
   padding: 0px 10px;
   color: #333;
-  font-size: 2rem;
-  margin: 20px;
+  font-size: 1.7rem;
+  margin: 10px;
 }
 /* Form */
 .containerForm {

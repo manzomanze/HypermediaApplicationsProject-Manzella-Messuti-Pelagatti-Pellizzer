@@ -239,10 +239,10 @@ export default {
 }
 
 .normalTitle h2 {
-  text-align: left;
+  text-align: center;
   padding: 0px 10px;
   color: #333;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 20px;
 }
 

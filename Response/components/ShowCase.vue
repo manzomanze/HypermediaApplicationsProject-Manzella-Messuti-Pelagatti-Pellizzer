@@ -85,7 +85,7 @@ export default {
 
 @media (max-width: 550px) {
   .showcase .container h2 {
-    font-size: 3rem !important;
+    font-size: 2.9rem !important;
   }
 }
 </style>
