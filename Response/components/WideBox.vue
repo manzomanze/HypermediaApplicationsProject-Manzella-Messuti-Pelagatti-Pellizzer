@@ -9,14 +9,14 @@
         the entire breadth of clients’ opportunities in the evolving world of
         cloud, digital and platforms.
       </p>
-      <NuxtLink to="/about_us" class="btn">Read More About Us</NuxtLink>
+      <NuxtLink to="/about_us" class="btn">More About Us</NuxtLink>
     </div>
     <br />
     <br />
     <br />
     <br />
     <div class="main-box">
-      <h3>Which are our areas of expertise?</h3>
+      <h3>Our areas of expertise</h3>
       <p>
         The Group’s sectorial expertise ensures that we are always up to speed
         with the challenges facing our clients and developing solutions tailored
@@ -82,7 +82,7 @@ export default {}
   align-items: center;
   flex-direction: column;
   margin: 30px auto;
-  width: 80%;
+  width: 70%;
   border-radius: 10px;
 }
 
@@ -93,12 +93,13 @@ export default {}
   align-items: center;
   flex-direction: column;
 }
+
 .main-box > .flexbox > div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  width: 70%;
+  width: 85%;
 }
 
 .main-box > h3 {
@@ -106,14 +107,16 @@ export default {}
   width: 100%;
   text-align: left;
   color: #4d80b9;
-  font-size: 45px;
+  font-size: 250%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
+
 .main-box > p {
   width: 100%;
   margin: 15px auto;
-  margin-left: 10%;
+  margin-left: 8%;
+  padding-right: 10%;
   font-size: 27px;
   line-height: 40px;
 }
@@ -122,14 +125,15 @@ export default {}
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
-  height: 50px;
+  margin-top: 40px;
+  width: 300px;
+  height: 80px;
   color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #4d80b9;
   border: 2px solid #4d80b9;
-  font-size: 20px;
+  font-size: 25px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
@@ -150,8 +154,8 @@ export default {}
   align-items: center;
   text-align: center;
   margin-top: 40px;
-  width: 350px;
-  height: 100px;
+  width: 300px;
+  height: 80px;
   color: #fff;
   border-radius: 10px;
   background-color: #4d80b9;
@@ -177,11 +181,13 @@ export default {}
   .main-box > h3 {
     margin: 15px 0px;
     width: 100%;
+    font-size: 250%;
     text-align: left;
   }
   .main-box > p {
     margin-left: 7%;
     margin-right: 1%;
+    font-size: 25px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="normalTitle">
-      <h2>We would welcome the opportunity to discuss the scope, write us!</h2>
+      <h2 href="tel:+0286816410">Get in touch!</h2>
     </div>
     <div class="containerForm">
       <form class="callback-form">
@@ -104,16 +104,16 @@ export default {
   display: flex;
   justify-content: left;
   position: relative;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 
 .normalTitle h2 {
   text-align: center;
-  padding: 0px 10px;
+  padding: 0px 5%;
   color: #333;
-  font-size: 1.7rem;
-  margin: 10px;
+  font-size: 2.7rem;
+  margin: 20px;
 }
 /* Form */
 .containerForm {

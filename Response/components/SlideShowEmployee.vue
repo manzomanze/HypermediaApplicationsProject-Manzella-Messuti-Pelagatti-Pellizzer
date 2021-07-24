@@ -26,8 +26,10 @@
 </template>
 
 <script>
+import SlidersMixin from '~/mixins/sliders-mixin'
 export default {
   name: 'SlideShow',
+  mixins: [SlidersMixin],
   props: {
     title: { type: String, default: () => 'Title Here' },
     section: { type: String, default: () => '' },
@@ -45,16 +47,14 @@ export default {
     }
   },
   mounted() {
-    // First Build the slideshow
-    this.buildSlideShow()
-    // Setup the listener
+    // Setup the listener for the smartphone view
     this.x = window.matchMedia('(max-width: 700px)')
-
     this.x.addEventListener('change', this.screenChange)
     // this.x.addListener(this.screenChange)
     this.screenChange(this.x)
   },
   beforeDestroy() {
+    // Remove listener
     this.x.removeEventListener('change', this.screenChange)
   },
   methods: {
@@ -69,36 +69,6 @@ export default {
       let numb = text.match(/\d/g)
       numb = numb.join('')
       return numb * 1
-    },
-    buildSlideShow() {
-      const slides = this.$refs.slideShowContainer.querySelectorAll('.slide')
-      const container = this.$refs.slideShowContainer.querySelector(
-        '.container'
-      )
-
-      // Set max width for the container
-      const maxWidth = slides.length > 3 ? 3 : slides.length
-      container.style.width = `${maxWidth * (200 + 50)}px`
-
-      // More than 3? showButton : hideButton
-      if (slides.length <= 3) {
-        this.hideButtons()
-      }
-
-      // Place each slide from the beginning of the container
-      for (let k = 0; k < slides.length; k++) {
-        slides[k].style.left = `${25 + (200 + 50) * k}px`
-      }
-    },
-    showButtons() {
-      this.$refs.slideShowContainer.querySelector('.next').style.display = ''
-      this.$refs.slideShowContainer.querySelector('.prev').style.display = ''
-    },
-    hideButtons() {
-      this.$refs.slideShowContainer.querySelector('.next').style.display =
-        'none'
-      this.$refs.slideShowContainer.querySelector('.prev').style.display =
-        'none'
     },
     next() {
       // Simple Rate Limiter
@@ -238,16 +208,23 @@ export default {
 }
 
 .normalTitle h2 {
-  text-align: left;
+  text-align: center;
   padding: 0px 10px;
   color: #333;
-  font-size: 2rem;
+  font-size: 2.7rem;
   margin: 20px;
+}
+
+@media (max-width: 420px) {
+  .normalTitle h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .slideShowContainer {
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 1500px;
   /* margin: 30px auto; */
   margin: 120px auto;
   position: relative;
@@ -286,20 +263,20 @@ export default {
   align-items: center;
 }
 
+.next {
+  right: 1.2em;
+}
+
+.prev {
+  left: 1.2em;
+}
+
 .prev:hover,
 .next:hover {
   color: var(--main_color);
   border: var(--main_color) 1px solid;
   border-bottom: var(--main_color) 3px solid;
   background-color: rgba(122, 122, 122, 0.096);
-}
-
-.next {
-  right: 1%;
-}
-
-.prev {
-  left: 1%;
 }
 
 .slideShowContainer .sectionTitle {
@@ -336,7 +313,7 @@ export default {
   transition-duration: 250ms;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   color: #fff;
   position: absolute;
   width: 200px;

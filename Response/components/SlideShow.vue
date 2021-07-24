@@ -78,11 +78,11 @@ export default {
       )
 
       // Set max width for the container
-      const maxWidth = slides.length > 3 ? 3 : slides.length
+      const maxWidth = slides.length > 5 ? 5 : slides.length
       container.style.width = `${maxWidth * (200 + 50)}px`
 
-      // More than 3? showButton : hideButton
-      if (slides.length <= 3) {
+      // More than 5? showButton : hideButton
+      if (slides.length <= 5) {
         this.hideButtons()
       }
 
@@ -242,13 +242,13 @@ export default {
   text-align: center;
   padding: 0px 10px;
   color: #333;
-  font-size: 1.8rem;
+  font-size: 2.7rem;
   margin: 20px;
 }
 
 .slideShowContainer {
   overflow: hidden;
-  max-width: 1000px;
+  max-width: 1500px;
   /* margin: 30px auto; */
   margin: 120px auto;
   position: relative;

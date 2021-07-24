@@ -20,7 +20,7 @@ export default {
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
     titleFontSize: { type: String, default: () => '3' },
     titleFont: { type: String, default: () => "'Montserrat', sans-serif" },
-    height: { type: String, default: () => '102' },
+    height: { type: String, default: () => '40' },
   },
   methods: {
     imagePath() {

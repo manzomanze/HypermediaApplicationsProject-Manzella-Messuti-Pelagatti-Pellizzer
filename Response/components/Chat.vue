@@ -136,7 +136,8 @@ export default {
   /* border: 1px solid rgb(1, 134, 211); */
   border: 2px solid rgb(1, 134, 211);
   border-radius: 4px;
-  height: 500px;
+  height: 60%;
+  max-height: 500px;
   width: 300px;
   position: fixed;
   bottom: 80px;
@@ -144,6 +145,7 @@ export default {
   border-radius: 10px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.514);
   background-color: rgba(255, 255, 255, 0.75);
+  z-index: 10000;
 }
 
 .chat-window {
