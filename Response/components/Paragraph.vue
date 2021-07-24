@@ -88,6 +88,9 @@ export default {
   width: 90%;
 }
 @media (max-width: 1050px) {
+  .normalTitle h2 {
+    font-size: 2.4rem !important;
+  }
   @media (min-width: 750px) {
     .normalTitle,
     .paragraph,

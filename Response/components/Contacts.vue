@@ -31,10 +31,12 @@ export default {
 </script>
 
 <style scoped>
+* {
+  color: #333;
+}
 .contact-info {
   margin: auto;
   max-width: 1000px;
-  color: #333;
 }
 
 .contact-info .container {

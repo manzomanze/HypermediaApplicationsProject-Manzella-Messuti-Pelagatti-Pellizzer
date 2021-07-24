@@ -32,6 +32,7 @@ export default {
   max-width: 1000px;
   align-items: center;
   color: #333;
+  padding-bottom: 25px;
 }
 
 .socialBlock .container {
@@ -62,6 +63,12 @@ export default {
 }
 
 .fa-3x {
-  font-size: 250% !important;
+  font-size: 4rem !important;
+}
+
+@media (max-width: 700px) {
+  .fa-3x {
+    font-size: 10vw !important;
+  }
 }
 </style>

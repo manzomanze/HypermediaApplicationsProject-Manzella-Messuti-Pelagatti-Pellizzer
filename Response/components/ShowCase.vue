@@ -91,5 +91,9 @@ export default {
   .showcase .container h2 {
     font-size: 2.9rem !important;
   }
+
+  .showcase .container h3 {
+    display: none;
+  }
 }
 </style>
