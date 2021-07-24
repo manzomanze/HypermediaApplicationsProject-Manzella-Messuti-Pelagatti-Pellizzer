@@ -29,16 +29,16 @@ export default {
       const container = this.$refs.slideShowContainer.querySelector(
         '.container'
       )
-      if (width < 1330) {
+      if (width < 1380) {
         visibles = 4
       }
-      if (width < 1070) {
+      if (width < 1120) {
         visibles = 3
       }
-      if (width < 810) {
+      if (width < 880) {
         visibles = 2
       }
-      if (width < 576) {
+      if (width < 630) {
         visibles = 1
       }
       const maxWidth = slides.length > visibles ? visibles : slides.length
