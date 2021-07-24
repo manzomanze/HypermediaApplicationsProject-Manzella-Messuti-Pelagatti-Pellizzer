@@ -24,20 +24,24 @@
     />
     <div id="team" class="anchor"></div>
     <!--Include the team members' slideshow-->
-    <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
+    <SlideShow
+      :is-person="true"
+      :content="paragraphs.employees"
+      :title="'Team'"
+    />
   </div>
 </template>
 
 <script>
 import ShowCase from '~/components/ShowCase'
 import Paragraph from '~/components/Paragraph'
-import SlideShowEmployee from '~/components/SlideShowEmployee'
+import SlideShow from '~/components/SlideShow'
 
 export default {
   components: {
     ShowCase,
     Paragraph,
-    SlideShowEmployee,
+    SlideShow,
   },
   async asyncData({ $axios, route }) {
     const { data } = await $axios.get(
