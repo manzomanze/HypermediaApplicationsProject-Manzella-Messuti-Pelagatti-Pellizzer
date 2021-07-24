@@ -53,17 +53,6 @@ export default {
       x: Object,
     }
   },
-  mounted() {
-    // Setup the listener for the smartphone view
-    this.x = window.matchMedia('(max-width: 700px)')
-    this.x.addEventListener('change', this.screenChange)
-    // this.x.addListener(this.screenChange)
-    this.screenChange(this.x)
-  },
-  beforeDestroy() {
-    // Remove listener
-    this.x.removeEventListener('change', this.screenChange)
-  },
   methods: {
     returnFinalLink(elem) {
       if (this.isPerson) {
@@ -158,46 +147,6 @@ export default {
         } else {
           slides[i].style.left = `${leftOffset - 250}px`
         }
-      }
-    },
-    screenChange(x) {
-      if (x.matches) {
-        // Small Screen
-        this.checkSmall()
-      } else {
-        this.checkBig()
-      }
-    },
-    checkSmall() {
-      const slides = this.$refs.slideShowContainer.querySelectorAll('.slide')
-
-      if (slides.length === 3) {
-        // Show - Hide buttons
-        this.showButtons()
-      } else if (slides.length === 2) {
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.position = 'relative'
-          slides[i].style.top = 0
-          slides[i].style.left = 0
-          slides[i].style.marginBottom = '30px'
-        }
-      }
-    },
-    checkBig() {
-      const slides = this.$refs.slideShowContainer.querySelectorAll('.slide')
-
-      if (slides.length === 3) {
-        // Hide buttons
-        this.hideButtons()
-      } else if (slides.length === 2) {
-        // Reset for bigger screens
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.position = 'absolute'
-          slides[i].style.top = 0
-          slides[i].style.left = 0
-          slides[i].style.marginBottom = '0px'
-        }
-        this.buildSlideShow()
       }
     },
     finalLink() {
