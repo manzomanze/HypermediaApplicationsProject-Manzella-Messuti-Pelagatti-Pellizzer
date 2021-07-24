@@ -5,6 +5,10 @@ export default {
     this.buildSlideShow()
     this.resizeListener()
   },
+  beforeDestroy() {
+    // Remove listener
+    window.removeEventListener('resize', this.buildSlideShow)
+  },
   methods: {
     showButtons() {
       this.$refs.slideShowContainer.querySelector('.next').style.display = ''
@@ -17,18 +21,15 @@ export default {
         'none'
     },
     resizeListener() {
-      window.addEventListener('resize', () => {
-        this.buildSlideShow()
-      })
+      window.addEventListener('resize', this.buildSlideShow)
     },
     buildSlideShow() {
       const width = window.innerWidth
       let visibles = 5
 
       const slides = this.$refs.slideShowContainer.querySelectorAll('.slide')
-      const container = this.$refs.slideShowContainer.querySelector(
-        '.container'
-      )
+      const container =
+        this.$refs.slideShowContainer.querySelector('.container')
       if (width < 1380) {
         visibles = 4
       }

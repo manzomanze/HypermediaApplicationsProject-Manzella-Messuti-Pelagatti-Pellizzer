@@ -1,6 +1,7 @@
 <template>
   <div class="showcase">
     <div class="container" :style="`${imagePath()}; height: ${height}vh;`">
+      <div class="divider"></div>
       <h2 :style="`font-family:${titleFont}; font-size: ${titleFontSize}rem`">
         {{ title }}
       </h2>
@@ -20,7 +21,7 @@ export default {
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
     titleFontSize: { type: String, default: () => '3' },
     titleFont: { type: String, default: () => "'Montserrat', sans-serif" },
-    height: { type: String, default: () => '40' },
+    height: { type: String, default: () => '50' },
   },
   methods: {
     imagePath() {
@@ -39,6 +40,10 @@ export default {
 .showcase {
   position: relative;
   overflow: hidden;
+}
+
+.showcase .divider {
+  height: 90px;
 }
 
 .showcase .container * {

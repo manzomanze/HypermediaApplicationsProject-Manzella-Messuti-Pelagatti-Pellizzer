@@ -11,9 +11,12 @@
         :key="element.id"
         class="slide slideShowBox"
         :style="imagePath(element.image)"
-        :to="`/team/${element.id}#top`"
+        :to="returnFinalLink(element.id)"
       >
-        <h3 class="title">{{ element.name }} {{ element.surname }}</h3>
+        <h3 v-if="isPerson" class="title is-person">
+          {{ element.name }} {{ element.surname }}
+        </h3>
+        <h3 v-else class="title not-person">{{ element.name }}</h3>
       </NuxtLink>
     </div>
     <div class="next" @click="prev">
@@ -38,6 +41,10 @@ export default {
       default: null,
     },
     defaultImagePath: { type: String, default: () => '/img/all_services.jpg' },
+    isPerson: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -58,6 +65,13 @@ export default {
     this.x.removeEventListener('change', this.screenChange)
   },
   methods: {
+    returnFinalLink(elem) {
+      if (this.isPerson) {
+        return `/team/${elem}#top`
+      } else {
+        return `/${this.finalLink()}/${elem}#top`
+      }
+    },
     imagePath(image) {
       if (image == null) {
         return `background: url('${this.defaultImagePath}') center center/cover`
@@ -348,8 +362,15 @@ export default {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.582);
   border-radius: 5px;
+}
+
+.is-person {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+}
+
+.not-person {
+  margin: 5%;
 }
 
 @media (max-width: 750px) {
