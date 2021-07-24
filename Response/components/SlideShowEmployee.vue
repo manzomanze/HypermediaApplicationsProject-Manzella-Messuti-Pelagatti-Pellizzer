@@ -348,7 +348,8 @@ export default {
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.582);
   border-radius: 5px;
-  margin: 5%;
+  position: absolute;
+  bottom: 0;
 }
 
 @media (max-width: 750px) {

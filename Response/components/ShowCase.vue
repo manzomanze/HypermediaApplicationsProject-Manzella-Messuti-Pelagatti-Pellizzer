@@ -52,8 +52,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 100%;
-  max-height: 1200px;
-  /* height: 102vh; */
+  min-height: 400px;
   /* background: url('/img/AI_01.jpg') center center/cover no-repeat; */
 }
 
