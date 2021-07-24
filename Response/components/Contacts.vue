@@ -8,12 +8,15 @@
         <p>Piazza Gae Aulenti, 20154 Milano MI</p>
       </div>
       <div class="box">
-        <i class="fas fa-phone fa-3x"></i>
+        <a class="fas fa-phone fa-3x" href="tel:+0286816410"></a>
         <h3>Phone Number</h3>
-        <p>+39 02 000 101</p>
+        <p>+02 86816410</p>
       </div>
       <div class="box">
-        <i class="fas fa-envelope fa-3x"></i>
+        <a
+          class="fas fa-envelope fa-3x"
+          href="email:pelagatti.mariano@gmail.com"
+        ></a>
         <h3>Email Address</h3>
         <p>info@response.com</p>
       </div>

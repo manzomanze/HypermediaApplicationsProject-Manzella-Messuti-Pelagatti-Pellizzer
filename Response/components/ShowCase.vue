@@ -20,7 +20,7 @@ export default {
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
     titleFontSize: { type: String, default: () => '3' },
     titleFont: { type: String, default: () => "'Montserrat', sans-serif" },
-    height: { type: String, default: () => '102' },
+    height: { type: String, default: () => '40' },
   },
   methods: {
     imagePath() {
@@ -52,8 +52,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 100%;
-  max-height: 1200px;
-  /* height: 102vh; */
+  min-height: 400px;
   /* background: url('/img/AI_01.jpg') center center/cover no-repeat; */
 }
 
@@ -85,7 +84,7 @@ export default {
 
 @media (max-width: 550px) {
   .showcase .container h2 {
-    font-size: 3rem !important;
+    font-size: 2.9rem !important;
   }
 }
 </style>
