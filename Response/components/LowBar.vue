@@ -92,7 +92,7 @@
     </ul>
     <!-- Button to open/close the menu in smartphone view -->
     <div class="capBurger" @click="navSlide">
-      <p>Cap.&nbsp;</p>
+      <p>Ch.&nbsp;</p>
       <p id="arrow" ref="arrow" class="text-theme-color">
         <i class="fas fa-chevron-left"></i>
       </p>
