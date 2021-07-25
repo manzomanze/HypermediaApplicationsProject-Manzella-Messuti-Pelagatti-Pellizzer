@@ -21,7 +21,12 @@ Massimiliano Pellizzer: I drew most of the diagrams in the documentation (C-IDM 
 **Server and DB technologies used**
 
 The choice of the backend's server and db was quite straghtforward following what was seen in the lectures, a simple server to implement the database connection and respective apis in node.js using express module.
-The database chosen was the postgresql DBMS that is managed through an ORM called sequelize that is a nod.js module
+The database chosen was the postgresql DBMS that is managed through an ORM called sequelize that is a node.js module.
+In the db-conn.js file.
+All tables are represented in const javascript entities and are described using JSON.
+Sequelize is then instructed with the various relationships that are present between the tables.
+In the api.js file
+All queries are described through sequelize and are served by the server through a rest api in JSON format
 
 **Components Developed**
 
