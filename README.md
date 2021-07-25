@@ -9,12 +9,12 @@ Massimiliano Pellizzer 10560296 10560296@polimi.it
 
 **Contributions**
 
-Davide Manzella: initial setup of the github repository and project, mostly focused on the database.
+Davide Manzella: Initial setup of the github repository and project, mostly focused on the database.
 The E-R schema, the database input injection and the api for the retrieval of information from the database
 
 Umberto Messuti: I have coded the template in HTML, CSS and JavaScript from which we have built the website. I have contributed to the implementation of most of the Vue components used in the website and I have also contributed to implement the connection between the front-end and the back-end. 
 
-Mariano Pelagatti:
+Mariano Pelagatti: I ran an attentive review of the UX and UI of the website, providing fixes and adjustments throughout the design and implementation of the front end, ensuring responsiveness and a pleasing mobile experience. I coded a few components (mostly Chatbot related), while also reworking and optimizing other ones, exploiting mixins to remove duplicate code. I also managed the drafting of both the Usability and Design reports (the one for the Chatbot too), documenting the process and all of our design choices. 
 
 Massimiliano Pellizzer: I drew most of the diagrams in the documentation (C-IDM large, C-IDM small, P-IDM, Wireframes), but I have also contributed to the implementation of Vue components and pages. I have reviewed and commented the code.
 
