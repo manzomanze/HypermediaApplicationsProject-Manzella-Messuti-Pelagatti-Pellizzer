@@ -13,10 +13,7 @@
         <p>+02 86816410</p>
       </div>
       <div class="box">
-        <a
-          class="fas fa-envelope fa-3x"
-          href="email:pelagatti.mariano@gmail.com"
-        ></a>
+        <a class="fas fa-envelope fa-3x" href="email:info@response.com"></a>
         <h3>Email Address</h3>
         <p>info@response.com</p>
       </div>
