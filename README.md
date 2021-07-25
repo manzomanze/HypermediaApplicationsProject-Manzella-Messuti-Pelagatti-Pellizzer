@@ -59,8 +59,18 @@ To dynamically change the style of the text (use bold/italic ecc) we had to use 
 - WideBox.vue: This is the hardcoded landing page. No logic is implemented.
 
 **Best Practices**
-- We have define and reused different components instead of "reinventing the wheel every time"
+- We have define and reused different components instead of "reinventing the wheel every time".
 - In order to show a list of elements, the "V-for" statement has been used, assigning to each element its own key.
-- Each interaction between the system and the user (where the user type some sort of text in the website) is managed through the "V-model" construct, in order to acquire the input correctly
-- We have used different listeners (i.e. @keypress.enter=...) in order to let the user interact with different parts of the website
+- Each interaction between the system and the user (where the user type some sort of text in the website) is managed through the "V-model" construct, in order to acquire the input correctly.
+- We have used different listeners (for example @keypress.enter=...) in order to let the user interact with different parts of the website.
+- To let the user navigate through the pages we have leveraged the features of NuxtLink; this allows to fetch from the server only the components needed.
+- We have used "V-if" and "V-else" constructs in order to show to the user only part of the web page.
+- In order to avoid the escaping of characters we have used "V-html", this allowed us to add some different styles to the text fetched from the database.
+- We have use binding directives in order to let the HTML change dynamically.
+- In order to let data flow from one component to another we have used the so called "props".
+- MIXINS???
+- 
+
+**Implementation Choices**
+
 
