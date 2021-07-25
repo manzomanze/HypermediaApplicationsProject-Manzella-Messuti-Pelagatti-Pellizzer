@@ -17,6 +17,7 @@ const db = new Sequelize(
  */
 
 function defineDatabaseStructure() {
+  /* Employee Entity of the ORM */
   const Employee = db.define(
     'employee',
     {
@@ -33,6 +34,8 @@ function defineDatabaseStructure() {
     }
   )
 
+  /* Area Entity of the ORM */
+
   const Area = db.define(
     'area',
     {
@@ -44,6 +47,7 @@ function defineDatabaseStructure() {
     }
   )
 
+  /* Area content Entity of the ORM */
   const AreaContent = db.define(
     'areacontent',
     {
@@ -56,19 +60,7 @@ function defineDatabaseStructure() {
     }
   )
 
-  const Career = db.define(
-    'career',
-    {
-      title: DataTypes.STRING,
-      introduction: DataTypes.TEXT,
-      requirements: DataTypes.TEXT,
-      location: { type: DataTypes.TEXT, allowNull: true },
-    },
-    {
-      underscored: true,
-    }
-  )
-
+  /* Service Entity of the ORM */
   const Service = db.define(
     'service',
     {
@@ -79,7 +71,7 @@ function defineDatabaseStructure() {
       underscored: true,
     }
   )
-
+  /* Case studies Entity of the ORM */
   const CaseStudies = db.define(
     'casestudies',
     {
@@ -90,7 +82,7 @@ function defineDatabaseStructure() {
       underscored: true,
     }
   )
-
+  /* Services Content Entity of the ORM */
   const ServicesContent = db.define(
     'servicescontent',
     {
@@ -103,6 +95,7 @@ function defineDatabaseStructure() {
     }
   )
 
+  /* Case Studies Content Entity of the ORM */
   const CaseStudiesContent = db.define(
     'casestudiescontent',
     {
@@ -114,7 +107,7 @@ function defineDatabaseStructure() {
       underscored: true,
     }
   )
-
+  /* Business Sectors Entity of the ORM */
   const BusinessSector = db.define(
     'businesssector',
     {
@@ -126,6 +119,7 @@ function defineDatabaseStructure() {
     }
   )
 
+  /* Business Sectors Content Entity of the ORM */
   const BusinessSectorContent = db.define(
     'businesssectorcontent',
     {
@@ -138,6 +132,7 @@ function defineDatabaseStructure() {
     }
   )
 
+  /* Image Content Entity of the ORM */
   const Image = db.define(
     'image',
     {
@@ -150,77 +145,93 @@ function defineDatabaseStructure() {
     }
   )
 
-  // Creating the 1 -> N association between Article and Comment
-  // More on association: https://sequelize.org/master/manual/assocs.html
+  // Creating the 1 -> N association between Service and Services Content
   Service.hasMany(ServicesContent)
   ServicesContent.belongsTo(Service)
 
+  // Creating the 1 -> N association between CaseStudies and CaseStudies Content
   CaseStudies.hasMany(CaseStudiesContent)
   CaseStudiesContent.belongsTo(CaseStudies)
 
+  // Creating the 1 -> N association between Area and Service
   Area.hasMany(Service)
   Service.belongsTo(Area)
 
+  // Creating the 1 -> N association between Area and Employee Content
   Area.hasMany(Employee)
   Employee.belongsTo(Area)
 
+  // Creating the 1 -> N association between Service and Services Content
   Area.hasMany(AreaContent)
   AreaContent.belongsTo(Area)
 
+  // Creating the 1 -> N association between BusinessSector and CaseStudies Content
   BusinessSector.hasMany(CaseStudies)
   CaseStudies.belongsTo(BusinessSector)
 
+  // Creating the 1 -> N association between BusinessSector and BusinessSector Content
   BusinessSector.hasMany(BusinessSectorContent)
   BusinessSectorContent.belongsTo(BusinessSector)
 
+  // Creating the N -> N association between Employee and CaseStudies
   Employee.belongsToMany(CaseStudies, { through: 'employeecasestudies' })
   CaseStudies.belongsToMany(Employee, { through: 'employeecasestudies' })
 
+  // Creating the N -> N association between Employee and CaseStudies
   Employee.belongsToMany(CaseStudies, { through: 'employeecasestudies' })
   CaseStudies.belongsToMany(Employee, { through: 'employeecasestudies' })
 
+  // Creating the N -> N association between Employee and Service
   Employee.belongsToMany(Service, { through: 'employeeservice' })
   Service.belongsToMany(Employee, { through: 'employeeservice' })
 
+  // Creating the N -> N association between BusinessSector and Service
   BusinessSector.belongsToMany(Service, { through: 'businesssectorservice' })
   Service.belongsToMany(BusinessSector, { through: 'businesssectorservice' })
 
+  // Creating the N -> N association between Image and Area Content
   Image.hasMany(AreaContent)
   AreaContent.belongsTo(Image)
 
+  // Creating the N -> N association between Image and Area
   Image.hasMany(Area)
   Area.belongsTo(Image)
 
+  // Creating the N -> N association between Image and BusinessSector Content
   Image.hasMany(BusinessSectorContent)
   BusinessSectorContent.belongsTo(Image)
 
+  // Creating the N -> N association between Image and BusinessSector
   Image.hasMany(BusinessSector)
   BusinessSector.belongsTo(Image)
 
-  Image.hasMany(Career)
-  Career.belongsTo(Image)
-
+  // Creating the N -> N association between Image and CaseStudies
   Image.hasMany(CaseStudies)
   CaseStudies.belongsTo(Image)
 
+  // Creating the N -> N association between Image and CaseStudies Content
   Image.hasMany(CaseStudiesContent)
   CaseStudiesContent.belongsTo(Image)
 
+  // Creating the N -> N association between Image headshot and Employee
   Image.hasMany(Employee, { foreignKey: 'main_image_id' })
   Employee.belongsTo(Image, {
     as: 'main_image',
     foreignKey: 'main_image_id',
   })
 
+  // Creating the N -> N association between Image headshot and Employee
   Image.hasMany(Employee, { foreignKey: 'headshot_id' })
   Employee.belongsTo(Image, {
     as: 'image',
     foreignKey: 'headshot_id',
   })
 
+  // Creating the N -> N association between Image and Service
   Image.hasMany(Service)
   Service.belongsTo(Image)
 
+  // Creating the N -> N association between Image and Services Contents
   Image.hasMany(ServicesContent)
   ServicesContent.belongsTo(Image)
 
@@ -234,36 +245,10 @@ function defineDatabaseStructure() {
     CaseStudiesContent,
     BusinessSector,
     BusinessSectorContent,
-    Career,
     Image,
   }
 }
 
-/**
- * Function to insert some fake info in the database
- */
-// async function insertFakeData() {
-//   const { Career } = db._tables
-//   await Career.create({
-//     title: title,
-//     introduction: introduction,
-//     requirements: requirements,
-//     location: location,
-//   })
-//   const comment1 = await Comment.create({
-//     content: 'Great article! Keep posting',
-//   })
-//   const comment2 = await Comment.create({
-//     content: 'Such Doge.',
-//   })
-//   // Adding the first comment to the first article
-//   await firstArticle.addComment(comment1.id)
-//   // Adding the second comment to the first article
-//   await firstArticle.addComment(comment2.id)
-// }
-/**
- * Function to initialize the database. This is exported and called in the main api.js file
- */
 async function initializeDatabase() {
   // Call the function for the database structure definition
   defineDatabaseStructure()

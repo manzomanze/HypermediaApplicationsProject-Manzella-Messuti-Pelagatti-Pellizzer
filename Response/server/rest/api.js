@@ -25,6 +25,7 @@ async function init() {
   // API to get all the articles
 
   // Employees
+  // gets all employees
   app.get('/employees', async (req, res) => {
     const articles = await Employee.findAll({
       include: {
@@ -34,6 +35,7 @@ async function init() {
     })
     return res.json(articles)
   })
+  // gets an employee by ID
   app.get('/employees/:id', async (req, res) => {
     const { id } = req.params
     const article = await Employee.findOne({
@@ -69,6 +71,7 @@ async function init() {
   })
 
   // CaseStudies & CaseStudiesContents
+  // gets all case studies
   app.get('/casestudies', async (req, res) => {
     const articles = await CaseStudies.findAll({
       include: {
@@ -77,6 +80,7 @@ async function init() {
     })
     return res.json(articles)
   })
+  // gets an casestudies by ID
   app.get('/casestudies/:id', async (req, res) => {
     const { id } = req.params
     const article = await CaseStudies.findOne({
@@ -107,6 +111,8 @@ async function init() {
     return res.json(article)
   })
 
+  // get all values of case studies from area by id join Employees an area
+  // and Image
   app.get('/casestudiesfromarea/:id', async (req, res) => {
     const { id } = req.params
     const article = await CaseStudies.findAll({
@@ -129,6 +135,7 @@ async function init() {
   })
 
   // Areas & AreasContents
+  // gets all areas
   app.get('/areas', async (req, res) => {
     const articles = await Area.findAll({
       include: {
@@ -137,6 +144,7 @@ async function init() {
     })
     return res.json(articles)
   })
+  // gets all areas by id join with Area content image employee and service
   app.get('/areas/:id', async (req, res) => {
     const { id } = req.params
     const article = await Area.findOne({
@@ -165,6 +173,7 @@ async function init() {
   })
 
   // BusinessSector & BusinessSectorContents
+  // gets all businesssectors join Image
   app.get('/businesssectors', async (req, res) => {
     const articles = await BusinessSector.findAll({
       include: {
@@ -173,6 +182,7 @@ async function init() {
     })
     return res.json(articles)
   })
+  // gets all businesssectors by id join with businesssectorcontent  and Image and Servvice
   app.get('/businesssectors/:id', async (req, res) => {
     const { id } = req.params
     const article = await BusinessSector.findOne({
@@ -197,6 +207,7 @@ async function init() {
   })
 
   // Services & ServicesContents
+  // gets all services
   app.get('/services', async (req, res) => {
     const articles = await Service.findAll({
       include: {
@@ -205,6 +216,8 @@ async function init() {
     })
     return res.json(articles)
   })
+  // get a service by id and joins Service Content, Image, BusinessSector
+  // Employee and Area
   app.get('/services/:id', async (req, res) => {
     const { id } = req.params
     const article = await Service.findOne({
