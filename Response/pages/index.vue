@@ -14,7 +14,7 @@
         the entire breadth of clients’ opportunities in the evolving world of
         cloud, digital and platforms.
       </p>
-      <NuxtLink to="/about_us" class="btn">More About Us</NuxtLink>
+      <NuxtLink to="/about_us#top" class="btn">More About Us</NuxtLink>
     </div>
     <br />
     <br />
@@ -29,14 +29,14 @@
       </p>
       <div class="flexbox">
         <div>
-          <NuxtLink to="/areas/4" class="big-btn"
+          <NuxtLink to="/areas/4#top" class="big-btn"
             >Artificial Intelligence</NuxtLink
           >
-          <NuxtLink to="/areas/1" class="big-btn">Cyber Security</NuxtLink>
+          <NuxtLink to="/areas/1#top" class="big-btn">Cyber Security</NuxtLink>
         </div>
         <div>
-          <NuxtLink to="/areas/2" class="big-btn">Cloud Services</NuxtLink>
-          <NuxtLink to="/areas/3" class="big-btn">Digital Services</NuxtLink>
+          <NuxtLink to="/areas/2#top" class="big-btn">Cloud Services</NuxtLink>
+          <NuxtLink to="/areas/3#top" class="big-btn">Digital Services</NuxtLink>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
     <div class="main-box">
       <h3>Contact Us!</h3>
       <p>Got a question? We’re here to help!</p>
-      <NuxtLink to="/contact_us" class="btn">Contact Us</NuxtLink>
+      <NuxtLink to="/contact_us#top" class="btn">Contact Us</NuxtLink>
     </div>
     <br />
     <br />
