@@ -43,10 +43,17 @@ export default {
       { name: 'author', content: 'Manzella, Messuti, Pelagatti, Pellizzer' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        hid: 'stripe',
+        src: 'https://kit.fontawesome.com/9e37cd66a2.js',
+        defer: true,
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/static/fontawesome-free-5.15.3-web/css/all.min.css'],
+  // css: ['~/static/fontawesome-free-5.15.3-web/css/all.min.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['~/plugins/mmcc.js'],
