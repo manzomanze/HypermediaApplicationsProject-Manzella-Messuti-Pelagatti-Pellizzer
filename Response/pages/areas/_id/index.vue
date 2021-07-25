@@ -26,7 +26,11 @@
     <SlideShow :content="paragraphs.services" :title="'Services'" />
     <div id="team" class="anchor"></div>
     <!--Include the team members' slideshow-->
-    <SlideShowEmployee :content="paragraphs.employees" :title="'Team'" />
+    <SlideShow
+      :is-person="true"
+      :content="paragraphs.employees"
+      :title="'Team'"
+    />
     <div id="casestudies" class="anchor"></div>
     <!--Include the case studies' slideshow-->
     <SlideShow :content="caseStudies" :title="'Case Studies'" />
@@ -38,14 +42,12 @@ import LowBar from '~/components/LowBar'
 import ShowCase from '~/components/ShowCase'
 import Paragraph from '~/components/Paragraph'
 import SlideShow from '~/components/SlideShow'
-import SlideShowEmployee from '~/components/SlideShowEmployee'
 
 export default {
   components: {
     LowBar,
     ShowCase,
     SlideShow,
-    SlideShowEmployee,
     Paragraph,
   },
   // Fetch from the database the paragraphs and the case studies

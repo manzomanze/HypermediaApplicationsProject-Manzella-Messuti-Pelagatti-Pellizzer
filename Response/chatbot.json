@@ -4,42 +4,42 @@
     "kb": {
       "guide": "Do you want to start the guide?",
       "xor1": {
-        "initials": ["Hi i'm BISSABISCI, you can choose to follow a guide through the website or go to the contact information for further support and guidance. write guide or contacts"],
+        "initials": ["Hi, I'm Responsebot, welcome! You can either follow a guide through the website or get contact information for further support and guidance. What would you like to do? [guide/contacts]"],
         "choices": [
           {
             "id": "xor2",
-            "intents": ["contacts"]
+            "intents": ["contacts", "Contacts", "2"]
           },
           {
             "id": "guide",
-            "intents": ["guide"]
+            "intents": ["guide", "Guide", "1"]
           }
         ]
       },
       "xor2": {
-        "initials": ["you can either reach the contact form directly or the contact page in general. write form or contacts"],
+        "initials": ["You can either reach the contact form directly or visit our contact page. Where would you like me to take you? [form/contacts]"],
         "choices": [
           {
             "id": "contact_form",
-            "intents": ["form"],
+            "intents": ["form", "Form"],
             "payload": {"guide":"/contact_us#tellus"}
           },
           {
             "id": "contact_page",
-            "intents": ["contacts"],
+            "intents": ["contacts", "Contacts", "contact", "Contact"],
             "payload": {"guide":"/contact_us"}
           }
         ]
       },
       "home": "I will guide you through the site. Welcome to the homepage, here you can see all the areas of expertise of Response",
       "about": "Welcome to the About page of our website. Here you can find all the information about Response",
-      "contact_form": "Welcome to the contact form\nIf you want to restart the chatbot just ask ",
-      "contact_page": "Welcome to the contact page\nIf you want to restart the chatbot just ask ",
-      "end": "The process is completed let's restart",
+      "contact_form": "Welcome to the contact form. If you would like to restart the process, kindly reload the page.",
+      "contact_page": "Welcome to the contact page. If you would like to restart the process, kindly reload the page.",
+      "end": "The process is completed. Reload the page if you wish to restart it",
       "steps_v": ["/", "/", "/about_us"],
-      "continue_v": ["continue", "ok", "go", "yes"],
+      "continue_v": ["continue", "Continue", "ok", "Ok", "go", "Go", "yes", "Yes", "k", "K", "y", "Y"],
       "guide_v": ["guide"],
-      "main_exit_v": ["no", "reset"],
+      "main_exit_v": ["no", "No", "reset", "Reset"],
       "main_err": "Option not available",
       "stay_message": "I don't understand. Do you want to continue?"
     },

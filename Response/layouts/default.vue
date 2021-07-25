@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="anchor" id="top"></div>
+    <div id="top" class="anchor"></div>
     <TopBar />
     <Nuxt />
     <Chat :chat-list="list" />
@@ -26,45 +26,15 @@ export default {
 </script>
 
 <style>
+/* Import Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 /* Import Fonts */
 @font-face {
   /* font-family: Lobster; */
   font-family: 'Lobster';
   font-display: swap;
   src: url(/fonts/Lobster-Regular.ttf);
-}
-
-/* light */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(/fonts/OpenSans-Light.ttf) format('ttf');
-}
-/* Regular */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/OpenSans-Regular.ttf) format('ttf');
-}
-/* Bold */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(/fonts/OpenSans-Bold.ttf) format('ttf');
-}
-/* Extra Bold */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/OpenSans-ExtraBold.ttf) format('ttf');
 }
 
 /* Montserrat */

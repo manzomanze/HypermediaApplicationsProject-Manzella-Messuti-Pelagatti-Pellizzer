@@ -32,6 +32,7 @@ export default {
   max-width: 1000px;
   align-items: center;
   color: #333;
+  padding-bottom: 25px;
 }
 
 .socialBlock .container {
@@ -39,6 +40,9 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 10%;
+  padding-bottom: 0%;
+  padding-top: 0%;
 }
 
 .socialBlock .container .slide:hover {
@@ -49,13 +53,22 @@ export default {
 .socialBlock .container .slide {
   cursor: pointer;
   transition-duration: 250ms;
-  padding: 10px;
-  width: 165px;
+  padding: 5%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150px;
-  border-radius: 10px;
+  border-radius: 10%;
+}
+
+.fa-3x {
+  font-size: 4rem !important;
+}
+
+@media (max-width: 700px) {
+  .fa-3x {
+    font-size: 10vw !important;
+  }
 }
 </style>

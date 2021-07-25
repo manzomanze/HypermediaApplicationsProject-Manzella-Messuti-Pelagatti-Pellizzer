@@ -1,7 +1,18 @@
 <template>
   <div class="showcase">
-    <div class="container" :style="`${imagePath()}; height: ${height}vh;`">
-      <h2 :style="`font-family:${titleFont}; font-size: ${titleFontSize}rem`">
+    <div class="container" :style="`${imagePath()}; height: ${height}px;`">
+      <div class="divider"></div>
+      <h2
+        v-if="isMain"
+        class="main-title"
+        :style="`font-family: 'Lobster'; font-size: 7rem`"
+      >
+        {{ title }}
+      </h2>
+      <h2
+        v-else
+        :style="`font-family: 'Montserrat', sans-serif; font-size: 3rem`"
+      >
         {{ title }}
       </h2>
       <h3 v-if="text" class="text-grey">{{ text }}</h3>
@@ -16,11 +27,10 @@ export default {
     title: { type: String, default: () => '' },
     text: { type: String, default: () => '' },
     image: { type: Object, default: () => null },
+    isMain: { type: Boolean, default: () => false },
     // Default image of the components (if something has no image)
     defaultImagePath: { type: String, default: () => '/img/AI_01.jpg' },
-    titleFontSize: { type: String, default: () => '3' },
-    titleFont: { type: String, default: () => "'Montserrat', sans-serif" },
-    height: { type: String, default: () => '102' },
+    height: { type: String, default: () => '450' },
   },
   methods: {
     imagePath() {
@@ -41,6 +51,10 @@ export default {
   overflow: hidden;
 }
 
+.showcase .divider {
+  height: 90px;
+}
+
 .showcase .container * {
   z-index: 1;
 }
@@ -52,7 +66,7 @@ export default {
   align-items: center;
   text-align: center;
   width: 100%;
-  /* height: 102vh; */
+  min-height: 400px;
   /* background: url('/img/AI_01.jpg') center center/cover no-repeat; */
 }
 
@@ -84,7 +98,15 @@ export default {
 
 @media (max-width: 550px) {
   .showcase .container h2 {
-    font-size: 3rem !important;
+    font-size: 2.2rem !important;
+  }
+
+  .showcase .container h2.main-title {
+    font-size: 20vw !important;
+  }
+
+  .showcase .container h3 {
+    display: none;
   }
 }
 </style>

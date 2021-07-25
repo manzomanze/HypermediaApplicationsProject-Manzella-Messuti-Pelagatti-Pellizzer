@@ -60,7 +60,7 @@ export default {
       {
         text:
           'Our operational headquarters is in Milan, near the “Garibaldi” metro station.',
-        title: 'Come and see us',
+        title: 'Come say hi',
         image: {
           path: '/img/ResponseHQ_map.png',
           alt_description: 'Headquarters Map',

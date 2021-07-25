@@ -33,6 +33,7 @@ export default {
   justify-content: left;
   position: relative;
   max-width: 1300px;
+  padding-top: 2%;
   margin: auto;
 }
 
@@ -40,9 +41,9 @@ export default {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-align: left;
-  padding: 0px 10px;
+  padding: 0px 5%;
   color: #333;
-  font-size: 2.3rem;
+  font-size: 2.7rem;
   margin: 20px;
 }
 
@@ -57,7 +58,7 @@ export default {
 
 .paragraph p {
   text-align: left;
-  padding: 0px 10px;
+  padding: 0px 5%;
   color: #333;
   font-size: 1.4rem;
   margin: 20px;
@@ -87,6 +88,9 @@ export default {
   width: 90%;
 }
 @media (max-width: 1050px) {
+  .normalTitle h2 {
+    font-size: 2.4rem !important;
+  }
   @media (min-width: 750px) {
     .normalTitle,
     .paragraph,
