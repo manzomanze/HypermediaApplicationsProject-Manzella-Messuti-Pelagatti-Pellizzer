@@ -254,8 +254,7 @@ async function initializeDatabase() {
   defineDatabaseStructure()
   // Synchronize Sequelize with the actual database
   await db.sync()
-  // Call the function to insert some fake data
-  // await insertFakeData()
+
   return db
 }
 
