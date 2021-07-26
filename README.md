@@ -59,7 +59,7 @@ To dynamically change the style of the text (use bold/italic ecc) we had to use 
 - WideBox.vue: This is the hardcoded landing page. No logic is implemented.
 
 **Best Practices**
-- We have defined and reused different components, instead of "reinventing the wheel every time", by exploiting mixins.
+- We have defined and reused different components, instead of "reinventing the wheel every time", also exploiting mixins.
 - In order to show a list of elements, the "V-for" statement has been used, assigning to each element its own key.
 - Each interaction between the system and the user (where the user types some sort of text in the website) is managed through the "V-model" construct, in order to acquire the input correctly.
 - We have used different listeners (for example @keypress.enter=...) in order to let the user interact with different parts of the website.
