@@ -59,19 +59,17 @@ To dynamically change the style of the text (use bold/italic ecc) we had to use 
 - WideBox.vue: This is the hardcoded landing page. No logic is implemented.
 
 **Best Practices**
-- We have define and reused different components instead of "reinventing the wheel every time".
+- We have defined and reused different components, instead of "reinventing the wheel every time", by exploiting mixins.
 - In order to show a list of elements, the "V-for" statement has been used, assigning to each element its own key.
-- Each interaction between the system and the user (where the user type some sort of text in the website) is managed through the "V-model" construct, in order to acquire the input correctly.
+- Each interaction between the system and the user (where the user types some sort of text in the website) is managed through the "V-model" construct, in order to acquire the input correctly.
 - We have used different listeners (for example @keypress.enter=...) in order to let the user interact with different parts of the website.
-- To let the user navigate through the pages we have leveraged the features of NuxtLink; this allows to fetch from the server only the components needed.
+- To let the user navigate through the pages we have leveraged the features of NuxtLink; this allows to fetch only the needed components from the server.
 - We have used "V-if" and "V-else" constructs in order to show to the user only part of the web page.
 - In order to avoid the escaping of characters we have used "V-html", this allowed us to add some different styles to the text fetched from the database.
-- We have use binding directives in order to let the HTML change dynamically.
+- We have used binding directives in order to let the HTML change dynamically.
 - In order to let data flow from one component to another we have used the so called "props".
-- MIXINS???
-- 
 
 **Other Considerations**
 - In order to avoid problems or warnings during the automatic evaluation of the website we linked the social buttons to a fake component
 - Since Heroku introduces a lot of latency during the automatic tests, we deloyed the website also to another server: https://response.duckdns.org
-
+- The section "Industries" represents the "Business Sectors" Response operates in
