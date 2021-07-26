@@ -71,6 +71,7 @@ To dynamically change the style of the text (use bold/italic ecc) we had to use 
 - MIXINS???
 - 
 
-**Implementation Choices**
-
+**Other Considerations**
+- In order to avoid problems or warnings during the automatic evaluation of the website we linked the social buttons to a fake component
+- Since Heroku introduces a lot of latency during the automatic tests, we deloyed the website also to another server: https://response.duckdns.org
 
